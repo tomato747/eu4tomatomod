@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 4975	# Kaga
+
+1444.1.1 = {
+	monarch = {
+		name = "Masachika" 
+		dynasty = "Shigeharu"
+		death_date = 1462.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1455.1.1 = {
+	heir = {
+		name = "Masachika"
+		dynasty = "Togashi"
+		monarch_name = "Masachika"
+		birth_date = 1455.1.1
+		death_date = 1488.7.17
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+1462.1.1 = {
+	monarch = {
+		name = "Masachika" 
+		dynasty = "Shigeharu"
+		death_date = 1488.7.17
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}

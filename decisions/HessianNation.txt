@@ -1,0 +1,96 @@
+country_decisions = {
+
+	hessian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_hesse_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				tag = MBG
+				tag = KSL
+				tag = DST
+				tag = FRN
+				tag = NSA
+				tag = MAI
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+					NOT = { exists = HES }
+				}
+			}
+			primary_culture = hessian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1876	# Frankfurt am Main
+				province_id = 81	# Marburg
+				province_id = 1762	# Kassel
+				province_id = 5014	# Darmstadt
+				province_id = 4774	# Fulda
+				province_id = 83	# Nassau
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = HES }
+			num_of_owned_provinces_with = {
+				OR = {
+					province_id = 1876	# Frankfurt am Main
+					province_id = 81	# Marburg
+					province_id = 1762	# Kassel
+					province_id = 5014	# Darmstadt
+					province_id = 4774	# Fulda
+					province_id = 83	# Nassau
+				}
+				value = 4
+			}
+		}
+		effect = {
+			change_tag = HES
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = { has_idea_group = HES_ideas }
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+			set_country_flag = formed_hesse_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

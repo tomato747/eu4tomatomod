@@ -1,0 +1,7 @@
+government = native
+add_government_reform = polynesian_kingdom
+government_rank = 1
+primary_culture = formosan
+religion = animism
+technology_group = chinese
+capital = 5025 #Sakam

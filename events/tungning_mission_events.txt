@@ -1,0 +1,705 @@
+namespace = frm_missions
+
+#Taiwanese
+country_event = {
+	id = frm_missions.1
+	title = frm_missions.1.t
+	desc = frm_missions.1.d
+	picture = KING_DOING_GREAT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRM
+	}
+	
+	#becomes taiwanese
+	option = {
+		name = frm_missions.1.a
+		change_primary_culture = taiwanese
+		taiwan_area = {
+			limit = {
+				owned_by = ROOT
+				OR = {
+					culture_group = east_asian
+					culture = formosan
+				}
+			}
+			change_culture = taiwanese
+			add_core = TWN
+			add_province_modifier = {
+				name = "FRM_taiwanese_identity"
+				duration = -1
+			}
+		}
+		north_taiwan_area = {
+			limit = {
+				owned_by = ROOT
+				OR = {
+					culture_group = east_asian
+					culture = formosan
+				}
+			}
+			change_culture = taiwanese
+			add_core = TWN
+			add_province_modifier = {
+				name = "FRM_taiwanese_identity"
+				duration = -1
+			}
+		}
+	}
+	
+	#stays original
+	option = {
+		name = frm_missions.1.b
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		add_legitimacy = 10
+	}
+}
+
+#keelung gold
+country_event = {
+	id = frm_missions.2
+	title = frm_missions.2.t
+	desc = frm_missions.2.d
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRM
+	}
+	
+	#get gold
+	option = {
+		name = frm_missions.2.a
+		2154 = {
+			change_trade_goods = gold
+			latent_trade_goods = { coal }
+		}
+	}
+	
+	#dont get gold
+	option = {
+		name = frm_missions.2.b
+		2154 = {
+			add_base_production = 3
+			latent_trade_goods = { coal }
+		}
+	}
+}
+
+#help tungning?
+country_event = {
+	id = frm_missions.3
+	title = frm_missions.3.t
+	desc = frm_missions.3.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#help them
+	option = {
+		name = frm_missions.3.a
+		ai_chance = { factor = 80 }
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		add_treasury = -50
+		add_manpower = -10
+		FRM = {
+			country_event = {
+				id = frm_missions.4
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_dynastic_helper
+				multiplier = 50
+			}
+		}
+	}
+	
+	#dont help
+	option = {
+		name = frm_missions.3.b
+		ai_chance = { factor = 20 }
+		FRM = {
+			country_event = { 
+				id = frm_missions.5
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_ignore_dynasty
+				multiplier = 50
+			}
+			add_prestige = -10
+		}
+		
+	}
+}
+
+#help arrives
+country_event = {
+	id = frm_missions.4
+	title = frm_missions.4.t
+	desc = frm_missions.4.d
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#help them
+	option = {
+		name = frm_missions.4.a
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		add_treasury = 50
+		add_manpower = 10
+		add_legitimacy = 10
+	}
+}
+
+#help doesnt arrives
+country_event = {
+	id = frm_missions.5
+	title = frm_missions.5.t
+	desc = frm_missions.5.d
+	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#help them
+	option = {
+		name = frm_missions.5.a
+		add_legitimacy = -10
+	}
+}
+
+#capital to Amoy
+country_event = {
+	id = frm_missions.6
+	title = frm_missions.6.t
+	desc = frm_missions.6.d
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#move to amoy
+	option = {
+		name = frm_missions.6.a
+		set_capital = 4984
+	}
+	
+	#stay on taiwan
+	option = {
+		name = frm_missions.6.b
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Ming Empire restore?
+country_event = {
+	id = frm_missions.7
+	title = frm_missions.7.t
+	desc = frm_missions.7.d
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRM
+	}
+	
+	#restore Ming dynasty
+	option = {
+		name = frm_missions.7.a
+		ai_chance = { factor = 100 }
+		change_tag = MNG
+		restore_country_name_effect = yes
+		if = {
+			limit = {
+				is_elector = no
+				is_emperor = no
+				OR = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						is_part_of_hre = yes
+					}
+				}
+			}
+			set_in_empire = no
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		hidden_effect = { set_government_rank = 3 }
+		china_superregion = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_core = MNG
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		remove_country_modifier = mng_rump_state
+		remove_country_modifier = mng_successor_state
+		remove_country_modifier = mng_successor_blank
+		if = {
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		on_change_tag_effect = yes
+		define_ruler = {
+			dynasty = "Zhu"
+		}
+		remove_heir = {
+			allow_new_heir = no
+		}
+		country_event = { 
+			id = frm_missions.8
+		}
+	}
+	
+	#dont restore
+	option = {
+		name = frm_missions.7.b
+		hidden_effect = { set_government_rank = 3 }
+		china_superregion = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_core = ROOT
+		}
+		add_prestige = 25
+		remove_country_modifier = mng_rump_state
+		remove_country_modifier = mng_successor_state
+		remove_country_modifier = mng_successor_blank
+		set_country_flag = tungning_new_dynasty
+		country_event = { 
+			id = frm_missions.8
+		}
+	}
+}
+
+#pick capital
+country_event = {
+	id = frm_missions.8
+	title = frm_missions.8.t
+	desc = frm_missions.8.d
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#move to tainan
+	option = {
+		name = frm_missions.8.a
+		trigger = {
+			tag = FRM
+			owns_or_non_sovereign_subject_of = 738
+			ROOT = { NOT = { capital = 738 } }
+		}
+		set_capital = 738
+	}
+	
+	#move to Peking
+	option = {
+		name = frm_missions.8.b
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1816
+			ROOT = { NOT = { capital = 1816 } }
+		}
+		set_capital = 1816
+	}
+	
+	#move to Nanking
+	option = {
+		name = frm_missions.8.c
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1821
+			ROOT = { NOT = { capital = 1821 } }
+		}
+		ai_chance = { factor = 100 }
+		set_capital = 1821
+	}
+	
+	#move to Kaifeng
+	option = {
+		name = frm_missions.8.e
+		trigger = {
+			owns_or_non_sovereign_subject_of = 688
+			ROOT = { NOT = { capital = 688 } }
+		}
+		set_capital = 688
+	}
+	
+	#move to Xi'an
+	option = {
+		name = frm_missions.8.f
+		trigger = {
+			owns_or_non_sovereign_subject_of = 700
+			ROOT = { NOT = { capital = 700 } }
+		}
+		set_capital = 700
+		700 = {
+			change_province_name = "Chang'an"
+			rename_capital = "Chang'an"
+		}
+	}
+	
+	#move to Luoyang
+	option = {
+		name = frm_missions.8.g
+		trigger = {
+			owns_or_non_sovereign_subject_of = 1836
+			ROOT = { NOT = { capital = 1836 } }
+		}
+		set_capital = 1836
+	}
+	
+	#move to Canton
+	option = {
+		name = frm_missions.8.h
+		trigger = {
+			owns_or_non_sovereign_subject_of = 667
+			ROOT = { NOT = { capital = 667 } }
+		}
+		set_capital = 667
+	}
+	
+	#move to Fukchew
+	option = {
+		name = frm_missions.8.i
+		trigger = {
+			owns_or_non_sovereign_subject_of = 669
+			ROOT = { NOT = { capital = 660 } }
+		}
+		set_capital = 669
+	}
+	
+	#not move
+	option = {
+		name = frm_missions.8.j
+	}
+}
+
+#capital to Nanking
+country_event = {
+	id = frm_missions.9
+	title = frm_missions.9.t
+	desc = frm_missions.9.d
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#move to amoy
+	option = {
+		name = frm_missions.9.a
+		set_capital = 1821
+		ai_chance = { factor = 100 }
+	}
+	
+	#stay on taiwan
+	option = {
+		name = frm_missions.9.b
+	}
+}
+
+#Submit to tungning
+country_event = {
+	id = frm_missions.10
+	title = frm_missions.10.t
+	desc = frm_missions.10.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		
+	}
+	
+	#submit
+	option = {
+		name = frm_missions.10.a
+		ai_chance = { factor = 90 }
+		FRM = { vassalize = ROOT }
+	}
+	
+	#not submit
+	option = {
+		name = frm_missions.10.b
+		ai_chance = { factor = 10 }
+		FRM = {
+			add_casus_belli = {
+				target = ROOT
+				type = cb_vassalize_mission
+				months = 120
+			}
+		}
+	}
+}
+
+country_event = {
+	id = frm_missions.11
+	title = frm_missions.11.t
+	desc = frm_missions.11.d
+	picture = AFRICAN_CHIEFTAIN_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		num_of_cities = 3
+		5025 = {
+			owned_by = ROOT
+			NOT = { is_capital_of = ROOT }	#The country should not get instantly killed when they are an OPM
+		}
+		is_year = 1600
+		NOT = { exists = TQQ }
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			is_year = 1650
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1700
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			5025 = {
+				add_core = TQQ
+				cede_province = TQQ
+				change_culture = formosan
+				change_religion = animism
+			}
+			TQQ = {
+				change_government = native
+				add_government_reform = polynesian_kingdom
+				set_capital = 5025
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.9
+						cavalry = 0.1
+					}
+				}
+				add_manpower = 15
+				add_treasury = 300
+			}
+		}
+	}
+	
+	option = {	#How dare taking our land!
+		name = frm_missions.11.a
+		declare_war_with_cb = {
+			casus_belli = cb_imperial
+			who = TQQ
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {	#Is currently busy with another war
+				factor = 0
+				is_at_war = yes
+			}
+			modifier = {	#Doesn't really care
+				factor = 0
+				num_of_owned_provinces_with = {
+					region = south_africa_region
+					value = 3
+				}
+			}
+		}
+	}
+	
+	option = {	#Ehh ... whatever
+		name = frm_missions.11.b
+		reverse_add_opinion = {
+			who = TQQ
+			modifier = zul_let_the_zulu_alone
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_owned_provinces_with = {
+						OR = {
+							area = taiwan_area
+							area = north_taiwan_area
+						}
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	
+	option = {	#Screw my throne, I am a Tjuaquvuquvulj now!
+		name = frm_missions.11.c
+		switch_tag = TQQ
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#colonisinig taiwan provinces, currently broken
+province_event = {
+	id = frm_missions.12
+	title = frm_missions.12.t
+	desc = frm_missions.12.d
+	picture = AFRICAN_CHIEFTAIN_eventPicture
+	
+	trigger = {
+		OR = {
+			area = taiwan_area
+			area = north_taiwan_area
+		}
+		is_colony = no
+		has_empty_adjacent_province = yes
+		NOT = { current_age = age_of_discovery }
+		owner = {
+			OR = {
+				has_reform = celestial_empire
+				has_reform = chinese_warlord
+				tag = FRM
+				tag = TWN
+				if = {
+					limit = { year = 1600 }
+					primary_culture = formosan
+				}
+			}
+		}
+		# always = no
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_empty_neighbor_province = {
+				limit = {
+					OR = {
+						area = taiwan_area
+						area = north_taiwan_area
+					}
+				}
+				save_event_target_as = empty_neighbor_target
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			is_year = 1666
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1700
+		}
+	}
+	
+	option = {
+		name = "frm_missions.12.a"
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				current_income_balance = 2
+			}
+		}
+		goto = empty_neighbor_target
+		event_target:empty_neighbor_target = {
+			create_colony = 200
+			add_province_modifier = {
+				name = "colonial_boom"
+				duration = 7300
+			}
+		}
+	}
+	option = {
+		name = "frm_missions.12.b"
+		ai_chance = { factor = 1 }
+		goto = root
+		owner = {
+			random_owned_province = {
+				if = {
+					limit = {
+						is_colony = yes
+					}
+					add_province_modifier = {
+						name = "colonial_boom"
+						duration = 1825
+					}
+					add_colonysize = 100
+				}
+				else = {
+					add_random_development = 1
+				}
+			}
+		}
+	}
+}

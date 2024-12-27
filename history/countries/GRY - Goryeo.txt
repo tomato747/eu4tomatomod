@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 5116	# Kaesong
+
+1389.3.9 = {
+	monarch = {
+		name = "Kon" #Taejo
+		dynasty = "Wang"
+		birth_date = 1345.3.9
+		death_date = 1394.5.17
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}

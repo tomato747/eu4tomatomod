@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 5000 # Sado
+
+1418.1.1 = {
+	monarch = {
+		name = "Shigenao"
+		dynasty = "Honma"
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}

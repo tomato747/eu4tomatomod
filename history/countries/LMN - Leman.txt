@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = united_cantons_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = arpitan
+capital = 1867
+add_army_professionalism = 0.1

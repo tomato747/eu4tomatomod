@@ -1,0 +1,167 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 117  26  8 }
+revolutionary_colors = { 0  15  16 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	economic_ideas
+}
+
+historical_units = {
+	persian_footsoldier
+	persian_cavalry_charge
+	persian_shamshir
+	qizilbash_cavalry_unit
+	tofongchis_musketeer
+	topchis_artillery
+	afsharid_reformed
+	afsharid_reformed_infantry
+	muslim_mass_infantry
+	muslim_dragoon
+	persian_rifle
+}
+
+monarch_names = {
+	"Abbar #0" = 50
+	"Abdmelqart #0" = 50
+	"Adonibaal #0" = 50
+	"Agbal #0" = 50
+	"Ahirom #0" = 50
+	"Azimilik #0" = 50
+	"Baal #0" = 50
+	"Baalhanno #0" = 50
+	"Bodashtart #0" = 50
+	"Bodmelqart #0" = 50
+	"Bomilcar #0" = 50
+	"Bostar #0" = 50
+	"Boulomenus #0" = 50
+	"Carthalo #0" = 50
+	"Chelbes #0" = 50
+	"Eshbaal #0" = 50
+	"Eugoras #0" = 50
+	"Germelqart #0" = 50
+	"Hamilcar #0" = 50
+	"Hannibal #0" = 50
+	"Hanno #0" = 50
+	"Hasdrubal #0" = 50
+	"Himilco #0" = 50
+	"Hiram #0" = 50
+	"Mago #0" = 50
+	"Maharbal #0" = 50
+	"Mattan #0" = 50
+	"Metallo #0" = 50
+	"Milkherem #0" = 50
+	"Milkiram #0" = 50
+	"Paltibaal #0" = 50
+	"Philosir #0" = 50
+	"al-Nasr #0" = 20
+	"al-Mu'azzam #0" = 20
+	"al-Salih #0" = 20
+	"al-'Adil #0" = 20
+	"al-Kamil #0" = 20
+	"al-Ashraf #0" = 20
+	"al-Afdal #0" = 15
+	"Tadj #0" = 10
+	"Mujir ud-Din #0" = 10
+	"Djamal ud-Din #0" = 10
+	"Shihab ud-Din #0" = 10
+	"Shams #0" = 10
+	"Saif #0" = 10
+	"'Abbas #0" = 0
+	"'Abd al-Rahman #0" = 0
+	"Anwar #0" = 0
+	"Atuf #0" = 0
+	"Bakr #0" = 0
+	"Fahd #0" = 0
+	"Hakim #0" = 0
+	"Harun #0" = 0
+	"Hikmat #0" = 0
+	"Hisham #0" = 0
+	"Husayn #0" = 0
+	"Isma'il #0" = 0
+	"Jafar #0" = 0
+	"Jamaal #0" = 0
+	"Karim #0" = 0
+	"Malîk #0" = 0
+	"Mirza #0" = 0
+	"Muhammad #0" = 0
+	"Rashîd #0" = 0
+	"Rusul #0" = 0
+	"Shimun #0" = 0
+	"Tarîq #0" = 0
+	"Usama #0" = 0
+	"Yasir #0" = 0
+	"Yusuf #0" = 0
+	"Zaid #0" = 0
+	"Zîyad #0" = 0
+	
+	"Ihsan #0" = -1
+	"Marwa #0" = -1
+	"Fatima #0" = -1
+	"Aisha #0" = -1
+	"Abdosir #0" = -5
+	"Arishat #0" = -5
+	"Astarte #0" = -5
+	"Batnoam #0" = -5
+	"Dido #0" = -5
+	"Shayna #0" = -5
+	"Sophonisba #0" = -5
+	"Tamar #0" = -5
+}
+
+leader_names = {
+	Damad
+	Esad
+	Farhad
+	Hafiz
+	Fazil
+	Ismail
+	Mehmed
+	Murad
+	Nasuh
+	Osman
+	Salih
+	Sinan
+	
+	Abbarid
+	Adonibaalid
+	Ahiromid
+	Baalhannid
+	Baalid
+	Barcid
+	Bostarid
+	Chelbesid
+	Eshbaalid
+	Eugorid
+	Hannid
+	Hiramid
+	Magoid
+	Mattanid
+	Metallid 
+	Milkiramid
+	Philosirid
+}
+
+ship_names = {
+	Arif
+	Azmi
+	Dervish
+	Fuad
+	Haci
+	Haydar
+	Mulish
+	Nuri
+	Salih
+	Said
+	Sefveti
+	Shukri
+}

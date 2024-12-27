@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = burgundian
+capital = 193	# Franche-Comté
+fixed_capital = 193 # Cannot move capital away from this province & no power cost to move to it

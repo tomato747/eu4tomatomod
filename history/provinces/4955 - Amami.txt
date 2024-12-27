@@ -1,0 +1,26 @@
+#4955 - Amami
+
+owner = RYU
+controller = RYU
+culture = okinawan
+religion = animism
+capital = "Amami"
+trade_goods = fish
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = RYU
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1542.1.1 = { discovered_by = POR }
+1624.1.1 = {
+	religion = shinto
+	owner = SMZ
+	controller = SMZ
+} # The Amami islands are annexed

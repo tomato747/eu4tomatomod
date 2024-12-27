@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = ligurian
+add_accepted_culture = greek
+religion = catholic
+technology_group = western
+capital = 4700	# Lesbos
+fixed_capital = 4700 # Cannot move capital away from this province & no power cost to move to it
+
+# Dukes of Naxos
+1428.1.1 = {
+	monarch = {
+		name = "Dorino I"
+		dynasty = "Gattilusio"
+		birth_date = 1390.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

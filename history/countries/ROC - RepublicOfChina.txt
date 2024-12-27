@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = republic_of_china_provisional_reform
+technology_group = chinese
+religion = confucianism
+primary_culture = jianghuai
+capital = 682	#Wuchang

@@ -1,0 +1,37 @@
+supply_hub = {
+    cost = 500                # Cost of the building in ducats
+    time = 24             # Time (in months) that it takes to construct the building
+    make_obsolete = <building>  # Optional, makes listed building obsolete when this building is constructed
+    
+    one_per_country = no           # Optional, limits construction to one per country
+    allow_in_gold_provinces = yes    # Optional, whether this building can be built in Gold producing provinces
+    indestructible = no            # Optional, exempts this building from being destroyed via bankruptcy
+    onmap = no                     # Optional, whether this building should display a 3D map model
+    influencing_fort = no          # Optional, whether this building operates like a fort
+    show_separate = no             # Optional, whether a manufactory will be shown separably in the building menu or merged into one manufactory entry
+ 
+	
+    build_trigger = {
+        ROOT = {
+			OR = {
+				development = 20
+				AND = {
+					development = 10
+					OR = {
+						trade_goods = grain
+						trade_goods = fish
+						trade_goods = livestock
+					}
+				}
+			}
+		}
+    }
+
+	modifier = {
+        supply_limit_modifier = 0.50
+    }
+	
+    ai_will_do = {
+        factor = 0.5
+    }
+}

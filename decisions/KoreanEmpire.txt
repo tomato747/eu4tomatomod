@@ -1,0 +1,189 @@
+country_decisions = {
+
+	korean_empire_decision = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = proclaimed_korean_empire_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			tag = KOR
+			culture_group = korean_g
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				AND = {
+					current_age = age_of_revolutions
+					OR = {
+						development_in_provinces = {
+							value = 300
+							region = korea_region
+						}
+						total_development = 500
+					}
+					custom_trigger_tooltip = {
+						tooltip = not_subject.tooltip
+						NOT = {
+							is_subject_of_type = vassal
+							is_subject_of_type = march
+							is_subject_of_type = daimyo_vassal
+							is_subject_of_type = appanage
+							is_subject_of_type = personal_union
+							is_subject_of_type = client_vassal
+							is_subject_of_type = client_march
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+							is_subject_of_type = tributary_state
+							is_subject_of_type = eyalet
+							is_subject_of_type = core_eyalet
+							is_subject_of_type = commercial_enterprise
+							is_subject_of_type = trade_protectorate
+							is_subject_of_type = hereditary_pronoia_subject_type
+							is_subject_of_type = pronoia_subject_type
+							is_subject_of_type = cultural_sphere_of_influence_subject
+							is_subject_of_type = theodoro_personal_union
+							is_subject_of_type = incorporated_vassal
+							is_subject_of_type = nahuatl_tributary
+							is_subject_of_type = european_colony
+							is_subject_of_type = mongol_brother_realm
+							is_subject_of_type = integrated_personal_union
+							is_subject_of_type = soyurghal_subject_type
+						}
+					}
+				}
+				AND = {
+					current_age = age_of_absolutism
+					OR = {
+						development_in_provinces = {
+							value = 400
+							region = korea_region
+						}
+						total_development = 750
+					}
+					custom_trigger_tooltip = {
+						tooltip = not_subject.tooltip
+						NOT = {
+							is_subject_of_type = vassal
+							is_subject_of_type = march
+							is_subject_of_type = daimyo_vassal
+							is_subject_of_type = appanage
+							is_subject_of_type = personal_union
+							is_subject_of_type = client_vassal
+							is_subject_of_type = client_march
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+							is_subject_of_type = tributary_state
+							is_subject_of_type = eyalet
+							is_subject_of_type = core_eyalet
+							is_subject_of_type = commercial_enterprise
+							is_subject_of_type = trade_protectorate
+							is_subject_of_type = hereditary_pronoia_subject_type
+							is_subject_of_type = pronoia_subject_type
+							is_subject_of_type = cultural_sphere_of_influence_subject
+							is_subject_of_type = theodoro_personal_union
+							is_subject_of_type = incorporated_vassal
+							is_subject_of_type = nahuatl_tributary
+							is_subject_of_type = european_colony
+							is_subject_of_type = mongol_brother_realm
+							is_subject_of_type = integrated_personal_union
+							is_subject_of_type = soyurghal_subject_type
+						}
+					}
+				}
+				AND = {
+					OR = {
+						development_in_provinces = {
+							value = 500
+							region = korea_region
+						}
+						total_development = 1000
+					}
+					custom_trigger_tooltip = {
+						tooltip = not_subject.tooltip
+						NOT = {
+							is_subject_of_type = vassal
+							is_subject_of_type = march
+							is_subject_of_type = daimyo_vassal
+							is_subject_of_type = appanage
+							is_subject_of_type = personal_union
+							is_subject_of_type = client_vassal
+							is_subject_of_type = client_march
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+							is_subject_of_type = tributary_state
+							is_subject_of_type = eyalet
+							is_subject_of_type = core_eyalet
+							is_subject_of_type = commercial_enterprise
+							is_subject_of_type = trade_protectorate
+							is_subject_of_type = hereditary_pronoia_subject_type
+							is_subject_of_type = pronoia_subject_type
+							is_subject_of_type = cultural_sphere_of_influence_subject
+							is_subject_of_type = theodoro_personal_union
+							is_subject_of_type = incorporated_vassal
+							is_subject_of_type = nahuatl_tributary
+							is_subject_of_type = european_colony
+							is_subject_of_type = mongol_brother_realm
+							is_subject_of_type = integrated_personal_union
+							is_subject_of_type = soyurghal_subject_type
+						}
+					}
+				}
+			}
+			NOT = { government_rank = 3 }
+		}
+		provinces_to_highlight = {
+			region = korea_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { culture_group = korean_g }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			korea_region = {
+				type = all
+				owned_by = ROOT
+				culture_group = korean_g
+			}
+			OR = {
+				legitimacy = 100
+				power_projection = 50
+			}
+		}
+		effect = {
+			add_government_reform = korean_empire
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_government_rank = 3
+			add_prestige = 25
+			set_country_flag = proclaimed_korean_empire_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

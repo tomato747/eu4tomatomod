@@ -1,0 +1,27 @@
+#5003 - Kobe
+
+owner = YMN
+controller = YMN
+culture = japanese
+religion = shinto
+capital = "Fukuhara"
+trade_goods = chinaware
+hre = no
+base_tax = 3
+base_manpower = 3
+base_production = 3
+is_city = yes
+add_core = YMN
+add_core = AKM
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+extra_cost = 8
+center_of_trade = 1
+
+1542.1.1 = { discovered_by = POR }
+1569.12.1 = { add_core = ODA owner = ODA controller = ODA }
+1580.1.1 = { remove_core = YMN }
+1615.6.4 = { add_core = TKG owner = TKG controller = TKG remove_core = TKG fort_16th = no }

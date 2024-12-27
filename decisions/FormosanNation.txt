@@ -1,0 +1,57 @@
+#country_decisions = {
+
+	formosan_kingdom = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = FRM }
+			tag = MDG
+			is_emperor_of_china = no
+			NOT = { has_country_flag = is_kingdom_of_formosa }
+			primary_culture = formosan
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			taiwan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_taiwan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			override_country_name = KINGDOM_OF_FORMOSA
+			set_country_flag = is_kingdom_of_formosa
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,21 @@
+#5026 - Hsinchu
+
+culture = formosan
+religion = animism
+capital = "Teukcham"
+trade_goods = unknown
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+native_size = 60
+native_ferocity = 1
+native_hostileness = 5
+
+
+
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG

@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = merchants_reform
+government = republic
+add_government_reform = oligarchy_reform
+government_rank = 1
+primary_culture = ligurian
+religion = catholic
+technology_group = western
+capital = 2992	# Albenga
+fixed_capital = 2992 # Cannot move capital away from this province & no power cost to move to it

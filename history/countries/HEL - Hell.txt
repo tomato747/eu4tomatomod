@@ -1,0 +1,23 @@
+government = theocracy
+add_government_reform = court_of_the_sevenheaded_serpent_reform
+government_rank = 2
+primary_culture = trench_crusade_demonic
+religion = catholic
+technology_group = western
+capital = 379	# Desecrated Jerusalem
+add_army_professionalism = 0.05
+
+add_country_modifier = { 
+    name = invasion_nation
+    duration = -1
+}
+
+1.1.1= {
+	monarch = {
+		name = "Court of the Seven-headed Serpent"
+		adm = 666
+		dip = 666
+		mil = 666
+		regent = yes
+	}
+}

@@ -1,0 +1,18 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+technology_group = western
+primary_culture = schlesian
+religion = catholic
+capital = 264
+
+1437.1.1 = {
+	monarch = {
+		name = "Konrad IV"
+		dynasty = "Piast"
+		birth_date = 1384.1.1
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}

@@ -1,0 +1,24 @@
+spriteTypes = {
+
+### CANALS ###
+	spriteType = {
+		name = "GFX_great_project_lachine_canal"	
+		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_welland_canal"	
+		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_st_marys_falls_canal"	
+		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_volga_don_canal"	
+		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_kra_canal"	
+		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
+	}
+}

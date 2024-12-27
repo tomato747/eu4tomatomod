@@ -1,0 +1,1488 @@
+#################
+#BUILD UP TAIWAN#
+#################
+tungning_taiwan_missions_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_subdue_middag = {
+        icon = mission_chinese_general_riding
+        position = 2
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_secure_taiwan
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				owned_by = MDG
+				province_id = 2155
+			}
+        }
+    
+        trigger = {
+			NOT = { exist = MDG }
+			owns_or_non_sovereign_subject_of = 2155
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_middag_subdued"
+				duration = 7300
+			}
+        }
+    }
+    
+    FRM_taiwan_powerbase = {
+        icon = mission_chinese_general_riding
+        position = 3
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_subdue_middag
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+        }
+    
+        trigger = {
+			738 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 10
+			}
+			2154 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 10
+			}
+			2155 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 10
+			}
+			5025 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 10
+			}
+			5026 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 10
+			}
+        }
+        
+        effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = taiwan_area
+						area = north_taiwan_area
+					}
+				}
+				add_province_modifier = {
+					name = "FRM_powerbase"
+					duration = 3650
+				}
+				add_random_development = 1
+			}
+        }
+    }
+    
+    FRM_educated = {
+        icon = mission_chinese_general_riding
+        position = 5
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_taiwan_powerbase
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+        }
+    
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = university
+				}
+				amount = 5
+			}
+		}
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_university"
+				duration = -1
+			}
+        }
+    }
+}
+
+tungning_taiwan_missions_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_taiwanese_identity = {
+        icon = mission_chinese_general_riding
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_taiwan_powerbase FRM_settle_western_plains
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+        }
+    
+        trigger = {
+			738 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 12
+				NOT = { local_autonomy_above_min = 1 }
+			}
+			2154 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 12
+				NOT = { local_autonomy_above_min = 1 }
+			}
+			2155 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 12
+				NOT = { local_autonomy_above_min = 1 }
+			}
+			5025 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 12
+				NOT = { local_autonomy_above_min = 1 }
+			}
+			5026 = {
+				culture_group = east_asian
+				has_owner_religion = yes
+				development = 12
+				NOT = { local_autonomy_above_min = 1 }
+			}
+        }
+        
+        effect = {
+			ROOT = {
+				country_event = { 
+					id = frm_missions.1
+				}
+			}
+        }
+    }
+}
+
+tungning_taiwan_missions_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_secure_taiwan = {
+        icon = mission_chinese_general_riding
+        position = 1
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			province_id = 738
+        }
+    
+        trigger = {
+			ROOT = {
+				owns_core_province = 738
+				army_size_percentage = 0.5
+				navy_size_percentage = 0.5
+			}
+			738 = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				feudalism = 100
+			}
+        }
+        
+        effect = {
+			738 = {
+				add_province_modifier = {
+					name = "FRM_taiwan_secured_prov"
+					duration = 3650
+				}
+			}
+			ROOT = {
+				add_country_modifier = {
+					name = "FRM_taiwan_secured_tag"
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+    FRM_settle_western_plains = {
+        icon = mission_chinese_general_riding
+        position = 3
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_secure_taiwan
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 738
+				province_id = 2154
+				province_id = 2155
+				province_id = 5025
+				province_id = 5026
+			}
+			NOT = { owned_by = ROOT }
+        }
+    
+        trigger = {
+			ROOT = {
+				owns_or_non_sovereign_subject_of = 738
+				owns_or_non_sovereign_subject_of = 2154
+				owns_or_non_sovereign_subject_of = 2155
+				owns_or_non_sovereign_subject_of = 5025
+				owns_or_non_sovereign_subject_of = 5026
+			}
+        }
+        
+        effect = {
+			738 = {
+				add_province_modifier = {
+					name = "FRM_western_plains_settled_prov"
+					duration = 3650
+				}
+			}
+			2154 = {
+				add_province_modifier = {
+					name = "FRM_western_plains_settled_prov"
+					duration = 3650
+				}
+			}
+			2155 = {
+				add_province_modifier = {
+					name = "FRM_western_plains_settled_prov"
+					duration = 3650
+				}
+			}
+			5025 = {
+				add_province_modifier = {
+					name = "FRM_western_plains_settled_prov"
+					duration = 3650
+				}
+			}
+			5026 = {
+				add_province_modifier = {
+					name = "FRM_western_plains_settled_prov"
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+    FRM_beyond_mountains = {
+        icon = mission_chinese_general_riding
+        position = 5
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_settle_western_plains
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 5023
+				province_id = 5024
+			}
+			NOT = { owned_by = ROOT }
+        }
+    
+        trigger = {
+			ROOT = {
+				owns_or_non_sovereign_subject_of = 5023
+				owns_or_non_sovereign_subject_of = 5024
+			}
+        }
+        
+        effect = {
+			5023 = {
+				add_province_modifier = {
+					name = "FRM_mountain_colonised"
+					duration = 3650
+				}
+			}
+			5024 = {
+				add_province_modifier = {
+					name = "FRM_mountain_colonised"
+					duration = 3650
+				}
+			}
+        }
+    }
+	
+    FRM_taiwan_industrialise = {
+        icon = mission_chinese_general_riding
+        position = 6
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_beyond_mountains FRM_resources FRM_taiwan_prosperity FRM_educated
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+        }
+    
+        trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+					OR = {
+						area = taiwan_area
+						area = north_taiwan_area
+					}
+				}
+				amount = 4
+			}
+			taiwan_area = {
+				type = all
+				has_building = workshop
+			}
+			north_taiwan_area = {
+				type = all
+				has_building = workshop
+			}
+        }
+        
+        effect = {
+			taiwan_area = {
+				add_province_modifier = {
+					name = "FRM_taiwan_industrialised"
+					duration = -1
+				}
+			}
+			north_taiwan_area = {
+				add_province_modifier = {
+					name = "FRM_taiwan_industrialised"
+					duration = -1
+				}
+			}
+        }
+    }
+}
+
+tungning_taiwan_missions_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_taipei = {
+        icon = mission_chinese_general_riding
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_settle_western_plains
+        }
+        
+        provinces_to_highlight = {
+			province_id = 2154
+        }
+    
+        trigger = {
+			2154 = {
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 3
+				NOT = { devastation = 1 }
+			}
+        }
+        
+        effect = {
+			2154 = {
+				add_center_of_trade_level = 1
+				add_random_development = 1
+				add_province_modifier = {
+					name = "FRM_taipei_growth"
+					duration = 3650
+				}
+				add_province_modifier = {
+					name = "FRM_taipei_city"
+					duration = -1
+				}
+			}
+        }
+    }
+    
+    FRM_resources = {
+        icon = mission_chinese_general_riding
+        position = 5
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_taipei
+        }
+        
+        provinces_to_highlight = {
+			province_id = 2154
+        }
+    
+        trigger = {
+			2154 = {
+				base_production = 10
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+        }
+        
+        effect = {
+			ROOT = {
+				country_event = { 
+					id = frm_missions.2
+				}
+			}
+        }
+    }
+}
+
+tungning_taiwan_missions_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_anping = {
+        icon = mission_chinese_general_riding
+        position = 2
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_secure_taiwan
+        }
+        
+        provinces_to_highlight = {
+			province_id = 738
+        }
+    
+        trigger = {
+			738 = {
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 3
+				NOT = { devastation = 1 }
+			}
+        }
+        
+        effect = {
+			738 = {
+				add_center_of_trade_level = 1
+				add_random_development = 1
+				add_province_modifier = {
+					name = "FRM_anping_growth"
+					duration = 3650
+				}
+			}
+        }
+    }
+    
+    FRM_taiwan_prosperity = {
+        icon = mission_chinese_general_riding
+        position = 5
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_taipei FRM_anping
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+        }
+    
+        trigger = {
+			taiwan_area = {
+				type = all
+				is_prosperous = yes
+				NOT = { unrest = 1 }
+			}
+			north_taiwan_area = {
+				type = all
+				is_prosperous = yes
+			}
+			desc = FRM_taiwan_prosperity_tooltip
+        }
+        
+        effect = {
+			taiwan_area = {
+				add_province_modifier = {
+					name = "FRM_taiwan_prosperous"
+					duration = 7300
+				}
+			}
+			north_taiwan_area = {
+				add_province_modifier = {
+					name = "FRM_taiwan_prosperous"
+					duration = 7300
+				}
+			}
+        }
+    }
+}
+##################
+#RECLAIM MAINLAND#
+##################
+
+tungning_mainland_missions_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_japan_ties = {
+        icon = mission_chinese_general_riding
+        position = 7
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			region = japan_region
+        }
+    
+        trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = FRM_japanese_ties.tooltip
+					calc_true_if = {
+						any_country = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+							NOT = { tag = RYU }
+							OR = {
+								primary_culture = togoku
+								primary_culture = japanese
+								primary_culture = kyushuan
+								primary_culture = hachijo
+							}
+							OR = {
+								has_reform = shogunate
+								has_reform = daimyo
+								has_reform = indep_daimyo
+								AND = {
+									tag = SOO
+									has_reform = pirate_republic_reform
+								}
+							}
+						}
+						amount = 1
+					}
+				}
+				owns_core_province = 1020
+			}
+        }
+        
+        effect = {
+			if = {
+				limit = {
+					owns_core_province = 1020
+				}
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+			random_country = {
+				limit = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					NOT = { tag = RYU }
+					OR = {
+						primary_culture = togoku
+						primary_culture = japanese
+						primary_culture = kyushuan
+						primary_culture = hachijo
+					}
+					OR = {
+						has_reform = shogunate
+						has_reform = daimyo
+						has_reform = indep_daimyo
+						AND = {
+							tag = SOO
+							has_reform = pirate_republic_reform
+						}
+					}
+				}
+				country_event = { 
+					id = frm_missions.3
+				}
+			}
+			capital_scope = {
+				samurai_infantry = ROOT
+				samurai_infantry = ROOT
+				samurai_infantry = ROOT
+				samurai_infantry = ROOT
+				samurai_infantry = ROOT
+			}
+        }
+    }
+}
+
+tungning_mainland_missions_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_fortify_amoy = {
+        icon = mission_chinese_general_riding
+        position = 7
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			province_id = 4984
+        }
+    
+        trigger = {
+			owns_core_province = 4984
+			4984 = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+        }
+        
+        effect = {
+			4984 = {
+				add_province_modifier = {
+					name = "FRM_amoy_stronghold"
+					duration = -1
+				}
+			}
+			country_event = { 
+				id = frm_missions.6
+			}
+			fujian_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+			ming_deng_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+			upper_fukien_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+			1821 = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+        }
+    }
+    
+    FRM_conquer_hokkien = {
+        icon = mission_chinese_general_riding
+        position = 8
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_fortify_amoy FRM_japan_ties FRM_sea_barbarian
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = fujian_area
+				area = ming_deng_area
+				area = upper_fukien_area
+			}
+        }
+    
+        trigger = {
+			fujian_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ming_deng_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_fukien_area = {
+				type = all
+				owned_by = ROOT
+			}
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_reconquest_hokkien"
+				duration = 3650
+			}
+			fujian_area = {
+				add_province_modifier = {
+					name = "FRM_mainland_loyalists"
+					duration = 3650
+				}
+			}
+			ming_deng_area = {
+				add_province_modifier = {
+					name = "FRM_mainland_loyalists"
+					duration = 3650
+				}
+			}
+			upper_fukien_area = {
+				add_province_modifier = {
+					name = "FRM_mainland_loyalists"
+					duration = 3650
+				}
+			}
+			south_china_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+	
+    FRM_defeat_traitors = {
+        icon = mission_chinese_general_riding
+        position = 9
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_conquer_hokkien
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				owned_by = CSH
+				owned_by = CXI
+			}
+        }
+    
+        trigger = {
+			NOT = { exist = CSH }
+			NOT = { exist = CXI }
+			custom_trigger_tooltip = {
+				tooltip = FRM_defeat_traitors.tooltip
+				NOT = {
+					calc_true_if = {
+						any_country = {
+							culture_group = east_asian
+							OR = {
+								has_reform = chinese_warlord
+								has_reform = celestial_empire
+							}
+							NOT = { dynasty = Zhu }
+							NOT = { dynasty = ROOT }
+						}
+						amount = 1
+					}
+				}
+			}
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_traitors_defeated"
+				duration = 3650
+			}
+        }
+    }
+}
+
+tungning_mainland_missions_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_sea_barbarian = {
+        icon = mission_chinese_general_riding
+        position = 7
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = FRM_europeans_ties.tooltip
+					OR = {
+						calc_true_if = {
+							any_country = {
+								has_opinion = {
+									who = ROOT
+									value = 100
+								}
+								OR = {
+									technology_group = western
+									technology_group = eastern
+								}
+							}
+							amount = 1
+						}
+						calc_true_if = {
+							any_country = {
+								is_rival = ROOT
+								OR = {
+									technology_group = western
+									technology_group = eastern
+								}
+							}
+							amount = 1
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+				tooltip = FRM_owns_european.tooltip
+					calc_true_if = {
+						any_province = {
+							owned_by = ROOT
+							continent = europe
+						}
+						amount = 1
+					}
+				}
+			}
+        }
+        
+        effect = {
+			random_country = {
+				limit = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					OR = {
+						technology_group = western
+						technology_group = eastern
+					}
+				}
+				country_event = { 
+					id = frm_missions.3
+				}
+			}
+			capital_scope = {
+				tercio_infantry = ROOT
+				tercio_infantry = ROOT
+				tercio_infantry = ROOT
+				tercio_infantry = ROOT
+				tercio_infantry = ROOT
+			}
+			luzon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_luzon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    
+    FRM_invade_luzon = {
+        icon = mission_chinese_general_riding
+        position = 8
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_sea_barbarian FRM_tungning_armada
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = luzon_area
+				area = southern_luzon_area
+			}
+        }
+    
+        trigger = {
+			luzon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			southern_luzon_area = {
+				type = all
+				owned_by = ROOT
+			}
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_luzon_straits"
+				duration = 3650
+			}
+			luzon_area = {
+				add_province_modifier = {
+					name = "FRM_luzon"
+					duration = 3650
+				}
+			}
+			southern_luzon_area = {
+				add_province_modifier = {
+					name = "FRM_luzon"
+					duration = 3650
+				}
+			}
+			mindanao_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_mindanao_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			visayas_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			palawan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    
+    FRM_south_china = {
+        icon = mission_chinese_general_riding
+        position = 9
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_conquer_hokkien FRM_conquer_nanking
+        }
+        
+        provinces_to_highlight = {
+			region = south_china_region
+        }
+    
+        trigger = {
+			south_china_region = {
+				type = all
+				owned_by = ROOT
+			}
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_south_china_liberated"
+				duration = 3650
+			}
+			south_china_region = {
+				add_province_modifier = {
+					name = "FRM_mainland_loyalists"
+					duration = 3650
+				}
+			}
+			china_superregion = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    
+    FRM_restore_ming = {
+        icon = mission_chinese_general_riding
+        position = 10
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_south_china FRM_defeat_traitors FRM_ming_successor
+        }
+        
+        provinces_to_highlight = {
+			region = south_china_region
+        }
+    
+        trigger = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1821	# Jiangning
+			owns_core_province = 1816	# Beiping
+			OR = {
+				is_emperor_of_china = yes
+				AND = {
+					owns_core_province = 667	# Canton
+					owns_core_province = 669	# Fukchiu
+					owns_core_province = 4984	# Amoy
+					owns_core_province = 2164	# Namning
+					owns_core_province = 684	# Hongchow
+					owns_core_province = 683	# Nanchang
+					owns_core_province = 671	# Changsha
+					owns_core_province = 674	# Guiyang
+					owns_core_province = 662	# Yunnan
+					owns_core_province = 679	# Chengdu
+					owns_core_province = 680	# Chongqing
+					owns_core_province = 682	# Wuchang
+					owns_core_province = 1838	# Hefei
+					owns_core_province = 4995	# Shanghai
+					owns_core_province = 688	# Kaifeng
+					owns_core_province = 1836	# Luoyang
+					owns_core_province = 700	# Xi'an
+					owns_core_province = 699	# Lanzhou
+					owns_core_province = 691	# Jinan
+					owns_core_province = 693	# Taiyuan
+				}
+			}
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				superregion = china_superregion
+				value = 50
+			}
+        }
+        
+        effect = {
+			country_event = { 
+				id = frm_missions.7
+			}
+        }
+    }
+}
+
+tungning_mainland_missions_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_tungning_armada = {
+        icon = mission_chinese_general_riding
+        position = 7
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			num_of_transport = 20
+			num_of_heavy_ship = 10
+			num_of_galley = 30
+			num_of_admirals = 1
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "FRM_armada"
+				duration = 7300
+			}
+        }
+    }
+    
+    FRM_conquer_nanking = {
+        icon = mission_chinese_general_riding
+        position = 8
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_tungning_armada FRM_ming_princes
+        }
+        
+        provinces_to_highlight = {
+			province_id = 1821
+        }
+    
+        trigger = {
+			1821 = {
+				type = all
+				controlled_by = ROOT
+			}
+        }
+        
+        effect = {
+			1821 = {
+				cede_province = ROOT
+				add_core = ROOT
+				add_province_modifier = {
+					name = "FRM_mainland_loyalists"
+					duration = 3650
+				}
+			}
+			country_event = { 
+				id = frm_missions.9
+			}
+			south_china_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "FRM_reconquest_nanking"
+				duration = 3650
+			}
+        }
+    }
+}
+
+tungning_mainland_missions_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        tag = FRM
+    }
+    
+    FRM_ming_princes = {
+        icon = mission_chinese_general_riding
+        position = 7
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			custom_trigger_tooltip = {
+				tooltip = FRM_ming_princes.tooltip
+				calc_true_if = {
+					any_country = {
+						OR = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+							is_rival = ROOT
+						}
+						dynasty = "Zhu"
+						OR = {
+							tag = TNG
+							tag = Fuk
+							tag = LOO
+							tag = LUU
+							tag = YIK
+							tag = TSK
+							tag = KWI
+						}
+					}
+					amount = 1
+				}
+			}
+        }
+        
+        effect = {
+			random_country = {
+				limit = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					dynasty = "Zhu"
+					OR = {
+						tag = TNG
+						tag = Fuk
+						tag = LOO
+						tag = LUU
+						tag = YIK
+						tag = TSK
+						tag = KWI
+					}
+				}
+				country_event = { 
+					id = frm_missions.3
+				}
+			}
+			add_prestige = 25
+			add_legitimacy = 10
+			add_meritocracy = 10
+        }
+    }
+    
+    FRM_ming_successor = {
+        icon = mission_chinese_general_riding
+        position = 9
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            FRM_ming_princes FRM_conquer_nanking
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			custom_trigger_tooltip = {
+				tooltip = FRM_ming_successor.tooltip
+				NOT = {
+					calc_true_if = {
+						any_country = {
+							OR = {
+								dynasty = "Zhu"
+								tag = TNG
+								tag = Fuk
+								tag = LOO
+								tag = LUU
+								tag = YIK
+								tag = TSK
+								tag = KWI
+							}
+							total_development = ROOT
+						}
+						amount = 1
+					}
+				}
+			}
+        }
+        
+        effect = {
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							dynasty = "Zhu"
+							NOT = { tag = MNG }
+						}
+						tag = TNG
+						tag = Fuk
+						tag = LOO
+						tag = LUU
+						tag = YIK
+						tag = TSK
+						tag = KWI
+					}
+				}
+				country_event = { 
+					id = frm_missions.10
+				}
+			}
+        }
+    }
+}

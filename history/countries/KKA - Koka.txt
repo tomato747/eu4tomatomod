@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = daimyo
+#add_government_reform = ikko_ikki_republic_reform
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = chinese
+capital = 4973	# Koka

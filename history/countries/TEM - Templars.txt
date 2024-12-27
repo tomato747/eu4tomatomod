@@ -1,0 +1,35 @@
+government = theocracy
+add_government_reform = monastic_order_reform
+government_rank = 1
+primary_culture = occitain
+religion = catholic
+technology_group = western
+capital = 379 # Jerusalem
+historical_friend = VEN
+historical_friend = KNI
+historical_friend = TEU
+historical_friend = LIV
+historical_rival = PAP
+historical_rival = FRA
+add_army_professionalism = 0.1
+
+1240.1.1 = {
+	monarch = {
+		name = "Jacques de Molay"
+		birth_date = 1292.4.16
+		death_date = 1312.3.18
+		culture = cosmopolitan_french
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+1312.3.18= {
+	monarch = {
+		name = "No Ruler"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

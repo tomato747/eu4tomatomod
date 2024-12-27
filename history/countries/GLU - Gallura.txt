@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+religion = catholic
+primary_culture = sardinian
+capital = 5012	# Tarranoa
+fixed_capital = 5012 # Cannot move capital away from this province & no power cost to move to it

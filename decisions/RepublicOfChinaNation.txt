@@ -1,0 +1,156 @@
+country_decisions = {
+
+	RepublicOfChina_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_china_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ROC }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { has_saved_global_event_target = EmperorOfChina }
+			has_parliament = no
+			is_emperor_of_china = no
+			government = republic
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 30
+					adm_tech = 18
+				}
+			}
+			OR = {
+				primary_culture = cantonese
+				primary_culture = chihan
+				primary_culture = ping_culture
+				primary_culture = tanka
+				primary_culture = jin
+				primary_culture = wu
+				primary_culture = huizhou_culture
+				primary_culture = chimin
+				primary_culture = hakka
+				primary_culture = gan
+				primary_culture = xiang
+				primary_culture = sichuanese
+				primary_culture = jianghuai
+				primary_culture = xibei
+				primary_culture = hubei
+				primary_culture = zhongyuan
+				primary_culture = shandong_culture
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			superregion = china_superregion
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 18
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 667	# Canton
+			owns_core_province = 669	# Fukchiu
+			owns_core_province = 4984	# Amoy
+			owns_core_province = 2164	# Namning
+			owns_core_province = 684	# Hongchow
+			owns_core_province = 683	# Nanchang
+			owns_core_province = 671	# Changsha
+			owns_core_province = 674	# Guiyang
+			owns_core_province = 662	# Yunnan
+			owns_core_province = 679	# Chengdu
+			owns_core_province = 680	# Chongqing
+			owns_core_province = 682	# Wuchang
+			owns_core_province = 1838	# Hefei
+			owns_core_province = 1821	# Jiangning
+			owns_core_province = 4995	# Shanghai
+			owns_core_province = 688	# Kaifeng
+			owns_core_province = 1836	# Luoyang
+			owns_core_province = 700	# Xi'an
+			owns_core_province = 699	# Lanzhou
+			owns_core_province = 691	# Jinan
+			owns_core_province = 693	# Taiyuan
+			owns_core_province = 1816	# Beiping
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				superregion = china_superregion
+				value = 50
+			}
+		}
+		effect = {
+			change_tag = ROC
+			restore_country_name_effect = yes
+			if = {
+				limit = {
+					is_elector = no
+					is_emperor = no
+					OR = {
+						is_part_of_hre = yes
+						any_owned_province = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				set_in_empire = no
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			hidden_effect = { set_government_rank = 3 }
+			add_government_reform = republic_of_china_provisional_reform
+			china_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROC
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_china_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 18 }
+			}
+		}
+	}
+}

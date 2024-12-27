@@ -1,0 +1,66 @@
+country_decisions = {
+
+	restore_templars = {
+		major = yes
+		potential = {
+			NOT = { tag = KOJ }
+			NOT = { tag = TEM }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			religion = catholic
+			NOT = { government = republic }
+			NOT = { has_reform = celestial_empire }
+			owns = 379
+			OR = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 379 #Jerusalem
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 379 #Jerusalem
+		}
+		effect = {
+			add_prestige = 25
+			379 = {
+				change_religion = catholic
+				add_core = TEM
+				cede_province = TEM
+			}
+			TEM = { change_primary_culture = ROOT }
+			TEM = {
+				set_capital = 379 #Jerusalem
+				change_religion = catholic
+				add_government_reform = monastic_order_reform
+				swap_non_generic_missions = yes
+				update_mission_previews = yes
+			}
+			if = {
+				limit = {
+					ROOT = { tag = PAP }
+				}
+				TEM = { remove_historical_rival = PAP }
+			}
+			if = {
+				limit = {
+					ROOT = { tag = FRA }
+				}
+				TEM = { remove_historical_rival = FRA }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

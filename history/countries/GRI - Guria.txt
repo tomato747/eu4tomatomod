@@ -1,0 +1,15 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = georgian
+religion = orthodox
+technology_group = eastern
+capital = 2196 # Guria
+
+1390.1.1 = {
+	every_province = {
+		limit = { region = persia_region }
+		ROOT = { discover_province = PREV }
+	}
+	discover_province = 4170 
+	discover_province = 4172
+}

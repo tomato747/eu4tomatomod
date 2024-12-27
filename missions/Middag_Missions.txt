@@ -1,0 +1,108 @@
+middag_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		
+	}
+	potential = {
+		tag = MDG
+	}
+	has_country_shield = yes
+	
+	mdg_develop = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {  }
+		position = 1
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.60
+			ROOT = {
+				capital_scope = {
+					num_of_times_improved_by_owner = 5
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				capital_scope = {
+					add_country_modifier = {
+						name = "mdg_develop_modifier"
+						duration = 7300
+					}
+				}
+			}
+			taiwan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_taiwan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mdg_unite_island = {
+		icon = dutch_formosa
+		required_missions = { mdg_develop }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+			}
+		}
+		trigger = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			taiwan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_taiwan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			override_country_name = KINGDOM_OF_FORMOSA
+			set_country_flag = is_kingdom_of_formosa
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = "mdg_unite_island"
+				duration = 7300
+			}
+			fujian_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ming_deng_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_fukien_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

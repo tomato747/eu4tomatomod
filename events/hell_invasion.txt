@@ -1,0 +1,38 @@
+namespace = hell_invasion
+
+country_event = {
+	id = hell_invasion.1
+    title = "hell_invasion.1_title"
+	desc = "hell_invasion.1_desc"
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		exist = HEL
+		is_ai = yes
+		NOT = { tag = HEL }
+	}
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = HEL
+								modifier = opinion_invasion
+							}
+							tag = HEL
+						}
+					}
+					add_opinion = {
+						who = HEL
+						modifier = opinion_invasion
+					}
+				}
+			}
+		}		
+	}
+	option = {
+		name = "hell_invasion.1.a"
+		
+	}
+}

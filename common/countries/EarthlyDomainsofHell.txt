@@ -1,0 +1,198 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 138  26  18 }
+
+historical_idea_groups = {
+	administrative_ideas
+	diplomatic_ideas
+	defensive_ideas
+	religious_ideas
+	trade_ideas
+	offensive_ideas
+	economic_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Baal #0" = 10
+	"Paimon #0" = 10
+	"Beleth #0" = 10
+	"Purson #0" = 10
+	"Asmodeus #0" = 10
+	"Vine #0" = 10
+	"Balam #0" = 10
+	"Zagan #0" = 10
+	"Belial #0" = 10
+	"Amdusias #0" = 10
+	"Agares #0" = 10
+	"Valefar #0" = 10
+	"Barbatos #0" = 10
+	"Augusyon #0" = 10
+	"Eligos #0" = 10
+	"Zepar #0" = 10
+	"Bathin #0" = 10
+	"Saleos #0" = 10
+	"Aim #0" = 10
+	"Buné #0" = 10
+	"Berith #0" = 10
+	"Astaroth #0" = 10
+	"Focalor #0" = 10
+	"Vepar #0" = 10
+	"Vual #0" = 10
+	"Crocell #0" = 10
+	"Allocer #0" = 10
+	"Murmur #0" = 10
+	"Gremory #0" = 10
+	"Vapula #0" = 10
+	"Flauros #0" = 10
+	"Dantalion #0" = 10
+	"Vassago #0" = 10
+	"Sitri #0" = 10
+	"Ipos #0" = 10
+	"Gaap #0" = 10
+	"Stolas #0" = 10
+	"Orobas #0" = 10
+	"Seir #0" = 10
+	"Gamigin #0" = 10
+	"Aamon #0" = 10
+	"Leraje #0" = 10
+	"Naberius #0" = 10
+	"Ronové #0" = 10
+	"Forneus #0" = 10
+	"Marchosias #0" = 10
+	"Phenex #0" = 10
+	"Sabnock #0" = 10
+	"Shax #0" = 10
+	"Orias #0" = 10
+	"Andras #0" = 10
+	"Andrealphus #0" = 10
+	"Kimaris #0" = 10
+	"Decarabia #0" = 10
+	"Furfur #0" = 10
+	"Malthus #0" = 10
+	"Raum #0" = 10
+	"Bifrons #0" = 10
+	"Furcas #0" = 10
+	"Marbas #0" = 10
+	"Buer #0" = 10
+	"Botis #0" = 10
+	"Morax #0" = 10
+	"Glasya-Labolas #0" = 10
+	"Foras #0" = 10
+	"Malphas #0" = 10
+	"Haagenti #0" = 10
+	"Camio #0" = 10
+	"Ose #0" = 10
+	"Amy #0" = 10
+	"Valac #0" = 10
+	
+	"Baal #0" = -10
+	"Paimon #0" = -10
+	"Beleth #0" = -10
+	"Purson #0" = -10
+	"Asmodeus #0" = -10
+	"Vine #0" = -10
+	"Balam #0" = -10
+	"Zagan #0" = -10
+	"Belial #0" = -10
+	"Amdusias #0" = -10
+	"Agares #0" = -10
+	"Valefar #0" = -10
+	"Barbatos #0" = -10
+	"Augusyon #0" = -10
+	"Eligos #0" = -10
+	"Zepar #0" = -10
+	"Bathin #0" = -10
+	"Saleos #0" = -10
+	"Aim #0" = -10
+	"Buné #0" = -10
+	"Berith #0" = -10
+	"Astaroth #0" = -10
+	"Focalor #0" = -10
+	"Vepar #0" = -10
+	"Vual #0" = -10
+	"Crocell #0" = -10
+	"Allocer #0" = -10
+	"Murmur #0" = -10
+	"Gremory #0" = -10
+	"Vapula #0" = -10
+	"Flauros #0" = -10
+	"Dantalion #0" = -10
+	"Vassago #0" = -10
+	"Sitri #0" = -10
+	"Ipos #0" = -10
+	"Gaap #0" = -10
+	"Stolas #0" = -10
+	"Orobas #0" = -10
+	"Seir #0" = -10
+	"Gamigin #0" = -10
+	"Aamon #0" = -10
+	"Leraje #0" = -10
+	"Naberius #0" = -10
+	"Ronové #0" = -10
+	"Forneus #0" = -10
+	"Marchosias #0" = -10
+	"Phenex #0" = -10
+	"Sabnock #0" = -10
+	"Shax #0" = -10
+	"Orias #0" = -10
+	"Andras #0" = -10
+	"Andrealphus #0" = -10
+	"Kimaris #0" = -10
+	"Decarabia #0" = -10
+	"Furfur #0" = -10
+	"Malthus #0" = -10
+	"Raum #0" = -10
+	"Bifrons #0" = -10
+	"Furcas #0" = -10
+	"Marbas #0" = -10
+	"Buer #0" = -10
+	"Botis #0" = -10
+	"Morax #0" = -10
+	"Glasya-Labolas #0" = -10
+	"Foras #0" = -10
+	"Malphas #0" = -10
+	"Haagenti #0" = -10
+	"Camio #0" = -10
+	"Ose #0" = -10
+	"Amy #0" = -10
+	"Valac #0" = -10
+}
+
+leader_names = {
+	Baal Paimon Beleth Purson Asmodeus Vine Balam Zagan Belial
+	Amdusias Agares Valefar Barbatos Augusyon Eligos Zepar Bathin Saleos Aim Buné Berith Astaroth Focalor Vepar Vual Crocell Allocer Murmur Gremory Vapula Flauros Dantalion
+	Vassago Sitri Ipos Gaap Stolas Orobas Seir
+	Gamigin Aamon Leraje Naberius Ronové Forneus Marchosias Phenex Sabnock Shax Orias Andras Andrealphus Kimaris Decarabia
+	Furfur Malthus Raum Bifrons
+	Furcas
+	Marbas Buer Botis Morax "Glasya-Labolas" Foras Malphas Haagenti Camio Ose Amy Valac
+}
+
+ship_names = {
+	"Ferry of Styx" Luxuria Gula Greed Tristitia Ira Invidia Superbia Acedia Vainglory "Fist of Lucifer" "The Great Serpent" "Blight of Humanity" "Vengful Spirit" "Damnation Incarnate"
+	"Bane of Antioch" "The Great Pentagram" Anathema "Hell Mouth" "Tyrant of Tyrants" "Maxime Crudelis" "The forsaken Deck" "Echos of the Abyss" "Morning star" "Dawnless night" "Will of Antichrist"
+	"Mark of the Beast" "The Flying Dutchman" "Destroyer of Worlds" "The Great Degenerate" "Scourge of Solomon"
+}
+
+army_names = {
+	"The damned of $PROVINCE$"
+}
