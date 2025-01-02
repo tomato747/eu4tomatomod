@@ -5,7 +5,8 @@ country_event = {
 	id = gamestart.1
 	title = gamestart.1.t
 	desc = gamestart.1.d
-	picture = KING_DOING_GREAT_eventPicture
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
 	
 	major = yes
 	fire_only_once = yes
@@ -15,7 +16,442 @@ country_event = {
 		ai = no
 	}
 	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TomatoModActive
+			set_global_flag = ChinaSiege
+			set_global_flag = CoreSiege
+			set_global_flag = TomatoMingModded
+			set_global_flag = TomatoCultureShiftEvents
+		}
+	}
+	
 	option = {
 		name = gamestart.1.a
+	}
+}
+
+#War core cede province
+province_event = {
+	id = gamestart.2
+	title = gamestart.2.t
+	desc = gamestart.2.d
+	picture = BORDER_TENSION_eventPicture
+	
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 3.0
+			controller = {
+				ai = yes
+			}
+		}
+
+		modifier = {
+			factor = 2.0
+			controller = {
+				is_in_war = {
+					casus_belli = cb_hundred_years_union
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			controller = {
+				war_score_against = {
+					who = owner
+					value = 50
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			controller = {
+				is_neighbor_of = ROOT
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			controller = {
+				war_score_against = {
+					who = owner
+					value = 99
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			owner = {
+				war_exhaustion = 5
+			}
+		}
+	}
+	
+	trigger = {
+		has_global_flag = CoreSiege
+		is_capital = no
+		OR = {
+			is_core = controller
+			AND = {
+				has_owner_culture = no
+				controller = {
+                    is_in_war = {
+                        casus_belli = cb_nationalist
+                    }
+				}
+				culture = controller
+			}
+		}
+		NOT = { owned_by = controller }
+		owner = {
+			is_at_war = yes
+		}
+		controller = {
+			NOT = { tag = REB }
+			NOT = { tag = PIR }
+			NOT = { tag = NAT }
+			is_at_war = yes
+			if = {
+				limit = { ai = yes }
+				NOT = {
+					is_in_war = {
+						casus_belli = cb_hundred_years_union
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = gamestart.2.a
+	}
+	
+	after = {
+		cede_province = controller
+		province_event = {
+			id = gamestart.3
+			days = 1
+		}
+	}
+}
+
+#recieve notification
+province_event = {
+	id = gamestart.3
+	title = gamestart.3.t
+	desc = gamestart.3.d
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		name = gamestart.3.a
+	}
+}
+
+#Settings
+country_event = {
+	id = gamestart.4
+	title = gamestart.4.t
+	desc = gamestart.4.d
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	# Close
+	option = {
+		name = gamestart.4.a
+	}
+	
+	# China Siege Turn off
+	option = {
+		name = gamestart.4.b.a
+		trigger = {
+			has_global_flag = ChinaSiege
+		}
+		clr_global_flag = ChinaSiege
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# China Siege Turn on
+	option = {
+		name = gamestart.4.b.b
+		trigger = {
+			NOT = { has_global_flag = ChinaSiege }
+		}
+		set_global_flag = ChinaSiege
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Core Siege Turn off
+	option = {
+		name = gamestart.4.c.a
+		trigger = {
+			has_global_flag = CoreSiege
+		}
+		clr_global_flag = CoreSiege
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Core Siege Turn on
+	option = {
+		name = gamestart.4.c.b
+		trigger = {
+			NOT = { has_global_flag = CoreSiege }
+		}
+		set_global_flag = CoreSiege
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Culture Shift Turn off
+	option = {
+		name = gamestart.4.g.a
+		trigger = {
+			has_global_flag = TomatoCultureShiftEvents
+		}
+		clr_global_flag = TomatoCultureShiftEvents
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Culture Shift Turn on
+	option = {
+		name = gamestart.4.g.b
+		trigger = {
+			NOT = { has_global_flag = TomatoCultureShiftEvents }
+		}
+		set_global_flag = TomatoCultureShiftEvents
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Instant canal Turn on
+	option = {
+		name = gamestart.4.f.a
+		trigger = {
+			NOT = { has_global_flag = TomatoInstantCanal }
+		}
+		set_global_flag = TomatoInstantCanal
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Instant canal Turn off
+	option = {
+		name = gamestart.4.f.b
+		trigger = {
+			has_global_flag = TomatoInstantCanal
+		}
+		clr_global_flag = TomatoInstantCanal
+		country_event = {
+			id = gamestart.6
+		}
+	}
+	
+	# Ming disaster settings
+	option = {
+		name = gamestart.4.e
+		country_event = {
+			id = gamestart.5
+		}
+	}
+	
+	# Wacky settings
+	option = {
+		name = gamestart.4.h
+		country_event = {
+			id = gamestart.7
+		}
+	}
+}
+
+#Ming Crisis Settings
+country_event = {
+	id = gamestart.5
+	title = gamestart.5.t
+	desc = {
+		trigger = {
+			has_global_flag = TomatoMingModded
+		}
+		desc = gamestart.5.t.a
+	}
+	desc = {
+		trigger = {
+			has_global_flag = TomatoMingVanilla
+		}
+		desc = gamestart.5.t.b
+	}
+	desc = {
+		trigger = {
+			has_global_flag = TomatoMingDisable
+		}
+		desc = gamestart.5.t.c
+	}
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	# Back
+	option = {
+		name = gamestart.5.a
+		country_event = {
+			id = gamestart.4
+		}
+	}
+	
+	# modded
+	option = {
+		name = gamestart.5.b
+		custom_tooltip = ming_disaster_modded_setting_tooltip
+		trigger = {
+			NOT = { has_global_flag = TomatoMingModded }
+		}
+		set_global_flag = TomatoMingModded
+		if = {
+			limit = {
+				has_global_flag = TomatoMingVanilla
+			}
+			clr_global_flag = TomatoMingVanilla
+		}
+		if = {
+			limit = {
+				has_global_flag = TomatoMingDisable
+			}
+			clr_global_flag = TomatoMingDisable
+		}
+		country_event = {
+			id = gamestart.4
+		}
+	}
+	
+	# vanilla
+	option = {
+		name = gamestart.5.c
+		custom_tooltip = ming_disaster_vanilla_setting_tooltip
+		trigger = {
+			NOT = { has_global_flag = TomatoMingVanilla }
+		}
+		set_global_flag = TomatoMingVanilla
+		if = {
+			limit = {
+				has_global_flag = TomatoMingDisable
+			}
+			clr_global_flag = TomatoMingDisable
+		}
+		if = {
+			limit = {
+				has_global_flag = TomatoMingModded
+			}
+			clr_global_flag = TomatoMingModded
+		}
+		country_event = {
+			id = gamestart.4
+		}
+	}
+	
+	# disable
+	option = {
+		name = gamestart.5.e
+		custom_tooltip = ming_disaster_disabled_setting_tooltip
+		trigger = {
+			NOT = { has_global_flag = TomatoMingDisable }
+		}
+		set_global_flag = TomatoMingDisable
+		if = {
+			limit = {
+				has_global_flag = TomatoMingModded
+			}
+			clr_global_flag = TomatoMingModded
+		}
+		if = {
+			limit = {
+				has_global_flag = TomatoMingVanilla
+			}
+			clr_global_flag = TomatoMingVanilla
+		}
+		country_event = {
+			id = gamestart.4
+		}
+	}
+}
+
+#Bounce back to settings
+country_event = {
+	id = gamestart.6
+	title = gamestart.6.t
+	desc = gamestart.6.d
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		country_event = {
+			id = gamestart.4
+		}
+	}
+	
+	trigger = {
+		
+	}
+	
+	# Back
+	option = {
+		name = gamestart.6.a
+		ai_chance = { 
+			factor = 100
+		}
+		country_event = {
+			id = gamestart.4
+		}
+	}
+	
+	after = {
+		
+	}
+}
+
+#Wacky Settings
+country_event = {
+	id = gamestart.7
+	title = gamestart.7.t
+	desc = gamestart.7.d
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	# Back
+	option = {
+		name = gamestart.7.a
+		country_event = {
+			id = gamestart.4
+		}
 	}
 }

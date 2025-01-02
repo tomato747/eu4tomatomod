@@ -276,6 +276,15 @@ asia = {
 	
 	#tomato Liaoning
 	5136
+	
+	#tomato Hokkaido
+	5137 5138 5139 5140 5141 5142
+	
+	#tomato shaanxi
+	5143 5144 5145 5146 5147 5148 5149 5150
+	
+	#tomato Gansu
+	5151 5152 5153 5154 5155
 }
 
 africa = {

@@ -147,7 +147,7 @@ country_event = {
 			area = taiwan_area
 			is_empty = yes
 		}
-		always = no
+		has_global_flag = TomatoMingVanilla
 	}
 	mean_time_to_happen = {
 		months = 120

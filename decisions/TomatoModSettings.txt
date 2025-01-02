@@ -1,0 +1,48 @@
+country_decisions = {
+
+	tomato_settings_decision = {
+		major = yes
+		potential = {
+			ai = no
+			has_global_flag = TomatoModActive
+			NOT = { has_global_flag = TomatoDisableSettings }
+		}
+		provinces_to_highlight = {
+			
+		}
+		allow = {
+			
+		}
+		effect = {
+			country_event = {
+				id = gamestart.4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 0
+	}
+
+	tomato_settings_disable_decision = {
+		major = yes
+		potential = {
+			ai = no
+			has_global_flag = TomatoModActive
+			NOT = { has_global_flag = TomatoDisableSettings }
+		}
+		provinces_to_highlight = {
+			
+		}
+		allow = {
+			
+		}
+		effect = {
+			set_global_flag = TomatoDisableSettings
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 0
+	}
+}

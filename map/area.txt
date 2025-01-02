@@ -113,7 +113,7 @@ coral_sea_area = {
 
 philipine_sea_area = {
 	1396 1397 1439 1402 1403 1435 1436 1437 1438 1390 1391 1404 1440 4224
-	4357 4358 5009 5010 5040 5041
+	4357 4358 5009 5010 5040 5041 5156
 }
 
 banda_arafura_seas_area = {
@@ -2600,8 +2600,12 @@ chungcheong_area = { #3
 	1013 4229 5117 5118
 }
 
-hokkaido_area = { #5
-	1031 1032 1847 1852 4193
+hokkaido_area = { #5 (South Hokkaido)
+	4193 1847 1852 5137 5138
+}
+
+north_hokkaido_area = { #5
+	1031 5139 5140 5141 5142
 }
 
 north_hokuriku_area = { #4 north hokuriku
@@ -2780,7 +2784,7 @@ ilan_hala_area = { #5 (North Jilin Area)
 }
 
 sakhalin_area = { #2
-	1033 4658
+	1033 4658 1032
 }
 
 central_jilin_area = { #5
@@ -3026,24 +3030,44 @@ kwangsi_north_area = { #4
 	664 1840 2163 5135
 }
 
-yun_gui_area = { #5 (Yun-Gui Hinterland)
-	662 663 673 674 4199
+north_kwaichow_area = { #5
+	2168 4199
 }
 
-yun_gui_borderland_area = { #5
+east_kwaichow_area = { #4
+	673
+}
+
+west_kwaichow_area = { #5
+	674
+}
+
+yun_gui_area = { #5 (Yunnan)
+	662 663 675
+}
+
+yun_gui_borderland_area = { #5 (Dali)
 	660 661 2165 2166 2167
 }
 
-sichuan_area = { #3
-	679 680 4212
+sichuan_area = { #5
+	679
 }
 
-chuannan_area = { #4
-	675 2168 2748 4213
+chuannan_area = { #5
+	2748 4213 4212
 }
 
-chuanbei_area = { #3
-	2169 2170 4211
+chuanbei_area = { #5
+	2169
+}
+
+chungking_area = { #5
+	680 4211
+}
+
+tibetan_foothills_area = { #4
+	2170
 }
 
 huguang_area = { #4 (Hubei)
@@ -3086,16 +3110,28 @@ shanxi_area = { #5
 	693 694 697 2177 2178
 }
 
-shaanxi_area = { #4
-	689 700 2179 4198
+shaanxi_area = { #4 (east shaanxi)
+	700 5143 5144
 }
 
-gansu_area = { #5 (East Gansu)
-	698 699 2180 2181 2183
+north_shaanxi_area = { #4
+	2179 5147 5148 5149 5150
 }
 
-west_gansu_area = { #4 
-	707 708 2182 2184
+west_shaanxi_area = { #4
+	689 4198 5145 5146
+}
+
+east_gansu_area = { #4 (East Gansu)
+	698 2181 5151 5152
+}
+
+gansu_area = { #5 (West Gansu)
+	699 2180 2183 5153 5154
+}
+
+west_gansu_area = { #5 (Hexi Corridor)
+	707 708 2182 2184 5155
 }
 
 ########################################

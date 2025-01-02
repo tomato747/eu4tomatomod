@@ -3,6 +3,7 @@ monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
 			reforms = {
+				dablit_guaif_reform
 				feudalism_reform
 				autocracy_reform
 				elective_monarchy_reform

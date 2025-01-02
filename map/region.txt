@@ -941,6 +941,12 @@ xinan_region = {
 		chuannan_area
 		yun_gui_borderland_area
 		chuanbei_area
+		
+		chungking_area
+		north_kwaichow_area
+		east_kwaichow_area
+		west_kwaichow_area
+		tibetan_foothills_area
 	}
 }
 
@@ -962,6 +968,9 @@ north_china_region = {
 		shandong_south_area
 		north_anhui_area
 		south_henan_area
+		north_shaanxi_area
+		west_shaanxi_area
+		east_gansu_area
 	}
 }
 

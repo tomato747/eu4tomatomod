@@ -130,6 +130,10 @@ country_event = {
 				area = hebei_area
 				area = south_hebei_area
 				area = liaoning_area
+				area = liaodong_area
+				area = north_shaanxi_area
+				area = west_shaanxi_area
+				area = east_gansu_area
 			}
 		}
 	}
@@ -150,12 +154,21 @@ country_event = {
 						area = hebei_area
 						area = south_hebei_area
 						area = liaoning_area
+						area = liaodong_area
+						area = north_shaanxi_area
+						area = west_shaanxi_area
+						area = east_gansu_area
 					}
 					OR = {
 						controlled_by = REB
 						controlled_by = ROOT
 					}
-					is_capital = no
+					if = {
+						limit = {
+							has_global_flag = TomatoMingModded
+						}
+						is_capital = no
+					}
 				}
 				add_core = CSH
 				clear_rebels = yes
@@ -342,9 +355,12 @@ country_event = {
 				area = yun_gui_area
 				area = chuannan_area
 				area = yun_gui_borderland_area
+				area = north_kwaichow_area
+				area = east_kwaichow_area
+				area = west_kwaichow_area
 			}
 		}
-		always = no
+		has_global_flag = TomatoMingVanilla
 	}
 	
 	immediate = {
@@ -359,6 +375,9 @@ country_event = {
 						area = yun_gui_area
 						area = chuannan_area
 						area = yun_gui_borderland_area
+						area = north_kwaichow_area
+						area = east_kwaichow_area
+						area = west_kwaichow_area
 					}
 					OR = {
 						controlled_by = REB
@@ -468,9 +487,17 @@ country_event = {
 				area = teoswa_area
 				area = hainan_area
 				area = east_river_area
+				area = shiuhing_area
+				area = ming_deng_area
+				area = upper_fukien_area
+				area = south_chekiang_area
+				area = upper_chekiang_area
+				area = north_kwongtung_area
+				area = kwangsi_area
+				area = kwangsi_north_area
 			}
 		}
-		always = no
+		has_global_flag = TomatoMingVanilla
 	}
 	
 	immediate = {
@@ -540,6 +567,10 @@ country_event = {
 								area = teoswa_area
 								area = hainan_area
 								area = east_river_area
+								area = shiuhing_area
+								area = north_kwongtung_area
+								area = kwangsi_area
+								area = kwangsi_north_area
 							}
 							OR = {
 								controlled_by = REB
@@ -746,6 +777,15 @@ country_event = {
 		name = ming_crisis.6.a
 		ai_chance = { factor = 1 }
 		add_mandate = 5
+		if = {
+			limit = { has_global_flag = TomatoMingModded }
+			event_target:ming_disaster_rebel_province = {
+				spawn_rebels = {
+					type = anti_tax_rebels 
+					size = 6
+				}
+			}
+		}
 		event_target:ming_disaster_rebel_province = {
 			spawn_rebels = {
 				type = anti_tax_rebels 
@@ -839,6 +879,15 @@ country_event = {
 		name = ming_crisis.9.A
 
 		liaoning_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+		
+		liaodong_area = {
 			limit = {
 				owned_by = CSH
 				NOT = { is_claim = ROOT }
@@ -1074,6 +1123,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		has_global_flag = TomatoMingModded
 		NOT = { exists = CXI }
 		num_of_owned_provinces_with = {
 			value = 10
@@ -1087,6 +1137,8 @@ country_event = {
 				area = west_fulan_area
 				area = central_hubei_area
 				area = western_hubei_area
+				area = chungking_area
+				area = tibetan_foothills_area
 			}
 			controlled_by = REB
 		}
@@ -1101,6 +1153,8 @@ country_event = {
 				area = west_fulan_area
 				area = central_hubei_area
 				area = western_hubei_area
+				area = chungking_area
+				area = tibetan_foothills_area
 			}
 		}
 	}
@@ -1123,6 +1177,8 @@ country_event = {
 						area = west_fulan_area
 						area = central_hubei_area
 						area = western_hubei_area
+						area = chungking_area
+						area = tibetan_foothills_area
 					}
 					OR = {
 						controlled_by = REB
@@ -1269,6 +1325,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		has_global_flag = TomatoMingModded
 		any_owned_province = {
 			province_id = 679
 			owned_by = ROOT
@@ -1384,6 +1441,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		has_global_flag = TomatoMingModded
 		has_disaster = ming_crisis
 		ROOT = {
 			capital_scope = {
@@ -1943,7 +2001,7 @@ country_event = {
 						}
 						add_core = KWI
 						cede_province = KWI
-					
+					}
 					kwangsi_area = {
 						limit = {
 							NOT = { province_id = 1840 }
@@ -1966,6 +2024,27 @@ country_event = {
 						cede_province = KWI
 					}
 					yun_gui_borderland_area = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
+					north_kwaichow_area = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
+					east_kwaichow_area = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
+					west_kwaichow_area = {
 						limit = {
 							controlled_by = ROOT
 						}
@@ -2250,6 +2329,42 @@ country_event = {
 				cede_province = CDL
 				clear_rebels = yes
 			}
+			north_kwaichow_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			east_kwaichow_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			west_kwaichow_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			if = {
+				limit = {
+					exists = CDL
+				}
+				CDL = {
+					define_ruler = {
+						dynasty = "Duainb"
+					}
+					change_government = monarchy
+					add_government_reform = dablit_guaif_reform
+				}
+			}
 		}
 	}
 	
@@ -2257,14 +2372,14 @@ country_event = {
 	option = {
 		name = ming_crisis.14.a
 		ai_chance = { factor = 100 }
-			
+		
 	}
 	
 	#Play as 東寧Tungning in Tainan
 	option = {
 		name = ming_crisis.14.b
 		trigger = {
-			 exists = FRM
+			exists = FRM
 		}
 		switch_tag = FRM
 	}
@@ -2418,6 +2533,12 @@ country_event = {
 						subject = FRM
 					}
 				}
+				if = {
+					limit = { exists = TNG }
+					TNG = {
+					 	create_guarantee = FRM
+					}
+				}
 			}
 			else_if = {
 				limit = {
@@ -2549,6 +2670,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		has_global_flag = TomatoMingModded
 		NOT = { exists = ANN }
 		num_of_owned_provinces_with = {
 			value = 10
@@ -2669,6 +2791,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		has_global_flag = TomatoMingModded
 		NOT = { exists = WPR }
 		num_of_owned_provinces_with = {
 			value = 10

@@ -73,7 +73,7 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				superregion = china_superregion
-				value = 50
+				value = 100
 			}
 		}
 		effect = {

@@ -40,6 +40,12 @@ japanse_missions_sea = {
 			owns_or_non_sovereign_subject_of = 1847
 			owns_or_non_sovereign_subject_of = 1852
 			owns_or_non_sovereign_subject_of = 1031
+			owns_or_non_sovereign_subject_of = 5137
+			owns_or_non_sovereign_subject_of = 5138
+			owns_or_non_sovereign_subject_of = 5139
+			owns_or_non_sovereign_subject_of = 5140
+			owns_or_non_sovereign_subject_of = 5141
+			owns_or_non_sovereign_subject_of = 5142
 			4193 = {
 				OR = {
 					religion = ROOT
@@ -64,9 +70,54 @@ japanse_missions_sea = {
 					ROOT = { has_harmonized_with = PREV }
 				}
 			}
+			5137 = {
+				OR = {
+					religion = ROOT
+					ROOT = { has_harmonized_with = PREV }
+				}
+			}
+			5138 = {
+				OR = {
+					religion = ROOT
+					ROOT = { has_harmonized_with = PREV }
+				}
+			}
+			5139 = {
+				OR = {
+					religion = ROOT
+					ROOT = { has_harmonized_with = PREV }
+				}
+			}
+			5140 = {
+				OR = {
+					religion = ROOT
+					ROOT = { has_harmonized_with = PREV }
+				}
+			}
+			5141 = {
+				OR = {
+					religion = ROOT
+					ROOT = { has_harmonized_with = PREV }
+				}
+			}
+			5142 = {
+				OR = {
+					religion = ROOT
+					ROOT = { has_harmonized_with = PREV }
+				}
+			}
 		}
 		effect = {
 			hokkaido_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "integrating_ainu"
+					duration = 7300
+				}
+			}
+			north_hokkaido_area = {
 				limit = {
 					owned_by = ROOT
 				}

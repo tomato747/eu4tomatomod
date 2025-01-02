@@ -29,6 +29,7 @@ on_startup = {
 		flavor_fra.206 # Setup the general for missions
 		flavor_geo.1 # Disaster info
 		flavor_mam.111 # Mamluks-Syria relations
+		gamestart.1 #Tomato mod startup and credits
 	}
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes
@@ -1086,6 +1087,7 @@ on_siege_won_province = {
 	
 	if = { #Chinese Unification, code by zyphon, author of black gold mod
         limit = {
+			has_global_flag = ChinaSiege
             owner = {
                 OR = {
                     tag = REB
@@ -1097,7 +1099,23 @@ on_siege_won_province = {
                 }
             }
             is_capital = no
-            superregion = china_superregion
+			OR = {
+				if = {
+					limit = {
+						OR = {
+							controlled_by = MCH
+							controlled_by = KOR
+							controlled_by = JAP
+							owned_by = MCH
+							owned_by = KOR
+							owned_by = JAP
+						}
+					}
+					area = liaodong_area
+					area = liaoning_area
+				}
+				superregion = china_superregion
+			}
             controller = {
                 OR = {
                     culture_group = east_asian
@@ -1118,21 +1136,6 @@ on_siege_won_province = {
         }
         if = {
             limit = {
-                controller = {
-                    NOT = { culture_group = east_asian }
-                }
-            }
-            add_province_modifier = {
-                name = yuan_han_relations
-                duration = 3650
-            }
-            add_local_autonomy = 100
-        }
-        else = {
-            add_local_autonomy = -100
-        }
-        if = {
-            limit = {
                 NOT = { culture = owner }
             }
             remove_core = owner
@@ -1140,6 +1143,10 @@ on_siege_won_province = {
         #change_controller = FROM
         add_core = controller
         cede_province = controller
+		random = { 
+			chance = 50
+			add_devastation = 5
+		}
     }
 	
 }

@@ -139,4 +139,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 5047;2326;sea;5049;-1;-1;-1;-1;Siwah-Bardiyah
 2318;359;sea;5050;-1;-1;-1;-1;Bahariya-Fayyum
 145;5053;sea;1319;-1;-1;-1;-1;Morea-Kythira
+235;87;canal;235;-1;-1;-1;-1;channel_tunnel
+5140;1033;canal;5140;-1;-1;-1;-1;chiho_tunnel
 -1;-1;;-1;-1;-1;-1;-1;-1;

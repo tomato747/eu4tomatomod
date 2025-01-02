@@ -1,0 +1,159 @@
+namespace = tomato_culture_shift
+
+#Hakka
+province_event = {
+	id = tomato_culture_shift.1
+	title = tomato_culture_shift.1.t
+	desc = tomato_culture_shift.1.d
+	picture = BORDER_TENSION_eventPicture
+	
+	mean_time_to_happen = {
+		months = 2400
+
+		modifier = {
+			factor = 0.5
+			owner = {
+				is_emperor_of_china = yes
+				NOT = { imperial_mandate = 50 }
+			}
+		}
+	}
+	
+	trigger = {
+		has_global_flag = TomatoCultureShiftEvents
+		OR = {
+			area = east_river_area
+			area = teoswa_area
+		}
+		NOT = { culture = hakka }
+		NOT = { development = 15 }
+		random_neighbor_province = {
+			culture = hakka
+			OR = {
+				devastation = 10
+				unrest = 5
+				if = {
+					limit = {
+						owner = { is_emperor_of_china = yes }
+					}
+					NOT = { imperial_mandate = 50 }
+				}
+			}
+		}
+		NOT = { current_age = age_of_discovery }
+		owner = {
+			ai = no
+			OR = {
+				has_reform = celestial_empire
+				has_reform = chinese_warlord
+			}
+		}
+		always = no
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_neighbor_province = {
+				limit = {
+					culture = hakka
+					OR = {
+						devastation = 10
+						unrest = 5
+						if = {
+							limit = {
+								owner = { is_emperor_of_china = yes }
+							}
+							NOT = { imperial_mandate = 50 }
+						}
+					}
+				}
+				save_event_target_as = hakka_neighbor_target
+			}
+		}
+	}
+	
+	#help local
+	option = {
+		name = tomato_culture_shift.1.a
+		ai_chance = { factor = 50 }
+		event_target:hakka_neighbor_target = {
+			add_country_modifier = {
+				name = denied_migration
+				duration = 240
+			}
+			add_devastation = 10
+		}
+		add_devastation = 5
+		add_yearly_manpower = -0.5
+	}
+	
+	#help hakka
+	option = {
+		name = tomato_culture_shift.1.b
+		ai_chance = { factor = 25 }
+		event_target:hakka_neighbor_target = {
+			add_devastation = 5
+		}
+		add_devastation = 10
+		change_culture = hakka
+		add_yearly_manpower = -0.5
+	}
+	
+	#let them fight
+	option = {
+		name = tomato_culture_shift.1.c
+		ai_chance = { factor = 25 }
+		event_target:hakka_neighbor_target = {
+			add_devastation = 15
+		}
+		add_devastation = 15
+		random = {
+			chance = 50 
+			change_culture = hakka
+		}
+	}
+}
+
+#Cantonese
+
+#Hokkien
+
+#Gon
+
+#Wu
+
+#Sian
+
+#South West Mandarin (Yunnan)
+
+#Cuengh
+
+#Hlai
+
+#Formosan
+
+#North East Mandarin (Manchuria)
+
+#Anglo-Irish
+
+#Scotish
+
+#Japanese
+
+#Korean
+
+#Aramean
+
+#Hebrew
+
+#Armenian
+
+#Kurdish
+
+#Russian
+
+#Ruthenian
+
+#Turkish
+
+#Balten

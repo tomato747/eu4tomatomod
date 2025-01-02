@@ -10,6 +10,9 @@ supply_hub = {
     influencing_fort = no          # Optional, whether this building operates like a fort
     show_separate = no             # Optional, whether a manufactory will be shown separably in the building menu or merged into one manufactory entry
  
+    potential = {
+        always = yes
+    }
 	
     build_trigger = {
         ROOT = {

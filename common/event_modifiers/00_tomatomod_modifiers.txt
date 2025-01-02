@@ -192,3 +192,8 @@ FRM_reconquest_nanking = {
 	land_morale = 0.10
 	recover_army_morale_speed = 0.10
 }
+
+denied_migration = {
+	local_unrest = 5
+	local_tax_modifier = -0.5
+}
