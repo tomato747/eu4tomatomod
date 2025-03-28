@@ -2979,7 +2979,7 @@ central_kiangsi_area = { #5
 }
 
 south_kiangsi_area = { #4
-	670 5070 5071 5072
+	670 5070 5071 5072 5224
 }
 
 fujian_area = { #4 Bân-lâm

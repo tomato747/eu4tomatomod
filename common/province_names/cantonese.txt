@@ -642,3 +642,4 @@ Germany-Austria
 5221 = {"Tungyuet" "Tungchung"}
 5222 = {"Wingcheung" "Boushan"}
 5223 = {"Shunning" "Funghing"}
+5224 = {"Shunfung" "Shunfung"}
