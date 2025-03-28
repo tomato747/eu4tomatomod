@@ -1,0 +1,15 @@
+664 = {"Lingzyinz" "Lingzyinz"} #Lingwun
+1840 = {"Gveilinz" "Gveilinz"} #Kwailam
+2162 = {"Ngouzcouh" "Ngouzcouh"} #Ngchow
+2163 = {"Liujcouh" "Liujcouh"} #Lauchau
+2164 = {"Nanzningz" "Nanzningz"} #Namning
+4950 = {"Ginhcouh" "Ginhcouh"} #Yamchau
+5065 = {"Lenzcouh" "Lenzcouh"} #Lienchau
+5066 = {"Lenzsanh" "Lenzsanh"} #Lienshan
+5129 = {"Yoglinz" "Yoglinz"} #Watlam
+5130 = {"Gveibingz" "Gveibingz"} #Chamchau
+5131 = {"Bingzloz" "Bingzloz"} #Pinglok
+5132 = {"Cungzcoj" "Cungzcoj"} #Taiping
+5133 = {"Dwzbauj" "Dwzbauj"} #Chanon
+5134 = {"Bingzgoj" "Bingzgoj"} #Siyan
+5135 = {"Yizcouh" "Yizcouh"} #Hingyuen

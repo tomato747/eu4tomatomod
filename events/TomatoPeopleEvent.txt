@@ -278,23 +278,24 @@ country_event = {
 	}
 }
 
-# 長平公主 rumours
+# Dae Janggeum
 country_event = {
 	id = tomato_spawn_people.4
-	title = "tomato_spawn_people.4.t"
-	desc = "tomato_spawn_people.4.d"
-	picture = BURGHER_ESTATE_eventPicture
-	fire_only_once = yes
+	title = tomato_spawn_people.4.t
+	desc = tomato_spawn_people.4.d
+	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+
 	trigger = {
-		NOT = { exists = MNG }
-		NOT = { has_global_flag = changping_princess_spawned }
-		has_global_flag = ming_empire_fall
-		OR = {
-			is_emperor_of_china = yes
-			has_reform = chinese_warlord
+		NOT = { has_global_flag = janggeum_spawned }
+		is_year = 1506
+		NOT = {
+			is_year = 1544
 		}
-		1816 = {
-		 	has_province_modifier = changping_princess_timer
+		OR = {
+			tag = KOR
+			any_province = {
+				culture_group = korean_g
+			}
 		}
 	}
 	
@@ -304,42 +305,24 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			set_global_flag = changping_princess_spawned
-			1816 = {
-				remove_province_modifier = changping_princess_timer
-			}
-		}		
-	}
-	
-	#seek her out
-	option = {
-		name = tomato_spawn_people.4.a
-		add_adm_power = -50
-		hidden_effect = {
-			random_list = {
-				50 = {
-					#can't find her
-					country_event = { 
-						id = tomato_spawn_people.3.2
-						days = 30
-						random = 15
-					}
-				}
-				50 = {
-					#found her
-					country_event = { 
-						id = tomato_spawn_people.3.3
-						days = 30
-						random = 15
-					}
-				}
-			}
+			set_global_flag = janggeum_spawned
 		}
 	}
 	
-	#dont care
+	option = {
+		name = tomato_spawn_people.4.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			type = physician
+			culture = korean
+			skill = 3
+			discount = yes
+			name = "Janggeum"
+		}
+	}
 	option = {
 		name = tomato_spawn_people.4.b
-		add_prestige = -5
+		add_prestige = 10
 	}
 }

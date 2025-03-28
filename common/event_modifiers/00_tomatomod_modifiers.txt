@@ -255,3 +255,6 @@ ming_crisis_state = {
 changping_princess_timer = {
 
 }
+ottomans_stop_convert_dhimmi = {
+	global_heathen_missionary_strength = -1.00
+}

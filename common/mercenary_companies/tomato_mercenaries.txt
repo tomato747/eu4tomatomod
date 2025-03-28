@@ -1,0 +1,42 @@
+# Hong Kong Volunteer Company
+merc_hongkong_volunteer_company = {
+    regiments_per_development = 0.04
+    home_province = 4942 # Hong Kong
+	cavalry_weight = 0.2
+	artillery_weight = 0.4
+	cavalry_cap = 4
+	sprites = { asiangfx_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+			technology_group = western
+			technology_group = eastern
+			capital_scope = {
+				continent = europe
+			}
+		}
+		owns_or_non_sovereign_subject_of = 4942
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = { 
+		land_morale = 0.05
+		movement_speed = 0.10
+	}
+}
+
+# Koxinga African Auxiliaries
+merc_tungning_african_auxiliaries = {
+    regiments_per_development = 0.04
+    home_province = 738 # Sakam/Anping/Tainan
+	cavalry_weight = 0.1
+	artillery_weight = 0.4
+	cavalry_cap = 4
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		tag = FRM
+	}
+	modifier = { 
+		regiment_disembark_speed = 0.25
+		fire_damage = 0.10
+		discipline = 0.02
+	}
+}
