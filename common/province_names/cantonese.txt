@@ -2,13 +2,13 @@
 
 660 = "Saiseungbannap" #Sibsongbanna
 661 = "Dailei" #Dali
-662 = "Wunnam" #Yunnan
+662 = {"Wunnam" "Kwanming"} #Yunnan
 663 = "Kwongnam" #Guangnan
 664 = "Lingwun" #Lingyun
 665 = "Shiuhing" #Shiuhing
 666 = "Kingchow" #Kingchow
-667 = "Canton" #Canton
-668 = "Macau" #Macau
+667 = {"Kwongchau" "Kwongchau"} #Canton
+668 = {"Oumún" "Oumún"} #Macau
 669 = "Fukchow" #Fuzhou
 670 = "Gungchow" #Ganzhou
 671 = "Cheungsa" #Changsha
@@ -201,8 +201,18 @@
 4359 = "Yisai" #Ise
 4360 = "Samhaw" #Mikawa
 
+#Others
+385 = "Tinfong" #Mecca
+534 = "Gulei" #Malabar
+558 = "Wasising" #Patna
+596 = "Moonlakga" #Malacca
+598 = "Panghang" #Pahang
+1203 = "Malamday" #Malindi
+1205 = "Mukkwatdochuk" #Mogadishu
+2095 = "Bawlawnaysi" #Varanasi
+
 #British Isles
-236 = "Lundun" #London
+236 = {"Lundun" "Lundun"} #London
 248 = "Ngoidingbou" #Edinburgh
 235 = "Gundak" #Kent
 4371 = "Sausiksi" #Sussex
@@ -291,75 +301,92 @@ Germany-Austria
 121 = "Nabolei" #Napoli
 126 = "Mayita" #Malta
 
-#Others
-385 = "Tinfong" #Mecca
-534 = "Gulei" #Malabar
-558 = "Wasising" #Patna
-596 = "Moonlakga" #Malacca
-598 = "Panghang" #Pahang
-1203 = "Malamday" #Malindi
-1205 = "Mukkwatdochuk" #Mogadishu
-2095 = "Bawlawnaysi" #Varanasi
-
-227 = "Poking" Lisboa
-183 = "Balaai" #Paris
-217 = "Madaklei" #Madrid
+#Americas
 2021 = "Gamshan" #San Francisco
+852 = "Maksaigo" #Mexico
+835 = "Banama" #Panama
+763 = "Leiyuekyitnoilou" #Rio de Janiro
+
+#Iberia
+227 = "Poking" Lisboa
+217 = "Madaklei" #Madrid
+213 = "Bachoilungna" #Barcelona
+
+#France
+183 = "Balaai" #Paris
+1247 = {"Sheung Gosiga" "Basitaia"}
+184 = "Ouleilong" #Orleans
+87 = "Galoi" #Calais
+
 266 = "Boulaaigaak #Praha
 257 = "Wasa" #Warsaw
 12 = "Gobunhaagun" #Copenhagen
 1 = "Sidakgoyimo" #Stockholm
 27 = "Faujai" #Turku
 17 = "Ousiluk" #Oslo
-151 = "Gwansitaandingbou" #Constantinopol
+1104 = {"Naam Gaaklinglaan" "Kafoyitokhak"}
+1105 = {"Bak Gaaklinglaan" "Louhaak"}
+
+#North Africa
 358 = "Aliksaandaaigong" #Alexandria
 361 = "Hoilo" #Cairo
 2315 = "Souyisi" #Suez
 1231 = "Asiwong" #Aswan
+341 = "Datleisi" #Tunis
+343 = "Feisi" #Fez
+1177 = "Houmonggok" #Cape
+
+#Levant
 364 = "Gasa" #Gaza
 379 = "Yelousaatlaang" #Ierosalem
 382 = "Daimasigak" #Damascus
 2313 = "Ontai'o" #Antioch
+
+#Anatolia
 326 = "Onkalaai" #Ankara
+321 = "Choipoulousi" #Cyprus
+318 = "Simuila" #Smyrna
+
+#Balkans
+151 = "Gwansitaandingbou" #Constantinopol
 148 = "Tipsaatloleiga" #Thessaloniki
 146 = "Ngadin" #Athens
 4701 = "Golamdo" #Korinthos
-321 = "Choipoulousi" #Cyprus
-318 = "Simuila" #Smyrna
 1765 = "Soufeia" #Sofia
 153 = "Boudaatpuisi" #Budapest
+1766 = "Fosokyuk" #Kosovo
+
+#Eastern Europe
 280 = "Geifu" #Kyiv
 276 = "Mingsihaak" #Minsk
 295 = "Moksifo" #Moscow
-184 = "Ouleilong" #Orleans
-1766 = "Fosokyuk" #Kosovo
+
+#Middle east
 410 = "Bagakdat" #Bagdad
 428 = "Dakhaaklaan" #Tehran
 429 = "Yisifaathon" #Isfahan
+
+#India
 522 = "Daklei" #Delhi
-622 = "Goeigong" #Palembang
-4815 = "Singgabo" #Singapura
-341 = "Datleisi" #Tunis
-343 = "Feisi" #Fez
-213 = "Bachoilungna" #Barcelona
-852 = "Maksaigo" #Mexico
-835 = "Banama" #Panama
-763 = "Leiyuekyitnoilou" #Rio de Janiro
 557 = "Gadakmundou" #Kathmandu
 4482 = "Sekgam" #Sikkim
+
+#SEA
+622 = "Goeigong" #Palembang
+4815 = "Singgabo" #Singapura
 4831 = "Maanguk" #Bangkok
 600 = "Sunlo" #Ayutthaya
-87 = "Galoi" #Calais
+636 = "Manloi" #Brunei
+609 = "Nggo" #Angkor
+
+#Lowlands
 97 = "Amousidakdaan" #Amsterdam
 4383 = "Hoinga" #Den Haag
 92 = "Boulouchoiyi" #Brussels
 94 = "Lousambou" #Luxembourg
-1177 = "Houmonggok" #Cape
-636 = "Manloi" #Brunei
-609 = "Nggo" #Angkor
 
 #Tomato mod
-4942 = "Heunggong"
+4942 = {"Heunggong" "Heunggong"}
 4951 = "Saanmei"
 4953 = "Muichau"
 4954 = "Saantau"
@@ -411,7 +438,7 @@ Germany-Austria
 5000 = "Zodou"
 5001 = "Keiyuk"
 5002 = "Taamlou"
-5003 = "Fukyun
+5003 = "Fukyun"
 5011 = "Laaifansibou"
 5012 = "Ouyibeia"
 5013 = "Daatwosi"
@@ -526,7 +553,7 @@ Germany-Austria
 5128 = "Chanchau"
 5132 = "Taiping"
 5133 = "Chanon"
-5134 = "Yanyan"
+5134 = "Siyan"
 5135 = "Hingyuen"
 5136 = "Tsingnaiwa"
 5137 = "Daamchun"
@@ -548,3 +575,70 @@ Germany-Austria
 5153 = "Gaaichau"
 5154 = "Lungsai"
 5155 = "Sukchau"
+5157 = {"Naam Gosiga" "Asesiou"}
+5158 = {"Auleisi" "Lailotseyi"}
+5159 = {"Yauyeung" "Yauyeung"}
+5160 = {"Shekchu" "Shekchu"}
+5161 = {"Chungchau" "Chungchau"}
+5162 = {"Shunhing" "Shunhing"}
+5163 = {"Seoiding" "Seoiding"}
+5164 = {"Taiping" "Taiping"}
+5165 = {"Leifaan" "Leifaan"}
+5166 = {"Mauchau" "Mauchau"}
+5167 = {"Lung'on" "Lung'on"}
+5168 = {"Minchau" "Minchau"}
+5169 = {"Kungchau" "Kungchau"}
+5170 = {"Meichau" "Meichau"}
+5171 = {"Jichau" "Jichau"}
+5172 = {"Tungchun" "Chaiyun"}
+5173 = {"Jeoichau" "Yiban"}
+5174 = {"Wingling" "Wingling"}
+5175 = {"Pouchau" "Wingjai"}
+5176 = {"Gaaichau" "Gaaichau"}
+5177 = {"Gongchau" "Gongchau"}
+5178 = {"Zaapchau" "Zaapchun"}
+5179 = {"Zaakchau" "Fungtoi"}
+5180 = {"Samchau" "Samchau"}
+5181 = {"Liuchau" "Liuchun"}
+5182 = {"Pingding" "Pingding"}
+5183 = {"Fokchau" "Fokchau"}
+5184 = {"Fanchau" "Fanyeung"}
+5185 = {"Yanchau" "Yanchau"}
+5186 = {"Boudak" "Boudak"}
+5187 = {"Doichau" "Doichau"}
+5188 = {"Sokping" "Yauyuk"}
+5189 = {"Kwongping" "Kwongfu"}
+5190 = {"Shuntak" "Yingtoi"}
+5191 = {"Ziuchau" "Ziuchau"}
+5192 = {"Keichau" "Keichau"}
+5193 = {"Samchau" "Samchau"}
+5194 = {"Tinjun" "Tinjun"}
+5195 = {"Dingchau" "Dingchau"}
+5196 = {"Yichau" "Yichau"}
+5197 = {"Junfa" "Junfa"}
+5198 = {"Sichau" "Sichau"}
+5199 = {"Shektsin" "Shektsin"}
+5200 = {"Sinam" "Sinam"}
+5201 = {"Laiping" "Laiping"}
+5202 = {"Douwan" "Douwan"}
+5203 = {"Pingyuet" "Pingyuet"}
+5204 = {"Onshun" "Onshun"}
+5205 = {"Hingyi" "Hingyi"}
+5206 = {"Daiding" "Daiding"}
+5207 = {"Pou'on" "Pou'on"}
+5208 = {"Wingbak" "Wingbak"}
+5209 = {"Chorhung" "Chorhung"}
+5210 = {"Mungfa" "Mungfa"}
+5211 = {"Moding" "Wokukchau"}
+5212 = {"Dongchun" "Dongchun"}
+5213 = {"Kukching" "Namning"}
+5214 = {"Kwongsai" "Kwongsai"}
+5215 = {"Hoifa" "Manshan"}
+5216 = {"Lam'on" "Lam'on"}
+5217 = {"Chingkong" "Chingkong"}
+5218 = {"Gingdung" "Gingdung"}
+5219 = {"Junyun" "Junyun"}
+5220 = {"Yuenkong" "Yuenkong"}
+5221 = {"Tungyuet" "Tungchung"}
+5222 = {"Wingcheung" "Boushan"}
+5223 = {"Shunning" "Funghing"}

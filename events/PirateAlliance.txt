@@ -1,0 +1,187 @@
+namespace = piratealliance_events
+
+# Spawn Pirate AllianceS
+country_event = {
+	id = piratealliance_events.1
+	title = "piratealliance_events.1.t"
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	desc = "piratealliance_events.1.d"
+
+	fire_only_once = yes
+
+	trigger = {
+		normal_or_historical_nations = yes
+		NOT = { exists = CPT }
+		NOT = { has_reform = pirate_republic_reform }
+		NOT = { current_age = age_of_reformation }
+		OR = {
+			AND = {
+				owns_core_province = 4942
+				is_subject = no
+				num_of_cities = 2
+			}
+			any_subject_country = {
+				owns_core_province = 4942
+				num_of_cities = 2
+			}
+		}
+		OR = {
+			4942 = {
+				recent_treasure_ship_passage = yes
+			}
+			1371 = {
+				privateer_power = { share = 5 }
+			}
+			any_country = {
+				capital_scope = {
+					region = south_china_region
+					has_port = yes
+				}
+				war_exhaustion = 5
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			4942 = {
+				discover_country = CPT
+				add_core = CPT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = { # play as the pirates
+		name = "piratealliance_events.1.a"
+		# play as CPT
+		trigger = {
+			ai = no
+		}
+		4942 = {
+			owner = {
+				release = CPT
+			}
+		}
+		add_truce_with = CPT
+		CPT = {
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			adopt_reform_progress = ROOT
+			add_republican_tradition = 50
+			discover_provinces = ROOT
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					artillery = 0.2
+					heavy_ship = 0.3
+					light_ship = 0.3
+					transport = 0.3
+				}
+			}
+			define_ruler = {
+				name = "Manhin"
+				dynasty = "Cheung"
+				adm = 5
+				dip = 6
+				mil = 6
+			}
+			if = {
+				limit = {
+					NOT = { has_idea_group = CPT_ideas }
+				}
+				swap_free_idea_group = yes
+			}
+			set_ruler_flag = historical_pirate
+			add_ruler_personality = legendary_pirate_personality
+			swap_non_generic_missions = yes
+		}
+		switch_tag = CPT
+	}
+	option = { # pirates get released
+		name = "piratealliance_events.1.b"
+		4942 = {
+			owner = {
+				release = CPT
+			}
+		}
+		add_truce_with = CPT
+		CPT = {
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			adopt_reform_progress = ROOT
+			add_republican_tradition = 50
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					artillery = 0.2
+					heavy_ship = 0.3
+					light_ship = 0.3
+					transport = 0.3
+				}
+			}
+			define_ruler = {
+				name = "Manhin"
+				dynasty = "Cheng"
+				adm = 5
+				dip = 6
+				mil = 6
+			}
+			if = {
+				limit = {
+					NOT = { has_idea_group = CPT_ideas }
+				}
+				swap_free_idea_group = yes
+			}
+			set_ruler_flag = historical_pirate
+			add_ruler_personality = legendary_pirate_personality
+			swap_non_generic_missions = yes
+		}
+	}
+	
+	after = {
+		CPT = {
+			convert_ruler_to_admiral = 100
+			create_admiral = {
+				name = "Shekyeung"
+				female = yes
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Potsai"
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Tsiching"
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Sheungching"
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Yaukam"
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Potai"
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Po"
+				tradition = 100
+			}
+			create_admiral = {
+				name = "Lotung"
+				tradition = 100
+			}
+			add_country_modifier = {
+				name = "pirate_alliance_power"
+				duration = -1
+			}
+		}
+	}
+}

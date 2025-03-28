@@ -140,13 +140,14 @@ provence_missions_2 = {
 		icon = rule_corsica
 		required_missions = {  }
 		provinces_to_highlight = {
-			province_id = 1247
+			area = corsica_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
-				1247 = {
-					owned_by = ROOT
+				corsica_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 				total_development = 100
 			}
@@ -195,6 +196,13 @@ provence_missions_2 = {
 				}
 			}
 			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

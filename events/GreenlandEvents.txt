@@ -1,0 +1,93 @@
+namespace = greenland_events
+
+#Greenland Cores
+country_event = {
+	id = greenland_events.1
+	title = greenland_events.1.t
+	desc = greenland_events.1.d
+	picture = EP_ISLAND_eventPicture
+	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		greenland_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT	
+			is_city = yes
+		}
+		NOT = { tag = GLD }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			greenland_area = {
+				type = all
+				change_culture = inuit
+				add_core = GLD
+			}
+		}
+	}
+	
+	option = {
+		name = greenland_events.1.a
+	}
+	
+	option = {
+		name = greenland_events.1.b
+		greenland_area = {
+			limit = {
+				controlled_by = ROOT
+			}
+			add_core = GLD
+			cede_province = GLD
+		}
+		ROOT = {
+			create_subject = {
+				subject_type = march
+				subject = GLD
+			}
+		}
+		1804 = {
+			discover_country = GLD
+		}
+		1924 = {
+			discover_country = GLD
+		}
+		1481 = {
+			discover_country = GLD
+		}
+		1610 = {
+			discover_country = GLD
+		}
+	}
+	
+	option = {
+		name = greenland_events.1.c
+		trigger = {
+			ai = no
+		}
+		greenland_area = {
+			limit = {
+				controlled_by = ROOT
+			}
+			add_core = GLD
+			cede_province = GLD
+		}
+		1804 = {
+			discover_country = GLD
+		}
+		1924 = {
+			discover_country = GLD
+		}
+		1481 = {
+			discover_country = GLD
+		}
+		1610 = {
+			discover_country = GLD
+		}
+		switch_tag = GLD
+	}
+}

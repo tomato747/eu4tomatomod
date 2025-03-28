@@ -119,6 +119,7 @@ MEE_BYZ_conquest_1 = {
 			give_claims = { area = naples_area }
 			
 			give_claims = { area = corsica_sardinia_area }
+			give_claims = { area = corsica_area }
 			give_claims = { area = barbary_coast_area }
 			give_claims = { area = kabylia_area }
 			give_claims = { area = tunisia_area }
@@ -159,6 +160,7 @@ MEE_BYZ_conquest_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
+				area = corsica_area
 				area = barbary_coast_area
 				area = kabylia_area
 				area = tunisia_area
@@ -171,6 +173,7 @@ MEE_BYZ_conquest_1 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = corsica_sardinia_area
+					area = corsica_area
 					area = barbary_coast_area
 					area = kabylia_area
 					area = tunisia_area
@@ -1184,6 +1187,7 @@ MEE_BYZ_conquest_4 = {
 			give_claims = { area = mecca_area }
 			
 			give_claims = { area = corsica_sardinia_area }
+			give_claims = { area = corsica_area }
 			give_claims = { area = barbary_coast_area }
 			give_claims = { area = kabylia_area }
 			give_claims = { area = tunisia_area }

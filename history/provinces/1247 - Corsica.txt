@@ -1,4 +1,4 @@
-#1247 - Corsica
+#1247 - Alto Corsica
 
 owner = GEN
 controller = GEN

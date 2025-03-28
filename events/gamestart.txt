@@ -83,6 +83,13 @@ province_event = {
 				}
 			}
 		}
+		
+		modifier = {
+			factor = 0.1
+			controller = {
+				has_country_modifier = tomato_rising_empire
+			}
+		}
 
 		modifier = {
 			factor = 0.1
@@ -105,6 +112,9 @@ province_event = {
                     }
 				}
 				culture = controller
+			}
+			controller = {
+				has_country_modifier = tomato_rising_empire
 			}
 		}
 		NOT = { owned_by = controller }
@@ -453,5 +463,143 @@ country_event = {
 		country_event = {
 			id = gamestart.4
 		}
+	}
+}
+# South Western Sinification
+country_event = {
+	id = gamestart.8
+	title = gamestart.8.t
+	desc = gamestart.8.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		capital_scope = {
+			OR = {
+				superregion = china_superregion
+				region = manchuria_region
+			}
+		}
+		NOT = { has_country_flag = rejected_chinese_spread_culture }
+		OR = {
+			culture_group = east_asian
+			is_emperor_of_china = yes
+		}
+		any_owned_province = {
+			NOT = { culture_group = east_asian }
+			OR = {
+				area = yun_gui_area
+				area = chuannan_area
+				area = yun_gui_borderland_area
+				area = north_kwaichow_area
+				area = east_kwaichow_area
+				area = west_kwaichow_area
+				area = hunan_area
+				area = south_fulan_area
+				area = west_fulan_area
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 240
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { culture_group = east_asian }
+					OR = {
+						area = yun_gui_area
+						area = chuannan_area
+						area = yun_gui_borderland_area
+						area = north_kwaichow_area
+						area = east_kwaichow_area
+						area = west_kwaichow_area
+						area = hunan_area
+						area = south_fulan_area
+						area = west_fulan_area
+					}
+				}
+				save_event_target_as = southwestern_mandarin_province
+			}
+		}
+	}
+	option = { # Allow spread southwestern
+		name = gamestart.8.a
+		event_target:southwestern_mandarin_province = {
+			change_culture = south_west_mandarin
+		}
+		set_country_flag = embraced_chinese_spread_culture
+	}
+	option = { # Resist cultural change
+		name = gamestart.8.b
+		event_target:southwestern_mandarin_province = {
+			change_culture = south_west_mandarin
+		}
+		set_country_flag = rejected_chinese_spread_culture
+	}
+}
+# North Eastern Sinification
+country_event = {
+	id = gamestart.9
+	title = gamestart.9.t
+	desc = gamestart.9.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		capital_scope = {
+			OR = {
+				superregion = china_superregion
+				region = manchuria_region
+			}
+		}
+		NOT = { has_country_flag = rejected_chinese_spread_culture }
+		OR = {
+			culture_group = east_asian
+			is_emperor_of_china = yes
+		}
+		any_owned_province = {
+			OR = {
+				NOT = { culture_group = east_asian }
+				culture = manchu_new
+			}
+			region = manchuria_region
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 240
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						NOT = { culture_group = east_asian }
+						culture = manchu_new
+					}
+					region = manchuria_region
+				}
+				save_event_target_as = southwestern_mandarin_province
+			}
+		}
+	}
+	option = { # Allow spread southwestern
+		name = gamestart.9.a
+		event_target:southwestern_mandarin_province = {
+			change_culture = north_east_mandarin
+		}
+		set_country_flag = embraced_chinese_spread_culture
+	}
+	option = { # Resist cultural change
+		name = gamestart.9.b
+		event_target:southwestern_mandarin_province = {
+			change_culture = north_east_mandarin
+		}
+		set_country_flag = rejected_chinese_spread_culture
 	}
 }

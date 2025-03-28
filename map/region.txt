@@ -80,6 +80,8 @@ italy_region = {
 		lazio_area
 		po_valley_area
 		western_sicily_area
+		
+		corsica_area
 	}
 }
 
@@ -862,6 +864,7 @@ japan_region = {
 		north_hokuriku_area
 		east_sanindo_area
 		sanyodo_area
+		north_hokkaido_area
 	}
 	monsoon = {
 		00.06.01
@@ -947,6 +950,9 @@ xinan_region = {
 		east_kwaichow_area
 		west_kwaichow_area
 		tibetan_foothills_area
+		xiushan_area
+		tengyue_area
+		puer_area
 	}
 }
 
@@ -971,6 +977,11 @@ north_china_region = {
 		north_shaanxi_area
 		west_shaanxi_area
 		east_gansu_area
+		shanxi_east_area
+		shanxi_north_area
+		shanxi_south_area
+		east_hebei_area
+		west_hebei_area
 	}
 }
 

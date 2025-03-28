@@ -1,0 +1,72 @@
+country_decisions = {
+
+	ming_crisis_fortify_capital = {
+		major = yes
+		potential = {
+			has_global_flag = TomatoMingModded
+			tag = MNG
+			has_disaster = ming_crisis
+			capital_scope = {
+				controlled_by = ROOT
+				fort_level = 1
+			}
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		allow = {
+			capital_scope = {
+				NOT = { has_province_modifier = ming_crisis_fortified_capital }
+			}
+			all_owned_province = {
+				NOT = { has_province_modifier = ming_crisis_garrison_withdrawn_to_capital }
+			}
+			mil_power = 200
+			imperial_mandate = 5
+		}
+		effect = {
+			add_war_exhaustion = 1
+			add_mandate = -5
+			add_mil_power = -200
+			capital_scope = {
+				add_province_modifier = {
+					name = "ming_crisis_fortified_capital"
+					duration = 730
+				}
+			}
+			every_owned_province = {
+				limit = {
+					fort_level = 1
+					controlled_by = ROOT
+					NOT = { is_capital_of = ROOT }
+				}
+				add_province_modifier = {
+					name = "ming_crisis_garrison_withdrawn_to_capital"
+					duration = 730
+				}
+			}
+			every_owned_province = {
+				add_devastation = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				NOT = {
+					capital_scope = {
+						any_neighbor_province = {
+							OR = {
+								has_siege = yes
+								NOT = { controlled_by = ROOT }
+							}
+						}
+					}
+					capital_scope = {
+						has_siege = yes
+					}
+				}
+			}
+		}
+	}
+}

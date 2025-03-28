@@ -10278,6 +10278,36 @@ country_event = {
 		}
 		desc = "random_event.EVTDESC2F"
 	}
+	desc = { # Australian
+		trigger = {
+			culture_group = british
+			any_owned_province = {
+				continent = oceania
+				OR = {
+					culture = scottish
+					culture = english
+					culture = welsh
+					culture = angloirish
+					culture = irish
+				}
+			}
+		}
+		desc = "random_event.EVTDESC2G"
+	}
+	desc = { # Dixie
+		trigger = {
+			primary_culture = american
+			any_owned_province = {
+				culture = american
+				OR = {
+					region = southeast_america_region
+					region = mississippi_region
+					region = rio_grande_region
+				}
+			}
+		}
+		desc = "random_event.EVTDESC2H"
+	}
 	picture = COLONIZATION_eventPicture
 	
 	is_triggered_only = yes
@@ -10386,6 +10416,32 @@ country_event = {
 						culture = gascon
 						culture = burgundian
 						culture = anglois
+					}
+				}
+			}
+			# Eligible for Australian culture
+			AND = {
+				culture_group = british
+				any_owned_province = {
+					continent = oceania
+					OR = {
+						culture = scottish
+						culture = english
+						culture = welsh
+						culture = angloirish
+						culture = irish
+					}
+				}
+			}
+			# Eligible for Dixie culture
+			AND = {
+				primary_culture = american
+				any_owned_province = {
+					culture = american
+					OR = {
+						region = southeast_america_region
+						region = mississippi_region
+						region = rio_grande_region
 					}
 				}
 			}
@@ -10584,11 +10640,66 @@ country_event = {
 					save_event_target_as = louisianans_province
 				}
 			}
+			if = {
+				limit = {
+					culture_group = british
+					any_owned_province = {
+						continent = oceania
+						OR = {
+							culture = scottish
+							culture = english
+							culture = welsh
+							culture = angloirish
+							culture = irish
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						continent = oceania
+						OR = {
+							culture = scottish
+							culture = english
+							culture = welsh
+							culture = angloirish
+							culture = irish
+						}
+					}
+					save_event_target_as = australian_province
+				}
+			}
+			if = {
+				limit = {
+					primary_culture = american
+					any_owned_province = {
+						culture = american
+						OR = {
+							region = southeast_america_region
+							region = mississippi_region
+							region = rio_grande_region
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = american
+						OR = {
+							region = southeast_america_region
+							region = mississippi_region
+							region = rio_grande_region
+						}
+					}
+					save_event_target_as = dixie_province
+				}
+			}
 		}
 	}
 	option = { # Become American
 		trigger = {
 			culture_group = british
+			event_target:australian_province = {
+				continent = north_america
+			}
 		}
 		name = "random_event.EVTOPTA2"
 		if = {
@@ -10619,6 +10730,9 @@ country_event = {
 			culture_group = british
 			ai = no
 			NOT = { has_country_flag = embraced_new_colonial_culture }
+			event_target:australian_province = {
+				continent = north_america
+			}
 		}
 		name = "random_event.EVTOPTB2"
 		event_target:american_province = {
@@ -10955,6 +11069,124 @@ country_event = {
 		name = "random_event.EVTOPTB2"
 		event_target:louisianans_province = {
 			change_culture = louisianans
+		}
+		set_country_flag = rejected_new_colonial_culture
+	}
+	option = { # Become Australian
+		trigger = {
+			culture_group = british
+			event_target:australian_province = {
+				continent = oceania
+			}
+		}
+		name = "random_event.EVTOPTI2"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = australian
+				}
+			}
+			change_primary_culture = australian
+		}
+		event_target:australian_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture = scottish
+						culture = english
+						culture = welsh
+						culture = angloirish
+						culture = irish
+					}
+				}
+				change_culture = australian
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
+	}
+	option = { # Resist cultural change
+		trigger = {
+			culture_group = british
+			ai = no
+			NOT = { has_country_flag = embraced_new_colonial_culture }
+		}
+		name = "random_event.EVTOPTB2"
+		event_target:australian_province = {
+			change_culture = australian
+		}
+		set_country_flag = rejected_new_colonial_culture
+	}
+	option = { # Become Dixie
+		trigger = {
+			primary_culture = american
+			event_target:australian_province = {
+				OR = {
+					region = southeast_america_region
+					region = mississippi_region
+					region = rio_grande_region
+				}
+			}
+		}
+		name = "random_event.EVTOPTJ2"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = dixie
+				}
+			}
+			change_primary_culture = dixie
+		}
+		event_target:dixie_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					culture = american
+				}
+				change_culture = dixie
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
+	}
+	option = { # Allow spread Dixie
+		trigger = {
+			primary_culture = american
+			event_target:australian_province = {
+				OR = {
+					region = southeast_america_region
+					region = mississippi_region
+					region = rio_grande_region
+				}
+			}
+		}
+		name = "random_event.EVTOPTK2"
+		event_target:dixie_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					culture = american
+				}
+				change_culture = dixie
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
+	}
+	option = { # Resist cultural change
+		trigger = {
+			primary_culture = american
+			event_target:australian_province = {
+				OR = {
+					region = southeast_america_region
+					region = mississippi_region
+					region = rio_grande_region
+				}
+			}
+			ai = no
+			NOT = { has_country_flag = embraced_new_colonial_culture }
+		}
+		name = "random_event.EVTOPTB2"
+		event_target:australian_province = {
+			change_culture = dixie
 		}
 		set_country_flag = rejected_new_colonial_culture
 	}

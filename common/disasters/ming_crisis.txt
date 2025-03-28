@@ -131,11 +131,13 @@ ming_crisis = {
 			ming_crisis.14 # Fall of Peking
 			ming_crisis.15 # Autonomy for Annam
 			ming_crisis.16 # Autonomy for Western Protectorate
+			ming_crisis.18 # Tibetan revolt
 		}
 		random_events = {
 			1000 = 0
 			100 = ming_crisis.6 # Rebellion
 			100 = ming_crisis.11
+			300 = ming_crisis.19
 		}
 	}
 }

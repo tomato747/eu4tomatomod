@@ -517,6 +517,13 @@ emp_naples_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			corsica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			baleares_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -532,6 +539,7 @@ emp_naples_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
+				area = corsica_area
 				area = baleares_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -541,6 +549,10 @@ emp_naples_4 = {
 				area = baleares_area
 			}
 			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

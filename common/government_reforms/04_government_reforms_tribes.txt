@@ -1062,3 +1062,26 @@ tribe_tribal_unity = {
 		factor = 2
 	}
 }
+
+formosan_polity = {
+	icon = "tribal_council"
+	allow_normal_conversion = no
+	potential = {
+		primary_culture = formosan
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	allow_migration = yes
+	modifiers = {
+		enemy_core_creation = 0.2
+		defensiveness = 0.10
+		morale_damage_received = -0.025
+		governing_capacity_modifier = -0.5
+	}
+	government_abilities = {
+		formosan_tribe_mechanic
+	}
+	ai = {
+		factor = 1000
+	}
+}

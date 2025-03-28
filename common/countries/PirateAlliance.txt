@@ -1,0 +1,161 @@
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 153  43  31 }
+
+historical_idea_groups = {
+	trade_ideas
+	economic_ideas
+	defensive_ideas
+	administrative_ideas
+	humanist_ideas
+	quantity_ideas
+	influence_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+		"Potsai #0" = 10	#寶仔
+		"Manhin #0" = 10	#文顯 aka 鄭一
+		"Yud #0" = 10		#一
+		"Yingshek #0" = 10	#英石 aka 鄭一之子
+		"Hungshek #0" = 10	#雄石 aka 鄭一之子
+		"Lincheung #0" = 10	#連昌 aka 鄭一老竇
+		"Yuklun #0" = 10	#玉麟 aka 張保仔之子
+		"Yiuwong #0" = 10	#耀煌 aka 鄭七
+		"Linfuk #0" = 10	#連福 aka 鄭七老竇
+		"Kin #0" = 10		#鄭建 aka founder of 鄭clan
+		"Tsih #0" = 10		#鄭七
+		"Waiman #0" = 10	#鄭衛民	2nd gen 鄭clan
+		"Waicheung #0" = 10	#鄭衛昌 3rd gen 鄭clan
+		"Yiuyat #0" = 10	#耀日 aka bro of 鄭七
+		"YiuYuet #0" = 10	#耀月 aka bro of 鄭七
+		"Yiusing #0" = 10	#耀星 aka bro of 鄭七
+		"Yiuming #0" = 10	#耀明 aka bro of 鄭七
+		"Yiuyuk #0" = 10	#耀煜 aka bro of 鄭七
+		"Poyeung #0" = 10	#保養 aka 鄭七之子
+		"Waifung #0" = 10	#維豐 aka 鄭七之子
+		"Hosung #0" = 10	#何送 aka 鄭七養子
+		"Kwunfu #0" = 10	#莫觀扶
+		"Timpo #0" = 10		#陳添保
+		"Kwunhing #0" = 10	#陳觀興
+		"Kwuncheung #0" = 10#陳觀祥
+		"Tak #0" = 10		#唐德
+		"Manchoi #0" = 10	#樊文才
+		"Mangang #0" = 10	#梁文庚
+		"Singcheung #0" = 10#黃勝長
+		"Aluk #0" = 10		#張亞六
+		"Shekyi #0" = 10	#烏石二 aka 麥有金
+		"Yaukam #0" = 10	#麥有金
+		"Shektai #0" = 10	#烏石大 aka 麥有貴
+		"YauKwai #0" = 10	#麥有貴
+		"Sheksam #0" = 10	#烏石三 aka 麥有吉
+		"Yaukat #0" = 10	#麥有吉
+		"Tim #0" = 10		#周添
+		"Pinhak #0" = 10	#楊片客
+		"Akwong #0" = 10	#陳亞廣
+		"Wantang #0" = 10	#龍運登
+		"Yiucheung #0" = 10	#鄭耀章
+		"Waimung #0" = 10	#楊為夢
+		"Kwokhing #0" = 10	#宋國興
+		"Hok #0" = 10		#黃鶴
+		"Tsiching #0" = 10	#吳智清
+		"Chungtsiu #0" = 10	#李宗潮
+		"Kuyeung #0" = 10	#金古養 aka 李相清
+		"Sheungching #0" = 10	#李相清
+		"Lunkwai #0" = 10	#馮聯貴
+		"Po #0" = 10		#梁寶
+		"A'huk #0" = 10		#溫阿鵠
+		"A'ng #0" = 10		#葉亞伍
+		"A'hong #0" = 10	#梁亞康
+		"Lotung #0" = 10	#鄭老童 aka 鄭流唐
+		"Lautong #0" = 10	#鄭流唐
+		"Popou #0" = 10		#梁婆保
+		"Shanyi #0" = 10	#香山二 aka 蕭稽蘭
+		"Kailan #0" = 10	#蕭稽蘭
+		"Boungou #0" = 10	#蕭步鼇
+		"Kwokwa #0" = 10	#鄭國華
+		"Ng #0" = 10		#陳五
+		"A'nam #0" = 10		#陳亞南
+		"Paufuk #0" = 10	#大炮椱
+		"Potai #0" = 10		#郭婆帶
+		"Yungfat #0" = 10	#馮用發
+		"Yatko #0" = 10		#張日高
+		"Tsausin #0" = 10	#郭就善
+		"A'sam #0" = 10		#王亞三
+		"A'kam #0" = 10		#王亞甘
+		
+		"Shekyeung #0" = -1	#石陽 aka 鄭一嫂
+		"Sau #0" = -1	#秀 mom of 鄭七
+		"Syunsou #0" = -1	#亞選嫂 Honestly idk are they male or female, I only guessed based on 嫂 in their name
+		
+		#Unrelated pirates
+		"Khian #0" = 1		#蔡牽
+		"Sapngtsai #0" = 1	#十五仔
+		"A'poo #0" = 1		#徐亞保
+		"Xiwen #0" = 1		#何喜文
+		"Kwailei #0" = 1	#倫貴利
+		"Hun #0" = 1		#朱濆
+		
+		"Akew #0" = -1		#吳亞嬌
+}
+
+leader_names = {
+	#Cheng clan
+	Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng
+	Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng Cheng
+	Zheng Zheng Zheng Zheng Zheng Zheng Zheng Zheng Zheng Zheng Zheng Zheng
+
+	Chiu Chio Chin Suen Sun Lee Li Chow Chau Chao Ng Cheng Cheang Wong
+	Vong Fung Fong Chan Chu Wai Cheung Cheong Shum Sum Sam Hon Ieong
+	Yeung Chun Chon Yau Iao Hui Hoi Ho Lui Loi Sze Si Hung Hong Cho
+	Tso Chou Yim Im Wa Wah Va Kam Ngai To Tao Tou Keung Keong Chik
+	Chek Tse Che Yu U Pak Sui Soi Tau Tao Wan Van So Sou Poon Pun Kot
+	Quat Hai Fan Pang Long Lo Wai Ma Miu Mio Fa Yam Iam Yuen Un Iun Lau
+	Lao Pau Pao Tong Pei Lim Sit Lui Louie Loi Ngai Tang Yan Ian Law Lo
+	Put Pat Kok Wu Vu On Sheung Lok Ok Ngok See Fu Foo Pei Pin Chai Hong
+	Yue Yuen Puk Pok Koo Ku Mang Ping Peng Wo Vo Muk Mok Siu Shiu Sio Wan
+	Yiu Iu Io Cham Kei Mo Mou Tik Dick Tek Mai Pui Ming Meng Chong Tsang
+	Chang Kai Fuk Fok Shing Sing Seng Tai Tam Sung Mau Song Mao Pong
+	
+	Diu Wat Vat Leung Leong Kwai Kuai Kong Kwok Kuok Kuoc Mui Lam Chung
+	Chui Tsui Choi Ko Kou Tin Fan Woo Fok Or O Lo Lu Loo Lou Fong Ting Teng
+	Pau Pao Bao Chu Kut Kat Kit Ching Cheng Ying Ieng Pui Luk Lok Wing Veng Ving
+	Yung Iong Ip Szema Auyeung
+}
+
+ship_names = {
+	Beiji Tianshu Sifu Gouchen Tianzhu Zhushi Tianqiang Xuange
+	Taizun Beidou Santai Tianji Wenchang Qizhenjiangjun Tenshe
+	Liaoning Beiluoshimen Yujing Hongshi 
+	Qinglong Baihu Zhuque Xuanwu Zhaowu Yong'an Nan'an Longhai Fu'an Fuding Jinchang
+	Qingyuan Xining Xingyi Wu'an Xianning Ruichang Xinghua
+	Zhaoyuan Xingping Yongji Xiaoyi Yongkang Rende Anding
+	Yanping 
+}
+
+army_names = {
+	"Red flag army" "Black flag army" "Yellow flag army" "Green flag army" "Blue flag army" "White flag army" "$PROVINCE$ Militia"
+}
+
+fleet_names = {
+	"Red flag pirates" "Black flag pirates" "Yellow flag pirates" "Green flag pirates" "Blue flag pirates" "White flag pirates" "Pirates of $PROVINCE$" 
+}

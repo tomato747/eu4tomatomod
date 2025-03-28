@@ -100,6 +100,12 @@ country_event = {
 				duration = -1
 			}
 		}
+		every_country = {
+			limit = {
+				has_country_modifier = ming_crisis_state
+			}
+			remove_country_modifier = ming_crisis_state
+		}
 	}
 }
 
@@ -134,6 +140,11 @@ country_event = {
 				area = north_shaanxi_area
 				area = west_shaanxi_area
 				area = east_gansu_area
+				area = shanxi_east_area
+				area = shanxi_north_area
+				area = shanxi_south_area
+				area = east_hebei_area
+				area = west_hebei_area
 			}
 		}
 	}
@@ -158,6 +169,11 @@ country_event = {
 						area = north_shaanxi_area
 						area = west_shaanxi_area
 						area = east_gansu_area
+						area = shanxi_east_area
+						area = shanxi_north_area
+						area = shanxi_south_area
+						area = east_hebei_area
+						area = west_hebei_area
 					}
 					OR = {
 						controlled_by = REB
@@ -166,6 +182,8 @@ country_event = {
 					if = {
 						limit = {
 							has_global_flag = TomatoMingModded
+							NOT = { capital_scope = { controlled_by = REB } }
+							NOT = { has_global_flag = ming_empire_fall }
 						}
 						is_capital = no
 					}
@@ -244,6 +262,7 @@ country_event = {
 					who = root
 					casus_belli = cb_take_mandate
 				}
+				
 			}
 		}
 		else = {
@@ -326,6 +345,15 @@ country_event = {
 						country_event = { id = ming_crisis.9 days = 1 }
 					}
 				}
+				if = {
+					limit = {
+						has_global_flag = TomatoMingModded
+					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
+					}
+				}
 			}
 		}
 	}
@@ -343,7 +371,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		NOT = { exists = CDL }
+		NOT = { exists = YUN }
 		num_of_owned_provinces_with = {
 			value = 6
 			NOT = { value = 5 }
@@ -358,6 +386,9 @@ country_event = {
 				area = north_kwaichow_area
 				area = east_kwaichow_area
 				area = west_kwaichow_area
+				area = xiushan_area
+				area = tengyue_area
+				area = puer_area
 			}
 		}
 		has_global_flag = TomatoMingVanilla
@@ -378,19 +409,22 @@ country_event = {
 						area = north_kwaichow_area
 						area = east_kwaichow_area
 						area = west_kwaichow_area
+						area = xiushan_area
+						area = tengyue_area
+						area = puer_area
 					}
 					OR = {
 						controlled_by = REB
 						controlled_by = ROOT
 					}
-					NOT = { is_core = CDL }
+					NOT = { is_core = YUN }
 					is_capital = no
 				}
-				add_core = CDL
+				add_core = YUN
 				clear_rebels = yes
 			}
-			release = CDL
-			CDL = {
+			release = YUN
+			YUN = {
 				capital_scope = {
 					build_to_forcelimit = {
 						infantry = 0.6
@@ -428,13 +462,13 @@ country_event = {
 		name = ming_crisis.4.a
 		ai_chance = { factor = 1 }
 		add_mandate = -5
-		CDL = { add_liberty_desire = 100 }
+		YUN = { add_liberty_desire = 100 }
 	}
 	option = {
 		name = ming_crisis.4.b
 		ai_chance = { factor = 0 }
 		add_mandate = 15
-		CDL = {
+		YUN = {
 			declare_war_with_cb = {
 				who = root
 				casus_belli = cb_independence_war
@@ -445,8 +479,8 @@ country_event = {
 		name = ming_crisis.4.c
 		trigger = { ai = no }
 		add_mandate = 15
-		switch_tag = CDL
-		CDL = {
+		switch_tag = YUN
+		YUN = {
 			declare_war_with_cb = {
 				who = root
 				casus_belli = cb_independence_war
@@ -855,6 +889,12 @@ country_event = {
 				}
 				save_event_target_as = emperor_of_china
 			}
+			every_country = {
+				limit = {
+					has_country_modifier = ming_crisis_state
+				}
+				remove_country_modifier = ming_crisis_state
+			}
 		}
 	}
 	
@@ -914,7 +954,52 @@ country_event = {
 			add_claim = ROOT
 		}
 
+		east_hebei_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		west_hebei_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
 		shanxi_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		shanxi_east_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		shanxi_north_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		shanxi_south_area = {
 			limit = {
 				owned_by = CSH
 				NOT = { is_claim = ROOT }
@@ -1307,7 +1392,15 @@ country_event = {
 	after = {
 		hidden_effect = {
 			CXI = {
-				country_event = { id = ming_crisis.13 days = 60 }
+				if = {
+					limit = {
+						has_global_flag = TomatoMingModded
+					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
+					}
+				}
 			}
 		}
 	}
@@ -1326,12 +1419,11 @@ country_event = {
 	
 	trigger = {
 		has_global_flag = TomatoMingModded
+		tag = CXI
 		any_owned_province = {
 			province_id = 679
-			owned_by = ROOT
 			NOT = {
 				controlled_by = ROOT
-				controlled_by = REB
 			}
 		}
 	}
@@ -1363,6 +1455,8 @@ country_event = {
 					area = sichuan_area
 					area = chuanbei_area
 					area = chuannan_area
+					area = chungking_area
+					area = tibetan_foothills_area
 				}
 			}
 			add_devastation = 50
@@ -1371,8 +1465,8 @@ country_event = {
 			limit = {
 				owned_by = ROOT
 				OR = {
-					area = huguang_area
-					area = hunan_area
+					area = chungking_area
+					area = tibetan_foothills_area
 					area = sichuan_area
 					area = chuanbei_area
 					area = chuannan_area
@@ -1385,8 +1479,8 @@ country_event = {
 			limit = {
 				owned_by = ROOT
 				OR = {
-					area = huguang_area
-					area = hunan_area
+					area = chungking_area
+					area = tibetan_foothills_area
 					area = sichuan_area
 					area = chuanbei_area
 					area = chuannan_area
@@ -1399,8 +1493,8 @@ country_event = {
 			limit = {
 				owned_by = ROOT
 				OR = {
-					area = huguang_area
-					area = hunan_area
+					area = chungking_area
+					area = tibetan_foothills_area
 					area = sichuan_area
 					area = chuanbei_area
 					area = chuannan_area
@@ -1446,6 +1540,7 @@ country_event = {
 		ROOT = {
 			capital_scope = {
 				NOT = { controlled_by = ROOT }
+				region = north_china_region
 			}
 		}
 	}
@@ -1453,6 +1548,16 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_global_flag = ming_empire_fall
+			
+			#Changping princess timer
+			1816 = {
+				add_province_modifier = { 
+					name = changping_princess_timer
+					duration = 7305
+					hidden = yes
+				}
+			}
+			
 			#Ruining Ming
 			MNG = {
 				add_stability = -6
@@ -1540,6 +1645,15 @@ country_event = {
 					cede_province = FRM
 					change_culture = chimin
 				}
+			}
+			any_province = {
+				limit = {
+					owned_by = ROOT
+					is_core = ROOT
+					controlled_by = ROOT
+				}
+				add_core = FRM
+				cede_province = FRM
 			}
 			if = {
 				limit = {
@@ -1665,6 +1779,10 @@ country_event = {
 						name = mng_rump_state
 						duration = -1
 					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
+					}
 				}
 			}
 			
@@ -1716,6 +1834,10 @@ country_event = {
 						name = mng_rump_state
 						duration = -1
 					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
+					}
 				}
 			}
 			
@@ -1760,6 +1882,10 @@ country_event = {
 					add_country_modifier = {
 						name = mng_rump_state
 						duration = -1
+					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
 					}
 				}
 			}
@@ -1819,6 +1945,10 @@ country_event = {
 					add_country_modifier = {
 						name = mng_rump_state
 						duration = -1
+					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
 					}
 				}
 			}
@@ -1911,6 +2041,10 @@ country_event = {
 						name = mng_rump_state
 						duration = -1
 					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
+					}
 				}
 			}
 			
@@ -1958,6 +2092,10 @@ country_event = {
 					add_country_modifier = {
 						name = mng_rump_state
 						duration = -1
+					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
 					}
 				}
 			}
@@ -2012,6 +2150,7 @@ country_event = {
 					kwangsi_north_area = {
 						limit = {
 							NOT = { province_id = 1840 }
+							controlled_by = ROOT
 						}
 						add_core = KWI
 						cede_province = KWI
@@ -2058,6 +2197,34 @@ country_event = {
 						add_core = KWI
 						cede_province = KWI
 					}
+					xiushan_area = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
+					tengyue_area = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
+					puer_area = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
+					burma_region = {
+						limit = {
+							controlled_by = ROOT
+						}
+						add_core = KWI
+						cede_province = KWI
+					}
 				}
 				KWI = {
 					define_ruler = {
@@ -2088,13 +2255,20 @@ country_event = {
 						name = mng_rump_state
 						duration = -1
 					}
+					add_country_modifier = {
+						name = ming_crisis_state
+						duration = 3650
+					}
 				}
 			}
 			
 			#Nanking Rebels
 			jiangsu_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						1821 = { controlled_by = REB }
+					}
 				}
 				add_core = LNG
 				cede_province = LNG
@@ -2102,7 +2276,10 @@ country_event = {
 			}
 			south_jiangsu_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						1821 = { controlled_by = REB }
+					}
 				}
 				add_core = LNG
 				cede_province = LNG
@@ -2110,7 +2287,10 @@ country_event = {
 			}
 			yangtze_delta_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						1821 = { controlled_by = REB }
+					}
 				}
 				add_core = LNG
 				cede_province = LNG
@@ -2118,7 +2298,10 @@ country_event = {
 			}
 			north_anhui_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						1821 = { controlled_by = REB }
+					}
 				}
 				add_core = LNG
 				cede_province = LNG
@@ -2126,7 +2309,10 @@ country_event = {
 			}
 			anhui_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						1821 = { controlled_by = REB }
+					}
 				}
 				add_core = LNG
 				cede_province = LNG
@@ -2134,7 +2320,10 @@ country_event = {
 			}
 			south_anhui_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						1821 = { controlled_by = REB }
+					}
 				}
 				add_core = LNG
 				cede_province = LNG
@@ -2144,7 +2333,10 @@ country_event = {
 			#Chekiang Rebels
 			zhejiang_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						684 = { controlled_by = REB }
+					}
 				}
 				add_core = WUU
 				cede_province = WUU
@@ -2152,7 +2344,10 @@ country_event = {
 			}
 			south_chekiang_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						2148 = { controlled_by = REB }
+					}
 				}
 				add_core = WUU
 				cede_province = WUU
@@ -2160,7 +2355,10 @@ country_event = {
 			}
 			upper_chekiang_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						2148 = { controlled_by = REB }
+					}
 				}
 				add_core = WUU
 				cede_province = WUU
@@ -2170,7 +2368,10 @@ country_event = {
 			#Kiangsi Rebels
 			jiangxi_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						5073 = { controlled_by = REB }
+					}
 				}
 				add_core = NNG
 				cede_province = NNG
@@ -2178,7 +2379,10 @@ country_event = {
 			}
 			central_kiangsi_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						5073 = { controlled_by = REB }
+					}
 				}
 				add_core = NNG
 				cede_province = NNG
@@ -2186,7 +2390,10 @@ country_event = {
 			}
 			south_kiangsi_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						5073 = { controlled_by = REB }
+					}
 				}
 				add_core = NNG
 				cede_province = NNG
@@ -2197,7 +2404,10 @@ country_event = {
 			#Fukien Rebels
 			fujian_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						669 = { controlled_by = REB }
+					}
 				}
 				add_core = MIN
 				cede_province = MIN
@@ -2205,7 +2415,10 @@ country_event = {
 			}
 			ming_deng_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						669 = { controlled_by = REB }
+					}
 				}
 				add_core = MIN
 				cede_province = MIN
@@ -2213,7 +2426,10 @@ country_event = {
 			}
 			upper_fukien_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						669 = { controlled_by = REB }
+					}
 				}
 				add_core = MIN
 				cede_province = MIN
@@ -2221,7 +2437,10 @@ country_event = {
 			}
 			teoswa_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						669 = { controlled_by = REB }
+					}
 				}
 				add_core = MIN
 				cede_province = MIN
@@ -2229,7 +2448,10 @@ country_event = {
 			}
 			hainan_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						669 = { controlled_by = REB }
+					}
 				}
 				add_core = MIN
 				cede_province = MIN
@@ -2239,7 +2461,10 @@ country_event = {
 			#Kwangchow Rebels
 			guangdong_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						667 = { controlled_by = REB }
+					}
 				}
 				add_core = YUE
 				cede_province = YUE
@@ -2247,7 +2472,10 @@ country_event = {
 			}
 			west_guangdong_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						667 = { controlled_by = REB }
+					}
 				}
 				add_core = YUE
 				cede_province = YUE
@@ -2255,7 +2483,10 @@ country_event = {
 			}
 			shiuhing_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
 				}
 				add_core = YUE
 				cede_province = YUE
@@ -2263,7 +2494,10 @@ country_event = {
 			}
 			north_kwongtung_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
 				}
 				add_core = YUE
 				cede_province = YUE
@@ -2271,7 +2505,10 @@ country_event = {
 			}
 			kwangsi_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
 				}
 				add_core = YUE
 				cede_province = YUE
@@ -2281,7 +2518,10 @@ country_event = {
 			#Hakka Rebels
 			east_river_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						667 = { controlled_by = REB }
+					}
 				}
 				add_core = HUA
 				cede_province = HUA
@@ -2291,14 +2531,20 @@ country_event = {
 			#Kwangsi Rebels
 			guangxi_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
 				}
 				add_core = CGS
 				cede_province = CGS
 			}
 			kwangsi_north_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
 				}
 				add_core = CGS
 				cede_province = CGS
@@ -2307,7 +2553,11 @@ country_event = {
 			#Dali Rebels
 			yun_gui_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
 				}
 				add_core = CDL
 				cede_province = CDL
@@ -2315,7 +2565,11 @@ country_event = {
 			}
 			yun_gui_borderland_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
 				}
 				add_core = CDL
 				cede_province = CDL
@@ -2323,7 +2577,11 @@ country_event = {
 			}
 			chuannan_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
 				}
 				add_core = CDL
 				cede_province = CDL
@@ -2331,7 +2589,11 @@ country_event = {
 			}
 			north_kwaichow_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
 				}
 				add_core = CDL
 				cede_province = CDL
@@ -2339,7 +2601,11 @@ country_event = {
 			}
 			east_kwaichow_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
 				}
 				add_core = CDL
 				cede_province = CDL
@@ -2347,7 +2613,47 @@ country_event = {
 			}
 			west_kwaichow_area = {
 				limit = {
-					controlled_by = REB
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			xiushan_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			tengyue_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			puer_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = bai
 				}
 				add_core = CDL
 				cede_province = CDL
@@ -2365,6 +2671,223 @@ country_event = {
 					add_government_reform = dablit_guaif_reform
 				}
 			}
+			
+			#Nuosu Rebels
+			yun_gui_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = yi
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			chuannan_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = yi
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			north_kwaichow_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = yi
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			east_kwaichow_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = yi
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			west_kwaichow_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = yi
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			
+			#Hmong Rebels
+			chuannan_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = miao
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			north_kwaichow_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = miao
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			east_kwaichow_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = miao
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			west_kwaichow_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = miao
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			west_fulan_area = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						665 = { controlled_by = REB }
+					}
+					culture = miao
+				}
+				add_core = CDL
+				cede_province = CDL
+				clear_rebels = yes
+			}
+			
+			#Hunan Rebels
+			hunan_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CHC
+				cede_province = CHC
+				clear_rebels = yes
+			}
+			south_fulan_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CHC
+				cede_province = CHC
+				clear_rebels = yes
+			}
+			west_fulan_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CHC
+				cede_province = CHC
+				clear_rebels = yes
+			}
+			huguang_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CHC
+				cede_province = CHC
+				clear_rebels = yes
+			}
+			central_hubei_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CHC
+				cede_province = CHC
+				clear_rebels = yes
+			}
+			western_hubei_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = CHC
+				cede_province = CHC
+				clear_rebels = yes
+			}
+			
+			#Sichuan Rebels
+			sichuan_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = SHU
+				cede_province = SHU
+				clear_rebels = yes
+			}
+			chuannan_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = SHU
+				cede_province = SHU
+				clear_rebels = yes
+			}
+			chuanbei_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = SHU
+				cede_province = SHU
+				clear_rebels = yes
+			}
+			chungking_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = SHU
+				cede_province = SHU
+				clear_rebels = yes
+			}
+			tibetan_foothills_area = {
+				limit = {
+					controlled_by = REB
+				}
+				add_core = SHU
+				cede_province = SHU
+				clear_rebels = yes
+			}
+			
 		}
 	}
 	
@@ -2772,7 +3295,7 @@ country_event = {
 		switch_tag = ANN
 		ANN = {
 			declare_war_with_cb = {
-				who = root
+				who = MNG
 				casus_belli = cb_independence_war
 			}
 		}
@@ -2870,10 +3393,10 @@ country_event = {
 	}
 	
 	option = {
-		name = ming_crisis.15.a
+		name = ming_crisis.16.a
 		ai_chance = { factor = 1 }
 		add_mandate = -5
-		ANN = { add_liberty_desire = 100 }
+		WPR = { add_liberty_desire = 100 }
 		ROOT = {
 			create_subject = {
 				subject_type = march
@@ -2882,7 +3405,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ming_crisis.15.b
+		name = ming_crisis.16.b
 		ai_chance = { factor = 0 }
 		add_mandate = 15
 		WPR = {
@@ -2893,13 +3416,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = ming_crisis.15.c
+		name = ming_crisis.16.c
 		trigger = { ai = no }
 		add_mandate = 15
 		switch_tag = WPR
 		WPR = {
 			declare_war_with_cb = {
-				who = root
+				who = MNG
 				casus_belli = cb_independence_war
 			}
 		}
@@ -2908,9 +3431,9 @@ country_event = {
 
 # Removes Ming sucessor
 country_event = {
-	id = ming_crisis.16
-	title = "ming_crisis.16.t"
-	desc = "ming_crisis.16.d"
+	id = ming_crisis.17
+	title = "ming_crisis.17.t"
+	desc = "ming_crisis.17.d"
 	picture = FAMINE_eventPicture
 	hidden = yes
 	is_triggered_only = yes
@@ -2958,7 +3481,353 @@ country_event = {
 	}
 	
 	option = {
-		name = ming_crisis.16.a
+		name = ming_crisis.17.a
 		
+	}
+}
+
+# Tibetan revolt
+country_event = {
+	id = ming_crisis.18
+	title = "ming_crisis.18.t"
+	desc = "ming_crisis.18.d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		has_global_flag = TomatoMingModded
+		NOT = { exists = TIB }
+		num_of_owned_provinces_with = {
+			value = 8
+			region = tibet_region
+			controlled_by = REB
+		}
+		any_owned_province = {
+			OR = {
+				region = tibet_region
+				area = tibetan_foothills_area
+				province_id = 2183
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						controlled_by = ROOT
+					}
+					OR = {
+						region = tibet_region
+						area = tibetan_foothills_area
+						province_id = 2183
+					}
+					OR = {
+						controlled_by = REB
+						controlled_by = ROOT
+					}
+					NOT = { is_core = TIB }
+					is_capital = no
+				}
+				add_core = TIB
+				clear_rebels = yes
+			}
+			release = TIB
+			TIB = {
+				if = {
+					limit = {
+						NOT = {
+							religion = vajrayana
+						}
+					}
+					change_religion = vajrayana
+				}
+				add_country_modifier = {
+					name = "rise_of_tibet"	#Tibet too weak to stay alive
+					duration = 3650
+				}
+				#Annex Tibet
+				if = {
+					limit = {
+						exists = KAM
+						KAM = {
+							ai = yes
+							OR = {
+								is_subject_of = MNG
+								is_subject = no
+							}
+						}
+					}
+					TIB = {
+						inherit = KAM
+					}
+				}
+				if = {
+					limit = {
+						exists = UTS
+						UTS = {
+							ai = yes
+							OR = {
+								is_subject_of = MNG
+								is_subject = no
+							}
+						}
+					}
+					TIB = {
+						inherit = UTS
+					}
+				}
+				if = {
+					limit = {
+						exists = PHA
+						PHA = {
+							ai = yes
+							OR = {
+								is_subject_of = MNG
+								is_subject = no
+							}
+						}
+					}
+					TIB = {
+						inherit = PHA
+					}
+				}
+				if = {
+					limit = {
+						exists = GUG
+						GUG = {
+							ai = yes
+							OR = {
+								is_subject_of = MNG
+								is_subject = no
+							}
+						}
+					}
+					TIB = {
+						inherit = GUG
+					}
+				}
+				if = {
+					limit = {
+						exists = AMD
+						AMD = {
+							ai = yes
+							OR = {
+								is_subject_of = MNG
+								is_subject = no
+							}
+						}
+					}
+					TIB = {
+						inherit = AMD
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						NOT = { is_neighbor_of = ROOT }
+						is_subject_of_type = tributary_state
+						is_subject_of = ROOT
+					}
+				}
+				every_country = {
+					limit = {
+						NOT = { is_neighbor_of = ROOT }
+						is_subject_of_type = tributary_state
+						is_subject_of = ROOT
+					}
+					country_event = {
+						id = ming_crisis.10
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ming_crisis.18.a
+		ai_chance = { factor = 0 }
+		add_mandate = -5
+		TIB = { add_liberty_desire = 100 }
+		ROOT = {
+			create_subject = {
+				subject_type = tributary_state
+				subject = TIB
+			}
+		}
+	}
+	option = {
+		name = ming_crisis.18.b
+		ai_chance = { factor = 1 }
+		add_mandate = 15
+		TIB = {
+			declare_war_with_cb = {
+				who = root
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+	option = {
+		name = ming_crisis.18.c
+		trigger = { ai = no }
+		add_mandate = 15
+		switch_tag = TIB
+		TIB = {
+			declare_war_with_cb = {
+				who = MNG
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+
+	after = {
+		TIB = {
+			add_country_modifier = {
+				name = "rise_of_tibet"	#Tibet too weak to stay alive
+				duration = 3650
+			}
+			if = {
+				limit = {
+					NOT = { capital = 677 }
+					owns = 677
+				}
+				set_capital = 118
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = tibetan
+						culture = tibetan_new
+					}
+				}
+				change_religion = vajrayana
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = vajrayana
+					}
+				}
+				change_religion = vajrayana
+			}
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.6
+					cavalry = 0.3
+					artillery = 0.1
+				}
+			}
+		}
+	}
+}
+
+# Frontier revolt in [area]
+country_event = {
+	id = ming_crisis.19
+	title = "ming_crisis.19.t"
+	desc = "ming_crisis.19.d"
+	picture = ANGRY_MOB_eventPicture
+	goto = ming_disaster_frontier_rebel_province
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = TomatoMingModded
+		any_owned_province = {
+			OR = {
+				NOT = { superregion = china_superregion }
+				NOT = {
+					culture = chihan
+					culture = cantonese
+					culture = ping_culture
+					culture = tanka
+					culture = jin
+					culture = wu
+					culture = huizhou_culture
+					culture = chimin
+					culture = hakka
+					culture = gan
+					culture = xiang
+					culture = sichuanese
+					culture = jianghuai
+					culture = xibei
+					culture = hubei
+					culture = zhongyuan
+					culture = shandong_culture
+					culture = taiwanese
+					culture = south_west_mandarin
+					culture = north_east_mandarin
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						NOT = { superregion = china_superregion }
+						NOT = {
+							culture = chihan
+							culture = cantonese
+							culture = ping_culture
+							culture = tanka
+							culture = jin
+							culture = wu
+							culture = huizhou_culture
+							culture = chimin
+							culture = hakka
+							culture = gan
+							culture = xiang
+							culture = sichuanese
+							culture = jianghuai
+							culture = xibei
+							culture = hubei
+							culture = zhongyuan
+							culture = shandong_culture
+							culture = taiwanese
+							culture = south_west_mandarin
+							culture = north_east_mandarin
+						}
+					}
+				}
+				save_event_target_as = ming_disaster_frontier_rebel_province
+			}
+		}
+	}
+	
+	option = {
+		name = ming_crisis.19.a
+		ai_chance = { factor = 1 }
+		add_mandate = 5
+		if = {
+			limit = { has_global_flag = TomatoMingModded }
+			event_target:ming_disaster_frontier_rebel_province = {
+				spawn_rebels = {
+					type = nationalist_rebels
+					friend = PREV
+					size = 12
+				}
+			}
+		}
+	}
+	option = {
+		name = ming_crisis.19.b
+		ai_chance = { factor = 0 }
+		add_mandate = -10
+		event_target:ming_disaster_frontier_rebel_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_local_autonomy = 100
+			}
+		}
 	}
 }

@@ -1199,6 +1199,13 @@ granada_slot_4_missions = {
 					}
 					add_permanent_claim = ROOT
 				}
+				corsica_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				baleares_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1236,6 +1243,7 @@ andalusia_slot_4_missions = {
 			OR = {
 				area = baleares_area
 				area = corsica_sardinia_area
+				area = corsica_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -1244,6 +1252,11 @@ andalusia_slot_4_missions = {
 		
 		trigger = {
 			corsica_sardinia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			corsica_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT

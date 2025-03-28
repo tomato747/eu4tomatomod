@@ -197,3 +197,61 @@ denied_migration = {
 	local_unrest = 5
 	local_tax_modifier = -0.5
 }
+rise_of_tibet = {
+	land_forcelimit_modifier = 2.0
+	global_tax_modifier = 3.0
+	land_morale = 0.10
+ 	devotion = 1
+	global_manpower_modifier = 2.0
+}
+lhasa_restored = {
+	local_prosperity_growth = 0.1
+	province_trade_power_modifier = 0.1
+	local_development_cost = -0.1
+	build_cost = -0.1
+	local_institution_spread = 0.1
+}
+tibet_rebuilt_lhasa = {
+	prestige = 0.5
+}
+tibet_urbanised = {
+	local_autonomy = -0.05
+	trade_goods_size_modifier = 0.25
+	local_development_cost = -0.1
+}
+tibet_developing = {
+	local_development_cost = -0.35
+	local_build_cost = -0.1
+}
+tomato_rising_empire = {
+
+}
+ming_crisis_fortified_capital = {
+	garrison_growth = 1.0
+	local_garrison_size = 1.0
+	fort_level = 1
+	local_defensiveness = 1.0
+	local_defender_dice_roll_bonus = 1
+	local_hostile_attrition = 1
+}
+ming_crisis_garrison_withdrawn_to_capital = {
+	garrison_growth = -0.05
+	local_garrison_size = -0.10
+	local_defensiveness = -0.1
+	local_fort_maintenance_modifier = 1
+}
+pirate_alliance_power = {
+	free_leader_pool = 6
+	global_ship_cost = -0.9
+	may_perform_slave_raid_on_same_religion = yes
+	no_religion_penalty = yes
+	naval_morale = 0.25
+}
+ming_crisis_state = {
+	global_unrest = 15
+	global_tax_modifier = -0.5
+	global_trade_goods_size_modifier = -0.3
+}
+changping_princess_timer = {
+
+}

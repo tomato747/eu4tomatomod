@@ -1,0 +1,1082 @@
+namespace = celestial_empire_events
+
+country_event = {
+	id = celestial_empire_events.1
+	title = celestial_empire_events.1.t
+	desc = celestial_empire_events.1.d
+	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = {
+		FROM = { is_emperor_of_china = yes }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			
+			set_global_flag = eoc_abolished
+			every_country = {
+				limit = {
+					has_reform = chinese_warlord
+				}
+				remove_government_reform = chinese_warlord
+			}
+			every_country = {
+				limit = {
+					has_reform = celestial_empire
+				}
+				remove_government_reform = celestial_empire
+			}
+			
+			#Cantonese culture group
+			every_province = {
+				limit = {
+					culture = cantonese
+					NOT = { area = guangdong_area }
+					NOT = { area = teoswa_area }
+					NOT = { area = north_kwongtung_area }
+					NOT = { area = shiuhing_area }
+					NOT = { area = west_guangdong_area }
+					NOT = { area = guangxi_area }
+					NOT = { area = kwangsi_area }
+					NOT = { area = kwangsi_north_area }
+					NOT = { area = hainan_area }
+					NOT = { area = east_river_area }
+				}
+				random_list = {
+					90 = {
+						change_culture = cantonese_n
+					}
+					5 = {
+						change_culture = hainan_cantonese
+					}
+					5 = {
+						change_culture = tungkong_cantonese
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					culture = cantonese
+					OR = {
+						area = guangdong_area
+						area = north_kwongtung_area
+						area = shiuhing_area
+						area = west_guangdong_area
+						area = guangxi_area
+						area = kwangsi_area
+						area = kwangsi_north_area
+						area = hainan_area
+					}
+				}
+				change_culture = cantonese_n
+			}
+			every_province = {
+				limit = {
+					culture = ping_culture
+				}
+				change_culture = ping_culture_n
+			}
+			every_province = {
+				limit = {
+					culture = tanka
+				}
+				change_culture = tanka_n
+			}
+			every_province = {
+				limit = {
+					culture = cantonese
+					area = hainan_area
+				}
+				change_culture = hainan_cantonese
+			}
+			every_province = {
+				limit = {
+					culture = cantonese
+					OR = {
+						area = east_river_area
+						area = teoswa_area
+					}
+				}
+				change_culture = tungkong_cantonese
+			}
+			every_province = {
+				limit = {
+					culture = vietnamese_new
+				}
+				change_culture = canto_vietnamese
+			}
+			
+			#Min culture group
+			every_province = {
+				limit = {
+					culture = chimin
+					NOT = { area = teoswa_area }
+					NOT = { area = fujian_area }
+					NOT = { area = ming_deng_area }
+					NOT = { area = upper_fukien_area }
+					NOT = { area = taiwan_area }
+					NOT = { area = north_taiwan_area }
+					NOT = { area = hainan_area }
+					NOT = { area = west_guangdong_area }
+					OR = {
+						NOT = { superregion = china_superregion }
+						has_port = yes
+					}
+				}
+				random_list = {
+					40 = {
+						change_culture = banlam
+					}
+					40 = {
+						change_culture = mingdeng
+					}
+					5 = {
+						change_culture = posing
+					}
+					5 = {
+						change_culture = hainam_hokkien
+					}
+					5 = {
+						change_culture = luichiu_hokkien
+					}
+					5 = {
+						change_culture = taiwanese_n
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					NOT = { area = teoswa_area }
+					NOT = { area = fujian_area }
+					NOT = { area = ming_deng_area }
+					NOT = { area = upper_fukien_area }
+					NOT = { area = taiwan_area }
+					NOT = { area = north_taiwan_area }
+					NOT = { area = hainan_area }
+					NOT = { area = west_guangdong_area }
+					superregion = china_superregion
+					has_port = no
+				}
+				random_list = {
+					35 = {
+						change_culture = banlam
+					}
+					30 = {
+						change_culture = mingdeng
+					}
+					1 = {
+						change_culture = maingba
+					}
+					1 = {
+						change_culture = centralmin
+					}
+					1 = {
+						change_culture = iautsiong
+					}
+					2 = {
+						change_culture = posing
+					}
+					10 = {
+						change_culture = hainam_hokkien
+					}
+					10 = {
+						change_culture = luichiu_hokkien
+					}
+					10 = {
+						change_culture = taiwanese_n
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					OR = {
+						area = teoswa_area
+						area = fujian_area
+						province_id = 5068
+					}
+				}
+				change_culture = banlam
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					area = ming_deng_area
+					NOT = { province_id = 4986 }
+				}
+				change_culture = mingdeng
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					province_id = 2152
+				}
+				change_culture = maingba
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					OR = {
+						province_id = 4988
+						province_id = 2153
+					}
+				}
+				change_culture = centralmin
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					province_id = 5069
+				}
+				change_culture = iautsiong
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					province_id = 4986
+				}
+				change_culture = posing
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					OR = {
+						area = taiwan_area
+						area = north_taiwan_area
+					}
+				}
+				change_culture = taiwanese_n
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					area = hainan_area
+				}
+				change_culture = hainam_hokkien
+			}
+			every_province = {
+				limit = {
+					culture = chimin
+					area = west_guangdong_area
+				}
+				change_culture = luichiu_hokkien
+			}
+			
+			#Hakka culture group
+			every_province = {
+				limit = {
+					culture = hakka
+					NOT = { area = guangdong_area }
+					NOT = { area = north_kwongtung_area }
+					NOT = { area = shiuhing_area }
+					NOT = { area = west_guangdong_area }
+					NOT = { area = guangxi_area }
+					NOT = { area = kwangsi_area }
+					NOT = { area = kwangsi_north_area }
+					NOT = { area = hainan_area }
+					NOT = { area = east_river_area }
+					NOT = { area = teoswa_area }
+					NOT = { area = fujian_area }
+					NOT = { area = ming_deng_area }
+					NOT = { area = upper_fukien_area }
+					NOT = { area = taiwan_area }
+					NOT = { area = north_taiwan_area }
+					NOT = { area = jiangxi_area }
+					NOT = { area = central_kiangsi_area }
+					NOT = { area = south_kiangsi_area }
+					NOT = { area = hunan_area }
+					NOT = { area = south_fulan_area }
+					NOT = { area = west_fulan_area }
+					NOT = { area = sichuan_area }
+					NOT = { area = chuannan_area }
+					NOT = { area = chuanbei_area }
+					NOT = { area = chungking_area }
+					NOT = { area = tibetan_foothills_area }
+					NOT = { area = kalimantan_area }
+					OR = {
+						NOT = { superregion = china_superregion }
+						has_port = yes
+					}
+				}
+				random_list = {
+					70 = {
+						change_culture = south_hakka
+					}
+					20 = {
+						change_culture = north_hakka
+					}
+					10 = {
+						change_culture = hainan_hakka
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					culture = hakka
+					NOT = { area = guangdong_area }
+					NOT = { area = north_kwongtung_area }
+					NOT = { area = shiuhing_area }
+					NOT = { area = west_guangdong_area }
+					NOT = { area = guangxi_area }
+					NOT = { area = kwangsi_area }
+					NOT = { area = kwangsi_north_area }
+					NOT = { area = hainan_area }
+					NOT = { area = east_river_area }
+					NOT = { area = teoswa_area }
+					NOT = { area = fujian_area }
+					NOT = { area = ming_deng_area }
+					NOT = { area = upper_fukien_area }
+					NOT = { area = taiwan_area }
+					NOT = { area = north_taiwan_area }
+					NOT = { area = jiangxi_area }
+					NOT = { area = central_kiangsi_area }
+					NOT = { area = south_kiangsi_area }
+					NOT = { area = hunan_area }
+					NOT = { area = south_fulan_area }
+					NOT = { area = west_fulan_area }
+					NOT = { area = sichuan_area }
+					NOT = { area = chuannan_area }
+					NOT = { area = chuanbei_area }
+					NOT = { area = chungking_area }
+					NOT = { area = tibetan_foothills_area }
+					NOT = { area = kalimantan_area }
+					superregion = china_superregion
+					has_port = no
+				}
+				random_list = {
+					25 = {
+						change_culture = south_hakka
+					}
+					25 = {
+						change_culture = north_hakka
+					}
+					20 = {
+						change_culture = sichuan_hakka
+					}
+					20 = {
+						change_culture = kwangsi_hakka
+					}
+					10 = {
+						change_culture = hainan_hakka
+					}
+				}
+			}
+			every_province = {
+				limit = {
+					culture = hakka
+					OR = {
+						area = guangdong_area
+						area = north_kwongtung_area
+						area = shiuhing_area
+						area = west_guangdong_area
+						area = east_river_area
+						area = teoswa_area
+						area = taiwan_area
+						area = north_taiwan_area
+						area = kalimantan_area
+					}
+				}
+				change_culture = south_hakka
+			}
+			every_province = {
+				limit = {
+					culture = hakka
+					OR = {
+						area = fujian_area
+						area = ming_deng_area
+						area = upper_fukien_area
+						area = jiangxi_area
+						area = central_kiangsi_area
+						area = south_kiangsi_area
+						area = hunan_area
+						area = south_fulan_area
+						area = west_fulan_area
+					}
+				}
+				change_culture = north_hakka
+			}
+			every_province = {
+				limit = {
+					culture = hakka
+					OR = {
+						area = sichuan_area
+						area = chuannan_area
+						area = chuanbei_area
+						area = chungking_area
+						area = tibetan_foothills_area
+					}
+				}
+				change_culture = sichuan_hakka
+			}
+			every_province = {
+				limit = {
+					culture = hakka
+					OR = {
+						area = guangxi_area
+						area = kwangsi_area
+						area = kwangsi_north_area
+					}
+				}
+				change_culture = kwangsi_hakka
+			}
+			every_province = {
+				limit = {
+					culture = hakka
+					OR = {
+						area = hainan_area
+					}
+				}
+				change_culture = hainan_hakka
+			}
+		}
+	}
+	
+	option = {
+		name = "celestial_empire_events.1.a"
+		add_prestige = 20
+		add_dip_power = 50
+		add_mil_power = 50
+		add_adm_power = 50
+	}
+	
+	after = {
+	
+		#Cantonese countries
+		every_country = {
+			limit = {
+				primary_culture = cantonese
+				capital_scope = {
+					NOT = { culture = cantonese_n }
+					NOT = { culture = hainan_cantonese }
+					NOT = { culture = tungkong_cantonese }
+				}
+			}
+			change_primary_culture = cantonese_n
+		}
+		every_country = {
+			limit = {
+				primary_culture = cantonese
+				capital_scope = {
+					culture = cantonese_n
+				}
+			}
+			change_primary_culture = cantonese_n
+		}
+		every_country = {
+			limit = {
+				primary_culture = cantonese
+				capital_scope = {
+					culture = hainan_cantonese
+				}
+			}
+			change_primary_culture = hainan_cantonese
+		}
+		every_country = {
+			limit = {
+				primary_culture = cantonese
+				capital_scope = {
+					culture = tungkong_cantonese
+				}
+			}
+			change_primary_culture = tungkong_cantonese
+		}
+		every_country = {
+			limit = {
+				primary_culture = ping_culture
+			}
+			change_primary_culture = ping_culture_n
+		}
+		every_country = {
+			limit = {
+				primary_culture = tanka
+			}
+			change_primary_culture = tanka_n
+		}
+		every_country = {
+			limit = {
+				primary_culture = vietnamese_new
+			}
+			change_primary_culture = canto_vietnamese
+		}
+		if = {
+			limit = {
+				exist = HKG
+				HKG = {
+					culture_group = cantonese_g
+					owns = 4942
+				}
+			}
+			change_primary_culture = hongkonger
+		}
+		if = {
+			limit = {
+				4942 = {
+					culture_group = cantonese_g
+					owner = {
+						OR = {
+							technology_group = western
+							technology_group = eastern
+							tag = HKG
+						}
+					}
+				}
+			}
+			4942 = {
+				change_culture = hongkonger
+			}
+		}
+		if = {
+			limit = {
+				exist = MAC
+				MAC = {
+					culture_group = cantonese_g
+					owns = 668
+				}
+			}
+			change_primary_culture = hongkonger
+		}
+		if = {
+			limit = {
+				668 = {
+					culture_group = cantonese_g
+					owner = {
+						OR = {
+							technology_group = western
+							technology_group = eastern
+							tag = MAC
+						}
+					}
+				}
+			}
+			668 = {
+				change_culture = hongkonger
+			}
+		}
+		
+		#Min countries
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					NOT = { culture = banlam }
+					NOT = { culture = mingdeng }
+					NOT = { culture = maingba }
+					NOT = { culture = centralmin }
+					NOT = { culture = iautsiong }
+					NOT = { culture = posing }
+					NOT = { culture = hainam_hokkien }
+					NOT = { culture = luichiu_hokkien }
+					NOT = { culture = taiwanese_n }
+					OR = {
+						NOT = { superregion = china_superregion }
+						has_port = yes
+					}
+				}
+			}
+			random_list = {
+				40 = {
+					change_primary_culture = banlam
+				}
+				40 = {
+					change_primary_culture = mingdeng
+				}
+				5 = {
+					change_primary_culture = posing
+				}
+				5 = {
+					change_primary_culture = hainam_hokkien
+				}
+				5 = {
+					change_primary_culture = luichiu_hokkien
+				}
+				5 = {
+					change_primary_culture = taiwanese_n
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					NOT = { culture = banlam }
+					NOT = { culture = mingdeng }
+					NOT = { culture = maingba }
+					NOT = { culture = centralmin }
+					NOT = { culture = iautsiong }
+					NOT = { culture = posing }
+					NOT = { culture = hainam_hokkien }
+					NOT = { culture = luichiu_hokkien }
+					NOT = { culture = taiwanese_n }
+					superregion = china_superregion
+					has_port = no
+				}
+			}
+			random_list = {
+				35 = {
+					change_primary_culture = banlam
+				}
+				30 = {
+					change_primary_culture = mingdeng
+				}
+				1 = {
+					change_primary_culture = maingba
+				}
+				1 = {
+					change_primary_culture = centralmin
+				}
+				1 = {
+					change_primary_culture = iautsiong
+				}
+				2 = {
+					change_primary_culture = posing
+				}
+				10 = {
+					change_primary_culture = hainam_hokkien
+				}
+				10 = {
+					change_primary_culture = luichiu_hokkien
+				}
+				10 = {
+					change_primary_culture = taiwanese_n
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = banlam
+				}
+			}
+			change_primary_culture = banlam
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = mingdeng
+				}
+			}
+			change_primary_culture = mingdeng
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = maingba
+				}
+			}
+			change_primary_culture = maingba
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = centralmin
+				}
+			}
+			change_primary_culture = centralmin
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = iautsiong
+				}
+			}
+			change_primary_culture = iautsiong
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = posing
+				}
+			}
+			change_primary_culture = posing
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = hainam_hokkien
+				}
+			}
+			change_primary_culture = hainam_hokkien
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = luichiu_hokkien
+				}
+			}
+			change_primary_culture = luichiu_hokkien
+		}
+		every_country = {
+			limit = {
+				primary_culture = chimin
+				capital_scope = {
+					culture = taiwanese_n
+				}
+			}
+			change_primary_culture = taiwanese_n
+		}
+		
+		#Hakka countries
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					NOT = { culture = south_hakka }
+					NOT = { culture = north_hakka }
+					NOT = { culture = sichuan_hakka }
+					NOT = { culture = kwangsi_hakka }
+					NOT = { culture = hainan_hakka }
+					OR = {
+						NOT = { superregion = china_superregion }
+						has_port = yes
+					}
+				}
+			}
+			random_list = {
+				70 = {
+					change_primary_culture = south_hakka
+				}
+				20 = {
+					change_primary_culture = north_hakka
+				}
+				10 = {
+					change_primary_culture = hainan_hakka
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					NOT = { culture = south_hakka }
+					NOT = { culture = north_hakka }
+					NOT = { culture = sichuan_hakka }
+					NOT = { culture = kwangsi_hakka }
+					NOT = { culture = hainan_hakka }
+					superregion = china_superregion
+					has_port = no
+				}
+			}
+			random_list = {
+				25 = {
+					change_primary_culture = south_hakka
+				}
+				25 = {
+					change_primary_culture = north_hakka
+				}
+				20 = {
+					change_primary_culture = sichuan_hakka
+				}
+				20 = {
+					change_primary_culture = kwangsi_hakka
+				}
+				10 = {
+					change_primary_culture = hainan_hakka
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					culture = south_hakka
+				}
+			}
+			change_primary_culture = south_hakka
+		}
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					culture = north_hakka
+				}
+			}
+			change_primary_culture = north_hakka
+		}
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					culture = sichuan_hakka
+				}
+			}
+			change_primary_culture = sichuan_hakka
+		}
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					culture = kwangsi_hakka
+				}
+			}
+			change_primary_culture = kwangsi_hakka
+		}
+		every_country = {
+			limit = {
+				primary_culture = hakka
+				capital_scope = {
+					culture = hainan_hakka
+				}
+			}
+			change_primary_culture = hainan_hakka
+		}
+	}
+}
+
+#An ideology for an Empire
+country_event = {
+	id = celestial_empire_events.2
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor_of_china = yes
+		has_dlc = "Mandate of Heaven"
+		NOT = { tag = MNG }
+		NOT = { religion = confucianism }
+		NOT = { has_country_flag = reacted_to_confucianism_event } #If you form the empire multiple times you won't get this again
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = reacted_to_confucianism_event
+			if = {
+				limit = {
+					religion = animism
+				}
+				set_country_flag = to_harmonize_religion_animism
+			}
+			if = {
+				limit = {
+					religion = buddhism
+				}
+				set_country_flag = to_harmonize_religion_buddhism
+			}
+			if = {
+				limit = {
+					religion = hinduism
+				}
+				set_country_flag = to_harmonize_religion_hinduism
+			}
+			if = {
+				limit = {
+					religion = mahayana
+				}
+				set_country_flag = to_harmonize_religion_mahayana
+			}
+			if = {
+				limit = {
+					religion = shinto
+				}
+				set_country_flag = to_harmonize_religion_shinto
+			}
+			if = {
+				limit = {
+					religion = sunni
+				}
+				set_country_flag = to_harmonize_religion_sunni
+			}
+			if = {
+				limit = {
+					religion = tengri_pagan_reformed
+				}
+				set_country_flag = to_harmonize_religion_tengri_pagan_reformed
+			}
+			if = {
+				limit = {
+					religion = vajrayana
+				}
+				set_country_flag = to_harmonize_religion_vajrayana
+			}
+		}
+	}
+	
+	option = {
+		name = "celestial_empire_events.2.a"
+		ai_chance = {
+			factor = 100
+		}
+		change_religion = confucianism
+		add_meritocracy_effect = yes
+		add_mandate_effect = yes
+		trigger_switch = {
+			on_trigger = has_country_flag
+			to_harmonize_religion_animism = {
+				add_harmonized_religion = animism
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_animism
+				}
+			}
+			to_harmonize_religion_buddhism = {
+				add_harmonized_religion = buddhism
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_buddhism
+				}
+			}
+			to_harmonize_religion_hinduism = {
+				add_harmonized_religion = hinduism
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_hinduism
+				}
+			}
+			to_harmonize_religion_mahayana = {
+				add_harmonized_religion = mahayana
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_mahayana
+				}
+			}
+			to_harmonize_religion_shinto = {
+				add_harmonized_religion = shinto
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_shinto
+				}
+			}
+			to_harmonize_religion_sunni = {
+				add_harmonized_religion = sunni
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_sunni
+				}
+			}
+			to_harmonize_religion_tengri_pagan_reformed = {
+				add_harmonized_religion = tengri_pagan_reformed
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_tengri_pagan_reformed
+				}
+			}
+			to_harmonize_religion_vajrayana = {
+				add_harmonized_religion = vajrayana
+				hidden_effect = {
+					clr_country_flag = to_harmonize_religion_vajrayana
+				}
+			}
+		}
+	}
+	option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = {
+			factor = 0
+		}
+		reduce_meritocracy_effect = yes
+		add_stability = -1
+	}
+}
+
+
+#Sinicization
+country_event = {
+	id = celestial_empire_events.3
+	title = celestial_empire_events.3.t
+	desc = celestial_empire_events.3.d
+	picture = MERITOCRACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor_of_china = yes
+		has_dlc = "Mandate of Heaven"
+		NOT = { tag = MNG }
+		NOT = { culture_group = east_asian } #No Chinese Primary Culture
+		any_owned_province = {
+			has_owner_culture = yes
+		}
+		NOT = { has_country_flag = had_sinicization_event }
+		calc_true_if = {
+			accepted_culture = manchu_new
+			accepted_culture = korean_new
+			accepted_culture = tibetan_new
+			accepted_culture = vietnamese_new
+			accepted_culture = altaic_new
+			accepted_culture = chihan
+			accepted_culture = miao
+			accepted_culture = cantonese
+			accepted_culture = jin
+			accepted_culture = wu
+			accepted_culture = chimin
+			accepted_culture = hakka
+			accepted_culture = gan
+			accepted_culture = xiang
+			accepted_culture = sichuanese
+			accepted_culture = jianghuai
+			accepted_culture = xibei
+			accepted_culture = hubei
+			accepted_culture = zhongyuan
+			accepted_culture = shandong_culture
+			amount = 2
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_sinicization_event
+			random_owned_province = {
+				limit = {
+					has_owner_culture = yes
+					is_state = yes
+				}
+				area = {
+					limit = { owned_by = ROOT }
+					set_province_flag = resentment_to_sinicization
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_culture = yes
+					is_state = yes
+					NOT = { has_province_flag = resentment_to_sinicization }
+				}
+				area = {
+					limit = { owned_by = ROOT }
+					set_province_flag = resentment_to_sinicization
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "celestial_empire_events.3.a"
+		ai_chance = {
+			factor = 75
+		}
+		add_mandate_effect = yes
+		add_meritocracy_large_effect = yes
+		every_owned_province = {	#2 states with atleast one province of a non-chinese primary culture, tooltip should display maximum 10 provinces
+			limit = {
+				has_province_flag = resentment_to_sinicization
+			}
+			clr_province_flag = resentment_to_sinicization
+			add_province_modifier = {
+				name = "resistance_to_cultural_changes"
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = "celestial_empire_events.3.b" #We must preserve our heritage!
+		ai_chance = {
+			factor = 25
+		}
+		add_adm_power = -75
+		reduce_mandate_effect = yes
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_flag = resentment_to_sinicization }
+				clr_province_flag = resentment_to_sinicization
+			}
+		}
+	}
+}

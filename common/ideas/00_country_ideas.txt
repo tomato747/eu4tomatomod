@@ -18486,7 +18486,13 @@ YUE_ideas = {
 	}
 	
 	trigger = {
-		tag = YUE
+		OR = {
+			tag = YUE
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
 	}
 	free = yes
 	
@@ -18646,7 +18652,14 @@ CHU_ideas = {
 	}
 	
 	trigger = {
-		tag = CHU
+		OR = {
+			tag = CHU
+			AND = {
+				NOT = { tag = CXI }
+				primary_culture = hubei
+			}
+			primary_culture = xiang
+		}
 	}
 	free = yes
 	
@@ -18717,3 +18730,270 @@ FRM_ideas = {
 	}
 }
 
+GLD_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		infantry_power = 0.10
+	}
+	
+	bonus = {
+		land_attrition = -0.10
+	}
+	
+	trigger = {
+		tag = GLD
+	}
+	free = yes
+	
+	GLD_hardy_people = {
+		global_trade_goods_size_modifier = 0.1
+		ship_durability = 0.1
+	}
+	GLD_harsh_climate = {
+		local_hostile_attrition = 2
+		discipline = 0.05
+	}
+	GLD_between_empires = {
+		diplomatic_reputation = 1
+	}
+	GLD_riches = {
+		production_efficiency = 0.05
+	}
+	GLD_location = {
+		global_trade_power = 0.1
+		movement_speed_in_fleet_modifier = 1
+	}
+	GLD_independence = {
+		republican_tradition = 0.5
+	}
+	GLD_identity = {
+		culture_conversion_cost = -0.20
+	}
+}
+
+SHU_ideas = {
+	start = {
+		global_unrest = -2
+		num_accepted_cultures = 2
+	}
+	
+	bonus = {
+		reserves_organisation = 0.10
+	}
+	
+	trigger = {
+		OR = {
+			tag = SHU
+			AND = {
+				NOT = { tag = CXI }
+				primary_culture = sichuanese
+			}
+		}
+	}
+	free = yes
+	
+	SHU_land_of_four_rivers = {
+		production_efficiency = 0.05
+	}
+	SHU_defensive_terrain = {
+		defensiveness = 0.10
+		morale_damage_received = -0.025
+	}
+	SHU_ancient_heritage = {
+		prestige = 0.5
+	}
+	SHU_shuhan_legacy = {
+		legitimacy = 1
+		imperial_mandate = 0.1
+	}
+	SHU_spices = {
+		global_supply_limit_modifier = 0.10
+	}
+	SHU_land_of_heavenly_court = {
+		monthly_splendor = 1
+	}
+	SHU_migrants = {
+		manpower_recovery_speed = 0.10
+	}
+}
+
+WUU_ideas = {
+	start = {
+		interest = -1
+		regiment_disembark_speed = 0.25
+	}
+	
+	bonus = {
+		core_creation = -0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = WUU
+			tag = HUE
+			AND = {
+				NOT = { tag = MNG }
+				primary_culture = jianghuai
+			}
+		}
+	}
+	free = yes
+	
+	WUU_jiangnan = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	WUU_yangtze_defense = {
+		leader_land_fire = 1
+	}
+	WUU_economy = {
+		global_tax_modifier = 0.10
+	}
+	WUU_emporium = {
+		global_trade_power = 0.1
+		global_institution_spread = 0.1
+	}
+	WUU_maritime_traditions = {
+		navy_tradition = 1
+		global_naval_engagement_modifier = 0.2
+	}
+	WUU_culture = {
+		diplomatic_reputation = 1
+	}
+	WUU_development = {
+		development_cost = -0.1
+	}
+}
+
+MIN_ideas = {
+	start = {
+		interest = -1
+		regiment_disembark_speed = 0.25
+	}
+	
+	bonus = {
+		core_creation = -0.1
+	}
+	
+	trigger = {
+		OR = {
+			tag = MIN
+			AND = {
+				NOT = { tag = FRM }
+				OR = {
+					primary_culture = chimin
+					primary_culture = taiwanese
+					culture_group = min_g
+				}
+			}
+		}
+	}
+	free = yes
+	
+	MIN_placeholder1 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	MIN_placeholder2 = {
+		leader_land_fire = 1
+	}
+	MIN_placeholder3 = {
+		global_tax_modifier = 0.10
+	}
+	MIN_placeholder4 = {
+		global_trade_power = 0.1
+		global_institution_spread = 0.1
+	}
+	MIN_Hungmen = {
+		spy_offence = 0.1
+		spy_action_cost_modifier = -0.2
+	}
+	MIN_placeholder6 = {
+		diplomatic_reputation = 1
+	}
+	MIN_placeholder7 = {
+		development_cost = -0.1
+	}
+}
+
+HUA_ideas = {
+	start = {
+		enemy_core_creation = 0.2
+		tolerance_own = 1
+		migration_cost = -0.2
+	}
+	
+	bonus = {
+		can_chain_claim = yes
+	}
+	
+	trigger = {
+		OR = {
+			tag = HUA
+			primary_culture = hakka
+		}
+	}
+	free = yes
+	
+	HUA_hakka_migration = {
+		culture_conversion_cost = -0.25
+	}
+	HUA_hardy_people = {
+		development_cost_modifier = -0.10
+	}
+	HUA_hakka_militias = {
+		infantry_power = 0.10
+	}
+	HUA_beyond_seas = {
+		colonists = 1
+	}
+	HUA_fortified_villages = {
+		defensiveness = 0.15
+	}
+	HUA_hakka_identity = {
+		same_culture_advisor_cost = -0.2
+	}
+	HUA_diaspora = {
+		global_colonial_growth = 10
+	}
+}
+
+CPT_ideas = {
+	start = {
+		idea_cost = -0.1
+		core_creation = -0.1
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	
+	bonus = {
+		artillery_power = 0.10
+	}
+	
+	trigger = {
+		tag = CPT
+	}
+	free = yes
+	
+	CPT_red_flag = {
+		global_naval_engagement_modifier = 0.3
+	}	
+	CPT_black_flag = {
+		naval_forcelimit_modifier = 0.25
+		global_institution_spread = 0.1
+	}
+	CPT_yellow_flag = {	
+		global_ship_trade_power = 0.3
+		privateer_efficiency = 0.3
+	}
+	CPT_white_flag = {
+		regiment_disembark_speed = 0.5
+		sea_repair = yes
+	}
+	CPT_blue_flag = {
+		diplomatic_reputation = 1
+	}
+	CPT_green_flag = {
+		own_coast_naval_combat_bonus = 1
+	}
+	CPT_pirate_alliance = {
+		republican_tradition = 0.5
+	}
+}

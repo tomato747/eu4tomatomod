@@ -3,12 +3,12 @@
 owner = MAM
 controller = MAM
 add_core = MAM
-culture = berber
+culture = east_berber
 religion = sunni
 capital = "Siwah"
 is_city = yes
 base_manpower = 1
-trade_goods = livestock
+trade_goods = date
 hre = no
 base_tax = 1 
 base_production = 1

@@ -1,0 +1,2 @@
+1247 = {"Corsica Suprana" "Bastìa"}
+5157 = {"Corsica Suttana" "Aiacciu"}

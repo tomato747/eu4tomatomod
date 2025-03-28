@@ -1,0 +1,345 @@
+########################################
+# Events for Women in History
+#
+# written by Sara Wendel-Örtqvist
+########################################
+
+namespace = tomato_spawn_people
+
+normal_or_historical_nations = yes
+
+# 袁崇煥 (non mandarin)
+country_event = {
+	id = tomato_spawn_people.1
+	title = "tomato_spawn_people.1.t"
+	desc = "tomato_spawn_people.1.d"
+	picture = CHINESE_GENERAL_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+			NOT = { culture_group = east_asian }
+		}
+		NOT = { has_global_flag = yuensongwun_spawned }
+		is_year = 1619
+		NOT = {
+			is_year = 1700
+		}
+		owns = 4943
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = yuensongwun_spawned
+		}		
+	}
+	
+	option = {
+		name = tomato_spawn_people.1.a
+		define_general = {
+			shock = 4
+			fire = 5
+			manuever = 3
+			siege = 4
+			name = "Yuen Songwun"
+			trait = cannoneer_personality
+		}
+	}
+	option = {
+		name = tomato_spawn_people.1.b
+		add_mil_power = 50
+		define_advisor = {
+			culture = tanka
+			type = army_reformer
+			skill = 3
+			discount = yes
+			name = "Yuen Songwun"
+		}
+	}
+}
+
+# 袁崇煥 (mandarin)
+country_event = {
+	id = tomato_spawn_people.2
+	title = "tomato_spawn_people.2.t"
+	desc = "tomato_spawn_people.2.d"
+	picture = CHINESE_GENERAL_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			NOT = {
+				primary_culture = cantonese
+				primary_culture = ping_culture
+				primary_culture = tanka
+			}
+			culture_group = east_asian
+		}
+		NOT = { has_global_flag = yuensongwun_spawned }
+		is_year = 1619
+		NOT = {
+			is_year = 1700
+		}
+		owns = 4943
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = yuensongwun_spawned
+		}		
+	}
+	
+	option = {
+		name = tomato_spawn_people.1.a
+		define_general = {
+			name = "Yuan Chonghuan"
+			shock = 4
+			fire = 5
+			manuever = 3
+			siege = 4
+			trait = cannoneer_personality
+		}
+	}
+	option = {
+		name = tomato_spawn_people.1.b
+		add_mil_power = 50
+		define_advisor = {
+			culture = tanka
+			type = army_reformer
+			skill = 3
+			discount = yes
+			name = "Yuan Chonghuan"
+		}
+	}
+}
+
+# 左光斗
+country_event = {
+	id = tomato_spawn_people.3
+	title = "tomato_spawn_people.3.t"
+	desc = {
+		trigger = {
+			OR = {
+				tag = MNG
+				is_emperor_of_china = yes
+			}
+		}
+		desc = "tomato_spawn_people.3.d.1"
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				tag = MNG
+				is_emperor_of_china = yes
+			}
+		}
+		desc = "tomato_spawn_people.3.d.2"
+	}
+	
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	fire_only_once = yes
+	trigger = {
+		NOT = { has_global_flag = zuoguangdou_spawned }
+		is_year = 1607
+		NOT = {
+			is_year = 1625
+		}
+		owns = 686
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = zuoguangdou_spawned
+		}		
+	}
+	
+	option = {
+		name = tomato_spawn_people.3.a
+		trigger = {
+			OR = {
+				tag = MNG
+				is_emperor_of_china = yes
+			}
+		}
+		add_adm_power = 50
+		add_corruption = -1
+		define_advisor = {
+			culture = jianghuai
+			type = inquisitor
+			skill = 3
+			discount = yes
+			name = "Zuo Guangdou"
+		}
+		if = {
+			limit = { has_dlc = "Domination" }
+			add_estate_loyalty = {
+				estate = estate_eunuchs
+				loyalty = -20
+			}
+			change_estate_land_share = {
+				estate = estate_eunuchs 
+				share = -2.5 
+			}
+			random = {
+				chance = 50
+				capital_scope = {
+					spawn_rebels = {
+						type = eunuch_rebels
+						estate = estate_eunuchs
+						size = 1
+					}
+				}
+			}
+		}
+		else = {
+			random = {
+				chance = 50
+				capital_scope = {
+					spawn_rebels = {
+						type = particularist_rebels
+						size = 1
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = tomato_spawn_people.3.b
+		trigger = {
+			OR = {
+				tag = MNG
+				is_emperor_of_china = yes
+			}
+		}
+		add_corruption = 1
+		add_mandate = -5
+		if = {
+			limit = { has_dlc = "Domination" }
+			add_estate_loyalty = {
+				estate = estate_eunuchs
+				loyalty = 20
+			}
+			change_estate_land_share = {
+				estate = estate_eunuchs 
+				share = 2.5 
+			}
+		}
+	}
+	option = {
+		name = tomato_spawn_people.3.a
+		trigger = {
+			NOT = {
+				tag = MNG
+				is_emperor_of_china = yes
+			}
+		}
+		add_adm_power = 50
+		add_corruption = -1
+		define_advisor = {
+			culture = jianghuai
+			type = inquisitor
+			skill = 3
+			discount = yes
+			name = "Zuo Guangdou"
+		}
+		random = {
+			chance = 50
+			capital_scope = {
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = tomato_spawn_people.3.c
+		trigger = {
+			NOT = {
+				tag = MNG
+				is_emperor_of_china = yes
+			}
+		}
+		add_corruption = 1
+	}
+}
+
+# 長平公主 rumours
+country_event = {
+	id = tomato_spawn_people.4
+	title = "tomato_spawn_people.4.t"
+	desc = "tomato_spawn_people.4.d"
+	picture = BURGHER_ESTATE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		NOT = { exists = MNG }
+		NOT = { has_global_flag = changping_princess_spawned }
+		has_global_flag = ming_empire_fall
+		OR = {
+			is_emperor_of_china = yes
+			has_reform = chinese_warlord
+		}
+		1816 = {
+		 	has_province_modifier = changping_princess_timer
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = changping_princess_spawned
+			1816 = {
+				remove_province_modifier = changping_princess_timer
+			}
+		}		
+	}
+	
+	#seek her out
+	option = {
+		name = tomato_spawn_people.4.a
+		add_adm_power = -50
+		hidden_effect = {
+			random_list = {
+				50 = {
+					#can't find her
+					country_event = { 
+						id = tomato_spawn_people.3.2
+						days = 30
+						random = 15
+					}
+				}
+				50 = {
+					#found her
+					country_event = { 
+						id = tomato_spawn_people.3.3
+						days = 30
+						random = 15
+					}
+				}
+			}
+		}
+	}
+	
+	#dont care
+	option = {
+		name = tomato_spawn_people.4.b
+		add_prestige = -5
+	}
+}

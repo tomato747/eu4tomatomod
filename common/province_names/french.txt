@@ -186,7 +186,7 @@
 125 = "Palerme"
 130 = "Istrie"
 205 = "Savoie"
-1247 = "Corse"
+1247 = "Haute Corse"
 1774 = "Trévise"
 1862 = "Crémone"
 1875 = "Coni"
@@ -362,3 +362,4 @@
 4721 = "Fribourg"
 
 5136 = "Port d'Arthur"
+5157 = "Corse du Sud"

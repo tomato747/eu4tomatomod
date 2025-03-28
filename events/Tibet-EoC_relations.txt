@@ -1,0 +1,66 @@
+namespace = tibet_eoc_relations
+
+#Tibet attacked
+country_event = {
+	id = tibet_eoc_relations.1
+	title = tibet_eoc_relations.1.t
+	desc = tibet_eoc_relations.1.d
+	picture = BATTLE_eventPicture
+	
+	major = no
+	
+	trigger = {
+		tag = FRM
+		is_emperor_of_china = yes
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = tibetan
+					primary_culture = tibetan_new
+				}
+			}
+			is_in_war = {
+				attacker_leader = {
+					NOT = {
+						primary_culture = tibetan
+						primary_culture = tibetan_new
+						tag = TIB
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = tibetan
+					primary_culture = tibetan_new
+				}
+				is_in_war = {
+					attacker_leader = {
+						NOT = {
+							primary_culture = tibetan
+							primary_culture = tibetan_new
+							tag = TIB
+						}
+					}
+				}
+			}
+			save_event_target_as = attatcked_tibetan
+		}
+	}
+	
+	#intervene
+	option = {
+		name = tibet_eoc_relations.1.a
+		ai_chance = { factor = 100 }
+		join_all_defensive_wars_of = attatcked_tibetan
+	}
+	
+	#not my business
+	option = {
+		name = tibet_eoc_relations.1.b
+	}
+}

@@ -4,7 +4,7 @@ owner = MNG
 controller = MNG
 add_core = MNG
 add_core = CMI
-culture = gaeml
+culture = miao
 religion = animism
 capital = "Yetseu"
 trade_goods = livestock
@@ -14,6 +14,7 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = CHC
+add_core = CMI
 
 
 

@@ -130,11 +130,21 @@ emp_sav_missions_conquest = {
 					}
 					add_permanent_claim = root
 				}
+				corsica_area = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
 			}
 			else = {
 				every_province = {
 					limit = {
-						area = corsica_sardinia_area
+						OR = {
+							area = corsica_sardinia_area
+							area = corsica_area
+						}
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
 						OR = {
@@ -177,7 +187,7 @@ emp_sav_missions_conquest = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3 #you can leave out Corsica
+				value = 4 #you can leave out Corsica
 				area = corsica_sardinia_area
 			}
 		}

@@ -1,0 +1,100 @@
+tibet_extra_missions_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+		OR = {
+			tag = TIB
+			tag = GUG
+			tag = UTS
+			tag = KAM
+			tag = PHA
+		}
+		NOT = { map_setup = map_setup_random }
+    }
+    
+    TIB_lhasa_develop = {
+        icon = mission_central_asian_city
+        position = 1
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			province_id = 677
+        }
+    
+        trigger = {
+			owns = 677
+			677 = {
+				num_of_times_improved_by_owner = 10
+				num_of_buildings_in_province = 3
+				NOT = { devastation = 1 }
+			}
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "tibet_rebuilt_lhasa"
+				duration = -1
+			}
+			677 = {
+				add_province_modifier = {
+					name = "lhasa_restored"
+					duration = 3650
+				}
+			}
+			tibet_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "tibet_developing"
+					duration = 7300
+				}
+			}
+        }
+    }
+    
+    TIB_urbanise = {
+        icon = mission_asian_city
+        position = 2
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            TIB_lhasa_develop
+        }
+        
+        provinces_to_highlight = {
+			region = tibet_region
+        }
+    
+        trigger = {
+			tibet_region = {
+				type = all
+				has_owner_religion = yes
+				development = 10
+			}
+        }
+        
+        effect = {
+			every_owned_province = {
+				limit = {
+					region = tibet_region
+				}
+				add_province_modifier = {
+					name = "tibet_urbanised"
+					duration = 3650
+				}
+				add_random_development = 1
+			}
+        }
+    }
+}

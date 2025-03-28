@@ -1,0 +1,2 @@
+1104 = {"Kujalleq" "Qaqortoq"}
+1105 = {"Sermersooq" "Nuuk"}
