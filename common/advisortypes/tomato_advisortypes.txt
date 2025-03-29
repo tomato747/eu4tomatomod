@@ -55,6 +55,8 @@ physician = {
 	
 	# Bonus
 	monarch_lifespan = 0.2
+	land_attrition = -0.05
+	naval_attrition = -0.05
 	skill_scaled_modifier = {
 		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
 		modifier = { reform_progress_growth = 0.03 }

@@ -12469,11 +12469,29 @@ province_event = {
 			limit = {
 				any_neighbor_province = {
 					NOT = { has_province_modifier = quarantined_influenza }
+					NOT = { has_province_modifier = quarantined_influenza_physician }
 					NOT = { has_province_modifier = influenza }
 					NOT = { has_province_flag = province_had_influenza }
 				}
 			}
 			custom_tooltip = random_events.23.b.tt
+		}
+	}
+	option = {
+		name = "random_event.EVTOPTC23" # We must aid them!
+		highlight = yes
+		trigger = {
+			owner = {
+				physician = 1
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		owner = { add_adm_power = -50 }
+		add_province_modifier = {
+			name = "quarantined_influenza_physician"
+			duration = 3650
 		}
 	}
 }
@@ -12499,6 +12517,7 @@ province_event = {
 			has_province_modifier = influenza
 		}
 		NOT = { has_province_modifier = quarantined_influenza }
+		NOT = { has_province_modifier = quarantined_influenza_physician }
 	}
 	
 	mean_time_to_happen = {
@@ -12522,6 +12541,7 @@ province_event = {
 			limit = {
 				owned_by = ROOT
 				NOT = { has_province_modifier = quarantined_influenza }
+				NOT = { has_province_modifier = quarantined_influenza_physician }
 			}
 			add_province_modifier = {
 				name = "quarantined_influenza"
@@ -12569,11 +12589,57 @@ province_event = {
 			limit = {
 				any_neighbor_province = {
 					NOT = { has_province_modifier = quarantined_influenza }
+					NOT = { has_province_modifier = quarantined_influenza_physician }
 					NOT = { has_province_modifier = influenza }
 					NOT = { has_province_flag = province_had_influenza }
 				}
 			}
 			custom_tooltip = random_events.23.b.tt
+		}
+	}
+	
+	option = {
+		name = "random_event.EVTOPTC24" # We must aid them!
+		highlight = yes
+		trigger = {
+			owner = {
+				physician = 1
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		add_province_modifier = {
+			name = "quarantined_influenza_physician"
+			duration = 3650
+		}
+		every_neighbor_province = {
+			limit = {
+				owned_by = ROOT
+				NOT = { has_province_modifier = quarantined_influenza }
+				NOT = { has_province_modifier = quarantined_influenza_physician }
+			}
+			add_province_modifier = {
+				name = "quarantined_influenza_physician"
+				duration = 3650
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					any_owned_province = { has_province_modifier = influenza }
+				}
+				every_owned_province = {
+					limit = {
+						has_province_modifier = influenza
+					}
+					remove_province_modifier = influenza
+					add_province_modifier = {
+						name = "quarantined_influenza_physician"
+						duration = 3650
+					}
+				}
+			}
 		}
 	}
 }

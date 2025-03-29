@@ -258,3 +258,11 @@ changping_princess_timer = {
 ottomans_stop_convert_dhimmi = {
 	global_heathen_missionary_strength = -1.00
 }
+quarantined_influenza_physician = {
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	trade_goods_size = -0.25
+}
+sent_physician_colony = {
+	local_colonial_growth = -5
+}
