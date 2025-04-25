@@ -8,6 +8,7 @@ mam_missions_1 = {
 	potential = {
 		OR = {
 			tag = EGY
+			tag = COP
 			tag = MAM
 		}
 		has_dlc = "King of Kings"
@@ -454,7 +455,10 @@ mam_missions_1 = {
 				}
 				else_if = {
 					limit = {
-						tag = EGY 
+						OR = {
+							tag = EGY
+							tag = COP
+						}
 					}
 					every_province = {
 						limit = {
@@ -462,6 +466,7 @@ mam_missions_1 = {
 							trade_goods = cloves
 						}
 						EGY = { add_mercantilism = 1 }
+						COP = { add_mercantilism = 1 }
 					}
 				}
 			}
@@ -479,6 +484,7 @@ mam_missions_2 = {
 	potential = {
 		OR = {
 			tag = EGY
+			tag = COP
 			tag = MAM
 		}
 		has_dlc = "King of Kings"
@@ -920,6 +926,7 @@ mam_missions_3 = {
 	potential = {
 		OR = {
 			tag = EGY
+			tag = COP
 			tag = MAM
 		}
 		has_dlc = "King of Kings"
@@ -1027,8 +1034,11 @@ mam_missions_3 = {
 				}
 			}
 			if = {
-				limit = { 
-					tag = EGY 
+				limit = {
+					OR = {
+						tag = EGY
+						tag = COP
+					}
 					has_government_mechanic = egyptian_westernization
 				}
 				if = {
@@ -1045,7 +1055,10 @@ mam_missions_3 = {
 			}
 			else_if = {
 				limit = { 
-					tag = EGY 
+					OR = {
+						tag = EGY
+						tag = COP
+					}
 					NOT = { has_government_mechanic = egyptian_westernization }
 				}
 				add_prestige_or_monarch_power = { amount = 50 }
@@ -1398,6 +1411,7 @@ mam_missions_4 = {
 	potential = {
 		OR = {
 			tag = EGY
+			tag = COP
 			tag = MAM
 		}
 		has_dlc = "King of Kings"
@@ -1939,7 +1953,10 @@ mam_missions_4 = {
 		trigger = {
 			if = {
 				limit = { 
-					tag = EGY 
+					OR = {
+						tag = EGY
+						tag = COP
+					} 
 					has_government_mechanic = egyptian_westernization
 				}
 				has_government_power = {
@@ -2003,7 +2020,10 @@ mam_missions_4 = {
 		effect = {
 			if = {
 				limit = { 
-					tag = EGY 
+					OR = {
+						tag = EGY
+						tag = COP
+					} 
 					has_dlc = "Rights of Man"
 				}
 				custom_tooltip = egy_better_traits_rulers_tt
@@ -2047,6 +2067,7 @@ mam_missions_5 = {
 	potential = {
 		OR = {
 			tag = EGY
+			tag = COP
 			tag = MAM
 		}
 		has_dlc = "King of Kings"

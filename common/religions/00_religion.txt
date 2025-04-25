@@ -1638,6 +1638,7 @@ muslim = {
 			tolerance_own = 3
 			global_missionary_strength = -0.01
 			tolerance_heretic = -1
+			tolerance_heathen = -1
 		}
 		country_as_secondary = {
 			advisor_pool = 1
@@ -2833,6 +2834,27 @@ pagan = {
 		heretic = { OLD_ZUNIST }	
 	}
 	
+	wiccan = {
+		icon = 52
+		color = { 54 107 48 }
+		country = {
+			idea_cost = -0.1
+			tolerance_heretic = 1
+			female_advisor_chance = 0.5
+			may_recruit_female_generals = yes
+		}
+		country_as_secondary = {
+			idea_cost = -0.05
+			female_advisor_chance = 0.25
+		}
+		province = {
+			local_friendly_movement_speed = 0.1
+			local_missionary_strength = 0.02
+		}
+		
+		heretic = { GOLDEN_DAWN }	
+	}
+	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pagan
 }
@@ -3208,6 +3230,35 @@ jewish_group = {
 	
 }
 
+mandaeism_group = {
+	
+	defender_of_faith = yes
+
+	mandaeism = {
+		icon = 53
+		color = { 84 122 227 }
+		country = {
+			tolerance_own = 3
+			global_missionary_strength = -0.01
+			local_development_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			local_development_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		
+		heretic = { ELCESAITES }
+	}
+	
+	harmonized_modifier = harmonized_mandaeism_group
+	
+	crusade_name = HOLY_WAR
+	
+}
+
 
 zoroastrian_group = {
 	flag_emblem_index_range = { 110 110 }
@@ -3363,5 +3414,30 @@ zoroastrian_group = {
 	harmonized_modifier = harmonized_zoroastrian_group
 	
 	crusade_name = HOLY_WAR
+	
+}
+
+antireligion_group = {
+	defender_of_faith = yes
+	juche = {
+		icon = 51
+		color = { 222 9 27 }
+		province = {
+			local_manpower_modifier = 0.25
+		}
+		country = {
+			mercantilism_cost = -0.1
+			interest = -1
+		}
+		country_as_secondary = {
+			mercantilism_cost = -0.05
+		}
+		
+		heretic = { YANAN_FACTION SOVIET_KOREAN }
+		
+		harmonized_modifier = harmonized_juche
+	
+		crusade_name = JUCHE_HOLY_WAR
+	}
 	
 }

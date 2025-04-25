@@ -8,7 +8,7 @@
 665 = "Shiuhing" #Shiuhing
 666 = "Kingchow" #Kingchow
 667 = {"Kwongchau" "Kwongchau"} #Canton
-668 = {"OumÃºn" "OumÃºn"} #Macau
+668 = {"Oumún" "Oumún"} #Macau
 669 = "Fukchow" #Fuzhou
 670 = "Gungchow" #Ganzhou
 671 = "Cheungsa" #Changsha
@@ -264,24 +264,24 @@
 Germany-Austria
 50 = "Paaklam" #Berlin
 44 = "Honbou" #Hamburg
-85 = "Folung" #KÃ¶ln
+85 = "Folung" #Köln
 1758 = "Honnokwai" #Hannover
 62 = "Loibeisek" #Leipzig
 1876 = "Faatlaanhaakfuk" #Frankfurt
 70 = "Sitougadak" #Stuttgart
-67 = "Naulunbou" #NÃ¼rnberg
-65 = "Mouneihaak" #MÃ¼nchen
+67 = "Naulunbou" #Nürnberg
+65 = "Mouneihaak" #München
 4743 = "Waima" #Weimar
-79 = "Wuzibou" #WÃ¼rzburg
+79 = "Wuzibou" #Würzburg
 69 = "Domungdak" #Dortmund
-84 = "Dousidofu" #DÃ¼sseldorf
+84 = "Dousidofu" #Düsseldorf
 1872 = "Wumui" #Ulm
 4712 = "Hongsitaanzi" #Konstanz
 1868 "Ougaaksibou" #Augsburg
 77 = "Hoidakbou" #Heidelberg
 74 = "Badang" #Baden
 4715 = "Lotangbou" #Rothenburg
-1869 = "Soulaaisai" #ZÃ¼rich
+1869 = "Soulaaisai" #Zürich
 165 = "Paakyan" #Bern
 1867 = "Loksong" #Lausanne
 4720 = "Yatnoina" #Geneva
@@ -444,7 +444,7 @@ Germany-Austria
 5013 = "Daatwosi"
 5014 = "Daatsitaaidaak"
 5015 = "Ngaaisumfaiyisi"
-5016 = "Faaifuk"
+5016 = "Singondaklousi"
 5017 = "Ongaaksi"
 5018 = "Gaaklaaisigo"
 5019 = "Losi"
@@ -643,3 +643,15 @@ Germany-Austria
 5222 = {"Wingcheung" "Boushan"}
 5223 = {"Shunning" "Funghing"}
 5224 = {"Shunfung" "Shunfung"}
+5225 = {"Yidakleibuk" "Yidakleibuk"}
+5226 = {"Afulam" "Afulam"}
+5227 = {"Choiloimaiye" "Choiloimaiye"}
+5229 = {"Danfulam" "Danfulam"}
+5230 = {"Manmau" "Manmau"}
+5231 = {"Pangboulohak" "Pangboulohak"}
+5232 = {"Hoileoidikgat" "Hoileoidikgat"}
+5233 = {"Bouleoihaknokhak" "Bouleoihaknokhak"}
+5234 = {"Laidaknok" "Laidaknok"}
+5235 = {"Ongakyisai" "Ongakyisai"}
+5236 = {"Muileiouleisi" "Muileiouleisi"}
+5239 = {"Gutsat" "Gutsat"}

@@ -1,0 +1,361 @@
+﻿l_english:
+ 
+ ################
+ ### Cultures ###
+ ################
+ 
+ chimin:0 "Ban"
+ gan:0 "Gon"
+ xiang:0 "Sian"
+ oghuz:0 "Oghuz"
+ altaic:0 "Mongolic"
+ tartar:0 "Kipchak"
+ karluk:0 "Karluk"
+ chagatai_culture:0 "Chagatai"
+ kazani:0 "Tartar"
+ oghur:0 "Oghur"
+ volga_bulgar:0 "Volga Bulgarian"
+ chuvash:0 "Chuvash"
+ huizhou_culture:0 "Hue"
+ ping_culture:0 "Ping"
+ emishi:0 "Emishi"
+ okinawan:0 "Okinawan"
+ hachijo:0 "Hachijo"
+ jeju_culture:0 "Jeju"
+ east_germanic:0 "East Germanic"
+ byzantine:0 "Hellenic"
+ kemetic:0 "Egyptian"
+ coptic_culture:0 "Coptic"
+ northwest_semetic:0 "Northwest Semetic"
+ east_semetic:0 "East Semetic"
+ tyrsenian:0 "Tyrsenian"
+ lemnian:0 "Lemnian"
+ babylonian:0 "Akkadian"
+ formosan:0 "Formosan"
+ ancient_hwan:0 "Hwan"
+ finno-ugric:0 "Finno-Ugric"
+ carpathian:0 "Eastern Romance"
+ yiddish:0 "Yiddish"
+ swiss:0 "Alemannic"
+ arpitan:0 "Arpitan"
+ gallo:0 "Gallo"
+ finngolian:0 "Finngolian"
+ lemuria:0 "Lemuria"
+ imperium_of_man_culture:0 "Imperial Human"
+ high_gothic:0 "High Gothic"
+ low_gothic:0 "Low Gothic"
+ al_misr_arabic:0 "Misri"
+ saidi_arabic:0 "Saidi"
+ romani:0 "Romani"
+ albanic:0 "Albanic"
+ ancient_chu:0 "Chu"
+ hayato:0 "Hayato"
+ tangut:0 "Tangut"
+ hlai:0 "Hlai"
+ khitan:0 "Khitan"
+ vasconic:0 "Vasconic"
+ cumbrian:0 "Cumbrian"
+ rhaetoromance:0 "Rhaeto-Romance"
+ friulian:0 "Friulian"
+ ladin:0 "Ladin"
+ romansh:0 "Romansh"
+ trench_crusade_demonic:0 "Demonic"
+ warhammer_demonic:0 "Chaotic"
+ demonic:0 "Demonic"
+ heavenly:0 "Heavenly"
+ taiwanese:0 "Taiwanese"
+ gaeml:0 "Gaeml"
+ yi:0 "Nuosu"
+ miao:0 "Hmong"
+ edomite:0 "Edomite"
+ moabite:0 "Moabite"
+ ammonite:0 "Ammonite"
+ philistine:0 "Philistine"
+ bai:0 "Baipho"
+ south_western_mandarin:0 "Yunnan"
+ zhuang:0 "Cuengh"
+ angloirish:0 "Anglo-Irish"
+ corsican:0 "Corsican"
+ manx:0 "Manx"
+ greek:0 "Rhomaioi"
+ sogdian:0 "Sogdian"
+ bactrian:0 "Bactrian"
+ aromanian:0 "Aromanian"
+ outremer:0 "Outremer"
+ dixie:0 "Dixie"
+ american:0 "Yankee"
+ australian:0 "Australian"
+ mormons:0 "Deseret"
+ afri:0 "Afri"
+ britanni:0 "Britanni"
+ roman_g:0 "Roman"
+ pannonian:0 "Pannonian"
+ hispanian:0 "Hispanian"
+ gallian:0 "Gallian"
+ spartan:0 "Laconain"
+ athenian:0 "Attic"
+ ionic:0 "Ionic"
+ aeolic:0 "Aeolic"
+ arcadocypriot:0 "Arcado-Cypriot"
+ achaean:0 "Achaean"
+ epirot:0 "Epirot"
+ hongkonger:0 "Hong Konger"
+ transylvanian_german:0 "Siebenbürger"
+ volga_german:0 "Weichsel"
+ vistula_german:0 "Wolga"
+ pennsilfaanisch:0 "Pennsilfaanisch"
+ faroese:0 "Faroese"
+ cat_g:0 "Cat"
+ cat_c:0 "Cat"
+ doggo_g:0 "Dog"
+ doggo_c:0 "Dog"
+ south_west_mandarin:0 "Xinan"
+ north_east_mandarin:0 "Dongbei"
+ caucasianalbanian:0 "Albanian"
+ cantonese_g:0 "Yuet"
+ ping_culture_n:0 "Ping"
+ tanka_n:0 "Tanka"
+ cantonese_n:0 "Cantonese"
+ hainan_cantonese:0 "Hoinam Cantonese"
+ canto_vietnamese:0 "Canto-Vietnamese"
+ tungkong_cantonese:0 "Tungkong"
+ banlam:0 "Banlam"
+ mingdeng:0 "Mingdeng"
+ maingba:0 "Maingba"
+ centralmin:0 "Metam"
+ iautsiong:0 "Iautsiong"
+ posing:0 "Posing"
+ hainam_hokkien:0 "Hainam Hokkien"
+ luichiu_hokkien:0 "Luichiu"
+ taiwanese_n:0 "Taiwanese"
+ hakka_g:0 "Hakka"
+ south_hakka:0 "Kongtung"
+ north_hakka:0 "Kamnam"
+ sichuan_hakka:0 "Si'tson"
+ kwangsi_hakka:0 "Kongsi"
+ hainan_hakka:0 "Hoinam Hakka"
+ wu_g:0 "Wu"
+ tehu_culture:0 "Tehu"
+ tetsei_culture:0 "Tetsei"
+ jinju_culture:0 "Jinju"
+ zali_culture:0 "Zali"
+ sitsei_culture:0 "Sitsei"
+ huetsei_culture:0 "Huetsei"
+ libyan:0 "Libyan"
+ amazigh:0 "Amazigh"
+ berber:0 "Tamazight"
+ east_berber:0 "Eastern Berber"
+ west_berber:0 "Zenaga"
+ afghani:0 "Pashtun"
+ 
+ old_egyptian:0 "Pharaonic Egyptian"
+ 
+ ############
+ ### Tags ###
+ ############
+ 
+ YUE: "Yuet"
+ YUE_ADJ: "Yuet"
+ YUE_ADJ2: "Yuet"
+ CYI: "Nuosu"
+ CYI_ADJ: "Nuosu"
+ CYI_ADJ2: "Nuosu"
+ CMI: "Hmong"
+ CMI_ADJ: "Hmong"
+ CMI_ADJ2: "Hmong"
+ CDL: "Dablit"
+ CDL_ADJ: "Dablit"
+ CDL_ADJ2: "Dablit"
+ 
+ #############
+ ### Areas ###
+ #############
+ 
+ west_guangdong_area:0 "West Kwangtung"
+ guangdong_area:0 "Pearl River Delta"
+ shikoku_area:0 "Shikoku"
+ thohoku_area:0 "Oshu"
+ kii_area:0 "Kii Peninsula"
+ hokuriku_area:0 "South Hokuriku"
+ sanindo_area:0 "East San'indo"
+ saigoku_area:0 "West Sanyodo"
+ fujian_area:0 "Banlam"
+ zhejiang_area:0 "North Chekiang"
+ eastern_chubu_area:0 "Tokaido"
+ chubu_area:0 "Tosando"
+ taiwan_area:0 "Southern Taiwan"
+ gulf_of_arabia_area:0 "Eastern Desert"
+ morea_area:0 "Southern Morea"
+ hesse_area:0 "South Hesse"
+ lowlands_area:0 "Southern Lowlands"
+ hunan_area:0 "North Fulan"
+ huguang_area:0 "Eastern Hubei"
+ jiangxi_area:0 "North Kiangsi"
+ shandong_area:0 "Northern Shandong"
+ anhui_area:0 "Central Anhui"
+ western_korea_area:0 "Gyeonggi"
+ eastern_korea_area:0 "Gyeongsang"
+ south_korea_area:0 "Jeolla"
+ henan_area:0 "Central Henan"
+ guangxi_area:0 "Kwangsi West"
+ liaoning_area:0 "Liaoxi"
+ hokkaido_area:0 "Southern Hokkaido"
+ shaanxi_area:0 "East Shaanxi"
+ gansu_area:0 "West Gansu"
+ west_gansu_area:0 "Hexi Corridor"
+ corsica_sardinia_area:0 "Sardinia"
+ shanxi_area:0 "Shanxi West"
+ wales_area:0 "Southern Wales"
+ yun_gui_area:0 "Yunnan"
+ yun_gui_borderland_area:0 "Dablit"
+ said_area:0 "Akhmim"
+ 
+ #################
+ ### Provinces ###
+ #################
+ 
+ PROV145:0 "Laconia"
+ PROV163:0 "Heraklion"
+ PROV321:0 "Nicosia"
+ PROV661:0 "Dablit"
+ PROV669:0 "Hokchew"
+ PROV670:0 "Kamchu"
+ PROV671:0 "Tsansa"
+ PROV672:0 "Litseu"
+ PROV683:0 "Lantsong"
+ PROV684:0 "Hangtsei"
+ PROV1028:0 "South Musashi"
+ PROV1031:0 "Ishikari"
+ PROV1247:0 "Alta Corsica"
+ PROV1326:0 "Volga Delta"
+ PROV1371:0 "Pearl Delta"
+ PROV1824:0 "Iuciou"
+ PROV1833:0 "Tsi'ngen"
+ PROV1838:0 "Luzhou"
+ PROV1840:0 "Kwailam"
+ PROV2144:0 "Yingzhou"
+ PROV2146:0 "Ningko"
+ PROV2147:0 "Huetsei"
+ PROV2148:0 "Sohshing"
+ PROV2150:0 "Kinhwa"
+ PROV2150:0 "Tsinua"
+ PROV2151:0 "Ieutseu"
+ PROV2152:0 "Kianleng"
+ PROV2152:0 "Kuinan"
+ PROV2153:0 "Tengchiu"
+ PROV2153:0 "Tengchiu"
+ PROV2163:0 "Lauchau"
+ PROV2173:0 "Yelin"
+ PROV2174:0 "Hentseu"
+ PROV2319:0 "Manfalut"
+ PROV4321:0 "Eastern Desert"
+ PROV4322:0 "Eastern Desert"
+ PROV_ADJ145:0 "Laconian"
+ PROV_ADJ163:0 "Heraklion"
+ PROV_ADJ321:0 "Nicosia"
+ PROV_ADJ517-:0 "Meizhou"
+ PROV_ADJ661:0 "Dablit"
+ PROV_ADJ669:0 "Hokchew"
+ PROV_ADJ670:0 "Kamchu"
+ PROV_ADJ671:0 "Tsansa"
+ PROV_ADJ672:0 "Litseu"
+ PROV_ADJ683:0 "Lantsong"
+ PROV_ADJ684:0 "Hangtsei"
+ PROV_ADJ1028:0 "South Musashi"
+ PROV_ADJ1031:0 "Ishikari"
+ PROV_ADJ1247:0 "Alta Corsica"
+ PROV_ADJ1326:0 "Volga Delta"
+ PROV_ADJ1371:0 "Pearl"
+ PROV_ADJ1824:0 "Iuciou"
+ PROV_ADJ1833:0 "Tsi'ngen"
+ PROV_ADJ1838:0 "Luzhou"
+ PROV_ADJ1840:0 "Kwailam"
+ PROV_ADJ2144:0 "Yingzhou"
+ PROV_ADJ2146:0 "Ningko"
+ PROV_ADJ2147:0 "Hue"
+ PROV_ADJ2148:0 "Sohshing"
+ PROV_ADJ2150:0 "Kinhwa"
+ PROV_ADJ2150:0 "Tsinua"
+ PROV_ADJ2151:0 "Ieutseu"
+ PROV_ADJ2152:0 "Kianleng"
+ PROV_ADJ2152:0 "Kuinan"
+ PROV_ADJ2153:0 "Tengchiu"
+ PROV_ADJ2153:0 "Tengchiu"
+ PROV_ADJ2163:0 "Lauchau
+ PROV_ADJ2173:0 "Yelin"
+ PROV_ADJ2174:0 "Hentseu"
+ PROV_ADJ2319:0 "Manfalut"
+ 
+ #############
+ ### Ideas ###
+ #############
+ 
+ ##############
+ ### EVENTS ###
+ ##############
+ 
+ #################
+ ### Modifiers ###
+ #################
+ 
+ ######################
+ ### Great Projects ###
+ ######################
+ 
+ #################
+ ### Decisions ###
+ #################
+ 
+ ###############
+ ### Strings ###
+ ###############
+ 
+ ################
+ ### Missions ###
+ ################
+ 
+ ##################
+ ### Government ###
+ ##################
+ 
+ ##################
+ ### Parliament ###
+ ##################
+ 
+ ################
+ ### Tooltips ###
+ ################
+ 
+ ################
+ ### Religion ###
+ ################
+ 
+ #Judaism
+ jewish:0 "Rabbinical Judaism"
+ 
+ #Norse Pagan
+ norse_pagan_reformed:0 "Germanic"
+ 
+ #Coptic/Miaphysite
+ coptic:0 "Miaphysite"
+ 
+ ###################
+ ### Trade Goods ###
+ ###################
+ 
+ ###################
+ ### Mercenaries ###
+ ###################
+ 
+ ################
+ ### Advisors ###
+ ################
+ 
+ ##############################
+ ### Tradenodes + Companies ###
+ ##############################
+ 
+ nippon:0 "Kansai"
+ trade_company_nippon:0 "Kansai Charter"
+ hangzhou:0 "Hangchow"
+ beijing:0 "Peking"

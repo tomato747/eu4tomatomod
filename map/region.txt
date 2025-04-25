@@ -214,6 +214,9 @@ british_isles_region = {
 		leinster_area
 		ulster_area
 		north_lowlands_area
+		
+		central_wales_area
+		northern_wales_area
 	}
 }
 
@@ -314,6 +317,9 @@ egypt_region = {
 		bahari_area
 		vostani_area
 		said_area
+		
+		qena_area
+		aswan_area
 	}
 }
 
@@ -862,7 +868,7 @@ japan_region = {
 		dewa_area
 		kii_area
 		north_hokuriku_area
-		east_sanindo_area
+		west_sanindo_area
 		sanyodo_area
 		north_hokkaido_area
 	}

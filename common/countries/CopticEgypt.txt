@@ -1,0 +1,214 @@
+graphical_culture = muslimgfx
+
+color = { 245 192 17 }
+
+historical_idea_groups = {
+	maritime_ideas
+	defensive_ideas
+	religious_ideas
+	trade_ideas
+	offensive_ideas
+	administrative_ideas
+	economic_ideas
+	expansion_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	mamluk_cavalry_charge
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	"Amoun #0" = 10
+	"Anoup #0" = 10
+	"Atre #0" = 10
+	"Vane #0" = 10
+	"Venipi #0" = 10
+	"Venofer #0" = 10
+	"Ves #0" = 10
+	"Evonh #0" = 10
+	"Kellouj #0" = 10
+	"Naverho #0" = 10
+	"Nahrow #0" = 10
+	"Weršenoufi #0" = 10
+	"Paesi #0" = 10
+	"Pambo #0" = 10
+	"Pamin #0" = 10
+	"Pilihei #0" = 10
+	"Pemsah #0" = 10
+	"Panau #0" = 10
+	"Phanisnew #0" = 10
+	"Panehas #0" = 10
+	"Panine #0" = 10
+	"Paniran #0" = 10
+	"Phanoub #0" = 10
+	"Patapi #0" = 10
+	"Paphnouti #0" = 10
+	"Pašonti #0" = 10
+	"Pahor #0" = 10
+	"Pakhom #0" = 10
+	"Petephre #0" = 10
+	"Pisoura #0" = 10
+	"Pišennoufi #0" = 10
+	"Phib #0" = 10
+	"Pišoy #0" = 10
+	"Pijimi #0" = 10
+	"Harmine #0" = 10
+	"Herwoj #0" = 10
+	"Jamoul #0" = 10
+	"Jicoi #0" = 10
+	"Jori #0" = 10
+	"Šenouti #0" = 10
+	"Çinousi #0" = 10
+	"Atnasius #0" = 10
+	"Alaksandrus #0" = 10
+	"Andarawus #0" = 10
+	"Basalyus #0" = 10
+	"Buqtur #0" = 10
+	"Gawargius #0" = 10
+	"Girgis #0" = 10
+	"Guraig #0" = 10
+	"Abifanius #0" = 10
+	"Abiban #0" = 10
+	"Wadamun #0" = 10
+	"Qiryaqus #0" = 10
+	"Kirullus #0" = 10
+	"Karas #0" = 10
+	"Karus #0" = 10
+	"Murqus #0" = 10
+	"Bulus #0" = 10
+	"Butrus #0" = 10
+	"Latsun #0" = 10
+	"Tiwuduraki #0" = 10
+	"Tawadrus #0" = 10
+	"Tadrus #0" = 10
+	"Sawaris #0" = 10
+	"Filubatir #0" = 10
+	"Arbuqratur #0" = 10
+	"Sidarus #0" = 10
+	"Baniqarus #0" = 10
+	"Bifam #0" = 10
+	"Badarmutaus #0" = 10
+	"Basanda #0" = 10
+	"Absudar #0" = 10
+	"Sanutyus #0" = 10
+	"Sarabam #0" = 10
+	"Mina #0" = 10
+	"Abram #0" = 10
+	"Ibrahim #0" = 10
+	"Binyamin #0" = 10
+	"Gabriyal #0" = 10
+	"Dawid #0" = 10
+	"Dawud #0" = 10
+	"Akhnukh #0" = 10
+	"Yusab #0" = 10
+	"Yuhannis #0" = 10
+	"Yahnis #0" = 10
+	"Yuhanna #0" = 10
+	"Ishaq #0" = 10
+	"Mikhayil #0" = 10
+	"Barsuma #0" = 10
+	"Barsum #0" = 10
+	"Sidrak #0" = 10
+	"Sisinyus #0" = 10
+	"Zakariya #0" = 10
+	"Naguib #0" = 10
+	"Farid #0" = 10
+	"Fadi #0" = 10
+	"Rami #0" = 10
+	"Tharwat #0" = 10
+	"Abd el-Masih #0" = 10
+	"Labib #0" = 10
+	"Sidhom #0" = 10
+	"Milad #0" = 10
+	"Ramzi #0" = 10
+	"Kamal #0" = 10
+	"Salib #0" = 10
+	"Basem #0" = 10
+	"Hadid #0" = 10
+	"Habib #0" = 10
+	"Abdulla #0" = 10
+	"Apakyri #0" = 10
+	"Apamoun #0" = 10
+	"Apanoub #0" = 10
+	"Apaskhyron #0" = 10
+	"Apatil #0" = 10
+	"Apater #0" = 10
+	
+	"Asenneth #0" = -10
+	"Loule #0" = -10
+	"Menrit #0" = -10
+	"Taisi #0" = -10
+	"Tampro #0" = -10
+	"Taloušem #0" = -10
+	"Tasoni #0" = -10
+	"Taroow #0" = -10
+	"Teçoše #0" = -10
+	"Tšenouti #0" = -10
+	"Tapšay #0" = -10
+	"Thoumisi #0" = -10
+	"Kouloje #0" = -10
+	"Thello #0" = -10
+	"Jemmahor #0" = -10
+	"Šošen #0" = -10
+	"Afrusina #0" = -10
+	"Damiana #0" = -10
+	"Irini #0" = -10
+	"Irani #0" = -10
+	"Darkun #0" = -10
+	"Darkuna #0" = -10
+	"Dulaji #0" = -10
+	"Kliubatra #0" = -10
+	"Takla #0" = -10
+	"Arabsima #0" = -10
+	"Hiraisi #0" = -10
+	"Thiudura #0" = -10
+	"Sinklitika #0" = -10
+	"Alisabat #0" = -10
+	"Marta #0" = -10
+	"Rifqa #0" = -10
+	"Susana #0" = -10
+	"Majda #0" = -10
+}
+
+leader_names = {
+	Ali
+	Aybak
+	Baibars
+	Bay
+	Bey
+	Bugha
+	Inâl
+	Kansur
+	Sayfuddin
+	Zangi
+	Burji
+	Alawiyya
+	Bahri
+	Katkhuda
+	Abaza
+	Qasimiyya
+	Qitas
+	al-Qazdughli
+	Yakubid
+	Hassanid
+}
+
+ship_names = {
+	"Zaher Barqooq" "Farag Ben Barqooq"
+	"Ben Barqooq" "Muyaid Sheikh" "Ahmen Muyaid" 
+	"Zaher Tatar" "Nasser Muhamed" "Ashraf Barsbay"
+	"Aziz Gamal" "Nahr an-Nil" "Al-Farafirah"
+	"Ad-Däkhilah" "Al-Kharijah" "Al-Ali" "Al-Bahriyah"
+	Rahman Rahim Malik Quddus Salam Mu'min Muhaymin
+	Aziz Jabbar Mutakabbir Khaliq Bari Musawwir 
+	Ghaffar Qahhar Wahhab Razzaq Fattah Alim Qabid
+	Basit Khafid Rafi Mu'izz Mudhill Sami Basir Hakam Adl
+	Apedemak Bes Dedwen Arensnuphis Amon
+	Mandulis Amenirdis Taweret Mut Tefnut Khnum
+}

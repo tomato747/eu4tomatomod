@@ -1,0 +1,54 @@
+namespace = triads_events
+
+#enable triads
+country_event = {
+	id = triads_events.1
+	title = triads_events.1.t
+	desc = triads_events.1.d
+	picture = FETISHIST_FIRE_eventPicture
+	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		NOT = { has_country_modifier = canton_lets_sack_the_capital }
+		is_emperor_of_china = no
+		OR = {
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
+		any_war_enemy_country = {
+			is_emperor_of_china = yes
+			OR = {
+				offensive_war_with = ROOT
+				defensive_war_with = ROOT
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { 
+				name = canton_lets_sack_the_capital
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+	
+	option = {
+		name = triads_events.1.a
+		tooltip = {
+			custom_tooltip = canton_capture_capital_tooltip
+			add_country_modifier = { 
+				name = canton_captured_capital
+				duration = 3560
+				hidden = yes
+			}
+		}
+	}
+}

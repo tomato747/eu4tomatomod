@@ -266,3 +266,27 @@ quarantined_influenza_physician = {
 sent_physician_colony = {
 	local_colonial_growth = -5
 }
+canton_lets_sack_the_capital = {
+	
+}
+canton_captured_capital = {
+	land_morale = 0.10
+	prestige = 0.5
+}
+canton_independent_modifier = {
+	republican_tradition = 0.5
+	prestige = 0.5
+}
+canton_forcelimit_modifier = {
+	manpower_recovery_speed = 0.10
+}
+harmonized_antireligion_group = {
+	mercantilism_cost = -0.05
+}
+cop_coptic_resurgence = {
+	tolerance_own = 1
+	global_missionary_strength = 0.01
+}
+harmonized_mandaeism_group = {
+	tolerance_own = 1
+}

@@ -12,6 +12,7 @@ chinese_missions_1 = {
 		culture_group = east_asian
 		NOT = { has_dlc = "Domination" }
 		NOT = { tag = FRM }
+		NOT = { tag = YUE }
 	}
 	has_country_shield = yes
 	# 
@@ -166,6 +167,7 @@ chinese_missions_2 = {
 		culture_group = east_asian
 		NOT = { has_dlc = "Domination" }
 		NOT = { tag = FRM }
+		NOT = { tag = YUE }
 	}
 	has_country_shield = yes
 	defend_korea = {

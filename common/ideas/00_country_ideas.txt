@@ -18203,7 +18203,10 @@ EGY_ideas = {
 	}
 	
 	trigger = {
-		tag = EGY
+		OR = {
+			tag = EGY
+			tag = COP
+		}
 	}
 	free = yes		#will be added at load.
 	
@@ -18995,5 +18998,45 @@ CPT_ideas = {
 	}
 	CPT_pirate_alliance = {
 		republican_tradition = 0.5
+	}
+}
+
+BRY_ideas = {
+	start = {
+		prestige = 0.5
+		female_advisor_chance = 0.2
+	}
+	
+	bonus = {
+		cavalry_power = 0.10
+	}
+	
+	trigger = {
+		tag = BRY
+	}
+	free = yes
+	
+	BRY_knights_of_the_round_table = {
+	 	free_leader_pool = 3
+		advisor_pool = 2
+	}	
+	BRY_camelot = {
+		move_capital_cost_modifier = -0.1
+	}
+	BRY_search_for_avalon = {
+		may_explore = yes
+	}
+	BRY_quest_for_the_holy_grail = {	
+		devotion = 1
+		papal_influence = 0.5
+	}
+	BRY_magic_swords = {
+		leader_land_shock = 1
+	}
+	BRY_lady_of_the_lake = {
+		legitimacy = 1
+	}	
+	BRY_legacy_of_rome = {
+		core_creation = -0.1
 	}
 }

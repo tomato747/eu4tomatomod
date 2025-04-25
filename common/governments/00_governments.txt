@@ -133,6 +133,7 @@ monarchy = {
 				
 				dablit_guaif_reform
 				formosan_kingdom
+				pharonic_kingdom_reform
 				global_dominion_reform
 			}
 		}

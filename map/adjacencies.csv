@@ -141,4 +141,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 145;5053;sea;1319;-1;-1;-1;-1;Morea-Kythira
 235;87;canal;235;-1;-1;-1;-1;channel_tunnel
 5140;1033;canal;5140;-1;-1;-1;-1;chiho_tunnel
+242;5235;sea;2184;-1;-1;-1;-1;Gwynedd-Anglesey
 -1;-1;;-1;-1;-1;-1;-1;-1;

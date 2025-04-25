@@ -2,7 +2,7 @@
 
 graphical_culture = westerngfx
 
-color = { 212  30  100 }
+color = { 199 8 37 }
 
 historical_idea_groups = {
 	maritime_ideas
@@ -32,7 +32,7 @@ historical_units = {
 	napoleonic_lancers
 }
 
-leader_names = { 
+leader_names = {
 	Atkinson Armstrong
 	Ball Bell Birkett Braithwaite Burdon
 	Carlisle Cavendish Carr Charlton
@@ -47,7 +47,8 @@ leader_names = {
 	Percy
 	Radcliffe Robinson Robson
 	Scott Shafto Swinburne
-	Todhunter Tyson	
+	Todhunter Tyson
+	Constantinian
 }
 
 monarch_names = {

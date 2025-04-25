@@ -12,6 +12,8 @@ ming_missions_1 = {
 		NOT = { primary_culture = korean_new }
 		NOT = { map_setup = map_setup_random }
 		tag = MNG
+		NOT = { tag = FRM }
+		NOT = { tag = YUE }
 	}
 	has_country_shield = yes 
 	
@@ -292,6 +294,8 @@ DOM_Qing_Related_Missions_1 = {
 			tag = MHX
 		}
 		NOT = { map_setup = map_setup_random }
+		NOT = { tag = FRM }
+		NOT = { tag = YUE }
 	}
 	has_country_shield = yes
 	
@@ -440,13 +444,11 @@ chinese_kingdoms_1 = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -661,13 +663,11 @@ ming_missions_1_b = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 			tag = MJZ
 			tag = MYR
 			tag = EJZ
@@ -1671,13 +1671,11 @@ chinese_kingdoms_2 = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1866,13 +1864,11 @@ ming_missions_2_b = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 			tag = MJZ
 			tag = MYR
 			tag = EJZ
@@ -2497,13 +2493,11 @@ chinese_kingdoms_3 = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -3830,13 +3824,11 @@ ming_missions_3_b = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 			tag = MJZ
 			tag = MYR
 			tag = EJZ
@@ -4471,13 +4463,11 @@ chinese_kingdoms_4 = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -5133,13 +5123,11 @@ ming_missions_4_b = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 			tag = MJZ
 			tag = MYR
 			tag = EJZ
@@ -5457,13 +5445,11 @@ ming_missions_4_moh = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 			tag = MJZ
 			tag = MYR
 			tag = EJZ
@@ -5636,13 +5622,11 @@ chinese_kingdoms_5 = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -6394,13 +6378,11 @@ ming_missions_5_b = {
 			tag = NNG
 			tag = MIN
 			tag = HUA
-			tag = YUE
 			tag = CMI
 			tag = CYI
 			tag = CDL
 			tag = CGS
-			tag = SHU 
-			tag = FRM
+			tag = SHU
 			tag = MJZ
 			tag = MYR
 			tag = EJZ

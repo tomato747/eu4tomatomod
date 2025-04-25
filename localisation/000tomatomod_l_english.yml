@@ -142,6 +142,14 @@
  zali_culture:0 "Zali"
  sitsei_culture:0 "Sitsei"
  huetsei_culture:0 "Huetsei"
+ libyan:0 "Libyan"
+ amazigh:0 "Amazigh"
+ berber:0 "Tamazight"
+ east_berber:0 "Eastern Berber"
+ west_berber:0 "Zenaga"
+ afghani:0 "Pashtun"
+ 
+ brythoniaid:0 "Brythoniaid"
  
  ############
  ### Tags ###
@@ -477,6 +485,24 @@
  AMD: "Amdo"
  AMD_ADJ: "Amdowa"
  AMD_ADJ2: "Amdowa"
+ KWS: "Yung"
+ KWS_ADJ: "Kwangsi"
+ KWS_ADJ2: "Kwangsi"
+ HWN: "Great Hwan"
+ HWN_ADJ: "Hwan"
+ HWN_ADJ2: "Hwan"
+ SUO: "Finnish Empire"
+ SUO_ADJ: "Finnish"
+ SUO_ADJ2: "Finnish"
+ KEM: "Kemet"
+ KEM_ADJ: "Kemetic"
+ KEM_ADJ2: "Kemetic"
+ CVS: "Chuvashia"
+ CVS_ADJ: "Chuvash"
+ CVS_ADJ2: "Chuvash"
+ COP: "Egypt"
+ COP_ADJ: "Egyptian"
+ COP_ADJ2: "Egyptian"
  
  #############
  ### Areas ###
@@ -565,18 +591,16 @@
  corsica_sardinia_area:0 "Sardinia"
  xiushan_area:0 "Xiushan"
  tengyue_area:0 "Tengyue"
- libyan:0 "Libyan"
- amazigh:0 "Amazigh"
- berber:0 "Tamazight"
- east_berber:0 "Eastern Berber"
- west_berber:0 "Zenaga"
- afghani:0 "Pashtun"
  shanxi_area:0 "Shanxi West"
  shanxi_east_area:0 "Shanxi East"
  shanxi_north_area:0 "Shanxi North"
  shanxi_south_area:0 "Shanxi South"
  east_hebei_area:0 "East Hebei"
  west_hebei_area:0 "West Hebei"
+ central_wales_area:0 "Central Wales"
+ northern_wales_area:0 "Northern Wales"
+ qena_area:0 "Qena"
+ aswan_area:0 "Aswan"
  
  #################
  ### Provinces ###
@@ -744,8 +768,8 @@
  PROV_ADJ5014:0 "Darmstädter"
  PROV5015:0 "Weißenfels"
  PROV_ADJ5015:0 "Weißenfels"
- PROV5016:0 "Fife"
- PROV_ADJ5016:0 "Fifer"
+ PROV5016:0 "St Andrews"
+ PROV_ADJ5016:0 "St Andrews"
  PROV5017:0 "Angus"
  PROV_ADJ5017:0 "Dundonian"
  PROV5018:0 "Lanarkshire"
@@ -1215,6 +1239,58 @@
  PROV_ADJ2163:0 "Lauchau
  PROV1840:0 "Kwailam"
  PROV_ADJ1840:0 "Kwailam"
+ PROV5225:0 "Idlib"
+ PROV_ADJ5225:0 "Idlib"
+ PROV5226:0 "Afrin"
+ PROV_ADJ5226:0 "Afrin"
+ PROV5227:0 "Salamiya"
+ PROV_ADJ5227:0 "Salamiya"
+ PROV5228:0 "Al Bad'"
+ PROV_ADJ5228:0 "Al Bad'"
+ PROV5229:0 "Dunfermline"
+ PROV_ADJ5229:0 "Dunfermline"
+ PROV5230:0 "Monmouth"
+ PROV_ADJ5230:0 "Monmouth"
+ PROV5231:0 "Pembroke"
+ PROV_ADJ5231:0 "Pembroke"
+ PROV5232:0 "Cardigan"
+ PROV_ADJ5232:0 "Cardigan"
+ PROV5233:0 "Brecknock"
+ PROV_ADJ5233:0 "Brecknock"
+ PROV5234:0 "Radnor"
+ PROV_ADJ5234:0 "Radnor"
+ PROV5235:0 "Anglesey"
+ PROV_ADJ5235:0 "Anglesey"
+ PROV5236:0 "Merioneth"
+ PROV_ADJ5236:0 "Merioneth"
+ PROV5237:0 "Denbigh"
+ PROV_ADJ5237:0 "Denbigh"
+ PROV5238:0 "Flint"
+ PROV_ADJ5238:0 "Flint"
+ PROV5239:0 "Giza"
+ PROV_ADJ5239:0 "Gizan"
+ PROV5240:0 "Beni Suef"
+ PROV_ADJ5240:0 "Beni Suef"
+ PROV5241:0 "Amarna"
+ PROV_ADJ5241:0 "Amarna"
+ PROV5242:0 "Akhmim"
+ PROV_ADJ5242:0 "Akhmim"
+ PROV5243:0 "Abnub"
+ PROV_ADJ5243:0 "Abnub"
+ PROV5244:0 "Asyut"
+ PROV_ADJ5244:0 "Asyut"
+ PROV5245:0 "Sohag"
+ PROV_ADJ5245:0 "Sohag"
+ PROV5246:0 "Nag Hammadi"
+ PROV_ADJ5246:0 "Nag Hammadi"
+ PROV5247:0 "Qena"
+ PROV_ADJ5247:0 "Qena"
+ PROV5248:0 "Luxor"
+ PROV_ADJ5248:0 "Luxor"
+ PROV5249:0 "Elkab"
+ PROV_ADJ5249:0 "Elkab"
+ PROV5250:0 "Edfu"
+ PROV_ADJ5250:0 "Edfu"
  
  #############
  ### Ideas ###
@@ -1471,6 +1547,25 @@
  CPT_pirate_alliance:0 "Alliance of the South Chinese Pirates"
  CPT_pirate_alliance_desc:0 "With the growing might of the Pirates off the coast from Canton, the pirates begin to form an alliance to ensure their mutual benefits in the area."
  
+ #Brythonia
+ BRY_ideas:0 "Brythonian Ideas"
+ BRY_ideas_start:0 "Brythonian Traditions"
+ BRY_ideas_bonus:0 "Brythonian Ambitions"
+ BRY_knights_of_the_round_table:0 "Knights of the Round Table"
+ BRY_knights_of_the_round_table_desc:0 "We're Knights of the Round Table\nWe dance when ere we're able\nWe do routines and chorus scenes\nWith footwork impecc-able\nWe dine well here in Camelot\nWe eat ham and jam and spam a lot\n-Knights of the Round Table"
+ BRY_camelot:0 "Camelot"
+ BRY_camelot_desc:0 "\"On second thought let's not go to Camelot, it is a silly place\"\n-King Arthur"
+ BRY_search_for_avalon:0 "Search of Avalon"
+ BRY_search_for_avalon_desc:0 "Legends has it that the isle of Avalon is home to many magical things. And over the years it many has attempted to search for it's location."
+ BRY_quest_for_the_holy_grail:0 "Quest for the Holy Grail"
+ BRY_quest_for_the_holy_grail_desc:0 "The Holy Grail is the grail from which Christ himself drank from. Surely finding this magical cup would grant us magical powers!"
+ BRY_magic_swords:0 "Magical Swords"
+ BRY_magic_swords_desc:0 "Be it the Swords that was given by the Ladies in lakes or Swords that are stuck in stone, the land of [Root] is home to many magical swords."
+ BRY_lady_of_the_lake:0 "Lady of the Lake"
+ BRY_lady_of_the_lake_desc:0 "Our rulers are said to have been chosen by magical women in lakes, surely that is a good way to choose rightous rulers that will not oppresse your rights!"
+ BRY_legacy_of_rome:0 "Romano-British Heritage"
+ BRY_legacy_of_rome_desc:0 "After the fall of Rome, Britannia is left defenseless against the Saxon invaders. Yet our Romano-British Ancestors stood strong against the Germanic hoards."
+ 
  ##############
  ### EVENTS ###
  ##############
@@ -1529,7 +1624,7 @@
  
  #Gamestart and Settings
  gamestart.1.t:0 "Credits for Tomato mod"
- gamestart.1.d:0 "Venice Flag: Blue from Overly Sarcastic Productions\nChina Siege code: Zyphon, author of Black Gold mod\nFrequently helped with my spaghetti code: Seelöwe, LimonenZitrone\n Channel Tunnel Great Project original image: Robin Webster, found via Wikimedia (File:Channel Tunnel entrance, 1992 (geograph 3306731).jpg) , file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license\n Chiho Tunnel Great Project original image: Bmazerolles, found via Wikimedia (File:Seikan Tunnel entrance - dual-gauge track.jpg) , file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license"
+ gamestart.1.d:0 "Venice Flag: Blue from Overly Sarcastic Productions\nChina Siege code: Zyphon, author of Black Gold mod\nFrequently helped with my spaghetti code: Seelöwe, LimonenZitrone\nChannel Tunnel Great Project original image: Robin Webster, found via Wikimedia (File:Channel Tunnel entrance, 1992 (geograph 3306731).jpg) , file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license\n Chiho Tunnel Great Project original image: Bmazerolles, found via Wikimedia (File:Seikan Tunnel entrance - dual-gauge track.jpg) , file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license"
  gamestart.1.a:0 "Cool!"
  gamestart.2.t:0 "$PROVINCENAME$ Defects!"
  gamestart.2.d:0 "While we may be the rulers of $PROVINCENAME$, $CONTROLLERNAME$ still have many loyalists there. With $CONTROLLERNAME$ now in control of $PROVINCE$ once more, their loyalists have siezed the oppertunity to reintegrate themselves back into their fold!"
@@ -1675,6 +1770,22 @@
  frm_missions.12.a:0 "We must claim more of the island"
  frm_missions.12.b:0 "Focus on our existing settlements."
  
+ #Cantonese
+ 
+ cantonese_events.1.t:0 "A war against our Oppressors"
+ cantonese_events.1.d:0 "Long have we suffered the rule of the Emperors of China whom rules far from our lands, they used our resources and our help and gave us back nothing!"
+ cantonese_events.1.a:0 "Lets give them a taste of their own medicine!"
+ cantonese_events.2.t:0 "Sack of [canton_capital_sack_city.Capital]"
+ cantonese_events.2.d:0 "We have captured the city from which the Emperor rules China from! What shall we do with it?"
+ cantonese_events.2.a:0 "[canton_capital_sack_city.Capital] must be destroyed!"
+ cantonese_events.2.b:0 "We will show these barbarians an example of being civilised."
+ 
+ #Coptic Egypt
+ copticegypt_event.1.t:0 "The Egyptian Identity"
+ copticegypt_event.1.d:0 "Over the millenia, the land of Egypt has been home to many peoples with many names. Which begs the question, what people are we?"
+ copticegypt_event.1.a:0 "We are Egyptians"
+ copticegypt_event.1.b:0 "We are Arabs"
+ 
  #################
  ### Modifiers ###
  #################
@@ -1694,6 +1805,7 @@
  rise_of_tibet:0 "Rise of Tibet"
  tomato_rising_empire:0 "Rising Empire"
  pirate_alliance_power:0 "Alliance of the Six flag Pirates"
+ canton_captured_capital:0 "Captured Chinese Capital"
  
  #Mission - Formosan
  mdg_unite_island:0 "Formosan Unification"
@@ -1728,6 +1840,13 @@
  tibet_rebuilt_lhasa:0 "Restored Lhasa"
  tibet_urbanised:0 "Tibetan Urbanisation"
  tibet_developing:0 "Developing Tibet"
+ 
+ #Mission - Cantonese
+ canton_independent_modifier:0 "Free Canton"
+ canton_forcelimit_modifier:0 "Prepared for war"
+ 
+ #Missions - Coptic Egypt
+ cop_coptic_resurgence:0 "Coptic Resurgence"
  
  ######################
  ### Great Projects ###
@@ -1850,6 +1969,44 @@
  TIB_urbanise_title:0 "Urbanise Tibet"
  TIB_urbanise_desc:0 "The people of Tibet has always been settled in disperse villages in mountain vallies through out the plateu with only a few settlement rising to prominance. Let us develop the rural areas as well to better distribute the inflence of the state."
  
+ #Cantonese
+ canton_independent_title:0 "Free Canton"
+ canton_independent_desc:0 " "
+ canton_forcelimit_title:0 "Muster our forces"
+ canton_forcelimit_desc:0 " "
+ canton_unite_ningnam_title:0 "Secure Ningnam"
+ canton_unite_ningnam_desc:0 " "
+ canton_vietnam_title:0 "Subjugate Vietnam"
+ canton_vietnam_desc:0 " "
+ canton_champa_title:0 "Invade Champa"
+ canton_champa_desc:0 " "
+ canton_cuengh_title:0 "Integrate the Cuengh"
+ canton_cuengh_desc:0 " "
+ canton_kin_and_kith_title:0 "Our Kin and Kith"
+ canton_kin_and_kith_desc:0 " "
+ canton_fortify_title:0 "Fortify our Country"
+ canton_fortify_desc:0 " "
+ canton_south_china_title:0 "Beyond Ningnam"
+ canton_south_china_desc:0 " "
+ canton_hegemon_china_title:0 "Hegemon of China"
+ canton_hegemon_china_desc:0 " "
+ canton_modern_military_title:0 "A Modernised Military"
+ canton_modern_military_desc:0 " "
+ canton_clanwars_title:0 "The Clan Wars"
+ canton_clanwars_desc:0 " "
+ canton_deal_with_hakka_title:0 "Deal with the Hakka"
+ canton_deal_with_hakka_desc:0 " "
+ canton_deal_with_hokkien_title:0 "Deal with the Hoklo"
+ canton_deal_with_hokkien_desc:0 " "
+ canton_develop_hinterlands_title:0 "Develop the Hinterlands"
+ canton_develop_hinterlands_desc:0 " "
+ canton_curtail_triads_title:0 "The Triad Problem"
+ canton_curtail_triads_desc:0 " "
+ 
+ #Coptic Egypt
+ cop_coptic_resurgence_title:0 "Coptic Resurgence"
+ cop_coptic_resurgence_desc:0 "The Coptic Christian communities has existed in the land of Egypt since the beginning of Christianity. Yet after centuries of Arab Muslim rule, our community has diminished greatly in both influence and numbers. Yet now that we are once more freed from their rule, let us once more reclaim our influence over Egyptian society."
+ 
  ##################
  ### Government ###
  ##################
@@ -1877,6 +2034,8 @@
  formosan_kingdom_desc:0 "A Formosan Kingdom is the form of government where a formosan monarch manages to unite the usually compiting tribes under their rule and act as a united nation."
  formosan_confederation:0 "Formosan Confederation"
  formosan_confederation_desc:0 "A Formosan Confederation is the form of government where the many formosan tribes bands together and unite under a single banner as a united nation."
+ pharonic_kingdom_reform:0 "Pharonic Kingdom"
+ pharonic_kingdom_reform_desc:0 "The pharaoh was the absolute monarch of the country and wielded complete control of the land and its resources."
  
  ##################
  ### Parliament ###
@@ -1942,6 +2101,10 @@
  ming_disaster_modded_setting_tooltip:0 "The Tomato Mod adds and disables various events in the disaster, with the aim of making it more historical (or at least tries to make it more historical). Most notablly adds @CXIZhang Xianzhong's rebellion (similar to @CSHLi Zicheng's) and @FUKMing princes (@FRMKoxinga included) establishing Rump states in southern china once the capital fell (Hence defending you capital is very important if you don't want to reform Ming as one of the Rump states)."
  ming_disaster_vanilla_setting_tooltip:0 "Mostly same as vanilla version of the disaster, with few changes to adapt to the mod."
  ming_disaster_disabled_setting_tooltip:0 "Disables the disaster entirely. Would advice against this if @MNGMing is AI since @MNGMing starts off way more powerful than vanilla and might snowball out of control without the disaster to destroy them."
+ canton_capture_capital_tooltip:0 "If we capture their capital within 5 years, we will get:"
+ COMPLETED_CLAN_WARS:0 "The Clan Wars has ended"
+ CANTON_DOMINATE_CHINA_TRADE:0 "Has at least 50% trade power in Canton, Amoy, Hangchow, Peking, Wuchang, Chengdu and Xi'an trade nodes."
+ CANTON_EMPIRE_150_PROVINCES_CHINA:0 "Is an Empire and owns 150 provinces in China Superregion."
  
  ################
  ### Religion ###
@@ -2153,12 +2316,50 @@
  
  #Waldensian
  waldensian:0 "Waldensian"
- waldensian_religion_desc:0 "Originally a reform movement within the Catholic church, Waldensian heretics are anti-clerical and advocate a return to vows of poverty. They are opposed to capital punishment and believe that laymen can also administer the sacraments."
+ waldensian_religion_desc:0 "Originally a reform movement within the Catholic church, Waldensians are anti-clerical and advocate a return to vows of poverty. They are opposed to capital punishment and believe that laymen can also administer the sacraments."
  waldensian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  waldensian_rebels_title:0 "Religious"
  waldensian_rebels_name:0 "$RELIGION$ Zealots"
  waldensian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  waldensian_rebels_army:0 "$RELIGION$ Army"
+ 
+ #Juche
+ antireligion_group:0 "Non Religion"
+ juche:0 "Juche"
+ juche_religion_desc:0 "Originating in Marxist-Leninism, The goal of Juche is to establish a self-reliant state that independently determines its political, economic, and military affairs."
+ juche_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ juche_rebels_title:0 "Religious"
+ juche_rebels_name:0 "$RELIGION$ Zealots"
+ juche_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ juche_rebels_army:0 "$RELIGION$ Army"
+ SOVIET_KOREAN:0 "Choson Sovietism"
+ YANAN_FACTION:0 "Yeonanpa"
+ JUCHE_HOLY_WAR:0 "Liberation War"
+ harmonized_juche:0 "Harmonized with Juche Ideology"
+ desc_harmonized_juche:0 "We have incorporated the Juche Ideology in our country and national ethos."
+ 
+ #Wicca
+ wiccan:0 "Wicca"
+ wiccan_religion_desc:0 "Emerging from Western Esoteric traditions, Wicca encompasses a wide range of believes with much variety that has connections to Duotheism and Witchcraft."
+ wiccan_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ wiccan_rebels_title:0 "Religious"
+ wiccan_rebels_name:0 "$RELIGION$ Zealots"
+ wiccan_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ wiccan_rebels_army:0 "$RELIGION$ Army"
+ GOLDEN_DAWN:0 "Golden Dawn"
+ 
+ #Mandaeism
+ mandaeism_group:0 "Mandaean"
+ mandaeism:0 "Mandaeism"
+ mandaeism_religion_desc:0 "Known for their baptism and ascent rituals, Mandaeism also known as Sabianism, they believe in the Hayyi Rabbi, The Great Life, which Living Water embodies, personifies the sustaining and creative force of the universe. And that John the Baptist is the latest prophet."
+ mandaeism_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ mandaeism_rebels_title:0 "Religious"
+ mandaeism_rebels_name:0 "$RELIGION$ Zealots"
+ mandaeism_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ mandaeism_rebels_army:0 "$RELIGION$ Army"
+ ELCESAITES:0 "Elcesaites"
+ harmonized_mandaeism_group:0 "Harmonized with Mandaeism"
+ desc_harmonized_mandaeism_group:0 "We have incorporated Mandaeism in our country and national ethos."
  
  ###################
  ### Trade Goods ###
@@ -2180,6 +2381,8 @@
  
  physician:0 "Physician"
  physician_desc:0 "A Physician is someone who cares for the well being and health of their clients."
+ court_wizard:0 "Wizard"
+ court_wizard_desc:0 "A Wizard uses magic to alter the world around us."
  
  ##############################
  ### Tradenodes + Companies ###
@@ -2191,3 +2394,21 @@
  trade_company_yangtze:0 "Yangtze Charter"
  yunnan:0 "Yunnan"
  trade_company_yunnan:0 "Yunnan Charter"
+ incheon:0 "Incheon"
+ trade_company_korea:0 "Korea Charter"
+ kanto:0 "Kanto"
+ trade_company_kanto:0 "Kanto Charter"
+ 
+ ###############
+ ### Estates ###
+ ###############
+ 
+ #Estates
+ estate_triads:0 "Triads"
+ estate_triads_desc:0 " "
+ estate_triad_land_rights:0 "Triad local governance"
+ estate_triad_land_rights_desc:0 " "
+ 
+ #Agendas
+ 
+ #Interactions

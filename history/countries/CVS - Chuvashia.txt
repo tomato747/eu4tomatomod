@@ -1,0 +1,6 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = chuvash
+religion = sunni
+technology_group = nomad_group
+capital = 2422	# Veda-Suvar

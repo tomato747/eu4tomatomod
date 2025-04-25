@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = coptic_culture
+add_accepted_culture = al_misr_arabic
+add_accepted_culture = saidi_arabic
+religion = coptic
+technology_group = muslim
+capital = 358 # Alexandria

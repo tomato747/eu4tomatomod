@@ -37,6 +37,8 @@ spriteTypes = {
 	}
 	
 ### ADVISOR ###
+	
+	#Physician
 	spriteType = {
 		name = "GFX_advisor_physician"
 		texturefile = "gfx//interface//advisors//natural_scientist.tga"
@@ -256,6 +258,232 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_advisor_south_east_asiagfx_physician_female"
 		texturefile = "gfx//interface//advisors//south_east_asia_natural_scientist_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+	#Wizard
+	spriteType = {
+		name = "GFX_advisor_court_wizard"
+		texturefile = "gfx//interface//advisors//inquisitor.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_court_wizard_female"
+		texturefile = "gfx//interface//advisors//inquisitor_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_asiangfx_court_wizard"
+		texturefile = "gfx//interface//advisors//asian_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_asiangfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//asian_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_russiangfx_court_wizard"
+		texturefile = "gfx//interface//advisors//russian_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_russiangfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//russian_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_cossackgfx_court_wizard"
+		texturefile = "gfx//interface//advisors//cossack_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_cossackgfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//cossack_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_africangfx_court_wizard"
+		texturefile = "gfx//interface//advisors//african_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_africangfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//african_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_muslimgfx_court_wizard"
+		texturefile = "gfx//interface//advisors//muslim_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_muslimgfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//muslim_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_persiangfx_court_wizard"
+		texturefile = "gfx//interface//advisors//persian_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_persiangfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//persian_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_indiangfx_court_wizard"
+		texturefile = "gfx//interface//advisors//indian_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_indiangfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//indian_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_northamericagfx_court_wizard"
+		texturefile = "gfx//interface//advisors//northamerica_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_northamericagfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//northamerica_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_mesoamericagfx_court_wizard"
+		texturefile = "gfx//interface//advisors//mesoamerica_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_mesoamericagfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//mesoamerica_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_southamericagfx_court_wizard"
+		texturefile = "gfx//interface//advisors//southamerica_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_southamericagfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//southamerica_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_aboriginalgfx_court_wizard"
+		texturefile = "gfx//interface//advisors//aboriginal_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_aboriginalgfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//aboriginal_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_polynesiangfx_court_wizard"
+		texturefile = "gfx//interface//advisors//polynesian_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_polynesiangfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//polynesian_inquisitor_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_south_east_asiagfx_court_wizard"
+		texturefile = "gfx//interface//advisors//south_east_asia_inquisitor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_south_east_asiagfx_court_wizard_female"
+		texturefile = "gfx//interface//advisors//south_east_asia_inquisitor_female.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

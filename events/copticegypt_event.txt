@@ -1,0 +1,32 @@
+namespace = copticegypt_event
+
+country_event = {
+	id = copticegypt_event.1
+	title = copticegypt_event.1.t
+	desc = copticegypt_event.1.d
+	picture = COPTIC_CITY_eventPicture
+	
+	fire_only_once = yes
+	
+	option = {
+		name = copticegypt_event.1.a
+		egypt_region = {
+			type = all
+			if = {
+				limit = {
+					religion = coptic
+					OR = {
+						culture = al_misr_arabic
+						culture = saidi_arabic
+					}
+				}
+				change_culture = coptic_culture
+			}
+		}
+		change_primary_culture = coptic_culture
+	}
+	
+	option = {
+		name = copticegypt_event.1.b
+	}
+}

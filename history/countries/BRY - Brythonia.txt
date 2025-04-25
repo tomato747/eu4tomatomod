@@ -1,0 +1,52 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = welsh
+religion = catholic
+capital = 234	# Hampshire
+
+1444.11.11 = {
+	monarch = {
+		name = "Uthyr \"Pen Ddraig\""
+		dynasty = "Cystennin"
+		adm = 6
+		dip = 6
+		mil = 6
+		leader = {
+			name = "Skanderbeg"
+			type = general
+			fire = 3
+			shock = 4
+			manuever = 3
+			siege = 1
+		}
+	}
+	heir = {
+		name = "Arthur"
+		dynasty = "Cystennin"
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+	consort = {
+		name = "Eigr"
+		dynasty = "of Cornwall"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = fertile_personality
+	add_ruler_personality = well_connected_personality
+	add_heir_personality = righteous_personality
+	define_advisor = {
+		type = court_wizard
+		name = "§GMyrddin§"
+		skill = 3
+		discount = yes
+		culture = brythoniaid
+		religion = catholic
+	}
+}

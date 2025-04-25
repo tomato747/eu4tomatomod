@@ -7447,6 +7447,8 @@ crusader_nobility_reform = {
 
 }
 
+#TOMATO MOD STUFF
+
 dablit_guaif_reform = {
 	icon = "religious_harmony_reform"
 	allow_normal_conversion = no
@@ -7501,6 +7503,31 @@ formosan_kingdom = {
 	}
 }
 
+pharonic_kingdom_reform = {
+	icon = "egyptian_government_reform"
+	allow_normal_conversion = yes
+	potential = {
+		religion = egyptian
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	nation_designer_trigger = {
+		religion = egyptian
+	}
+
+	modifiers = {
+		max_absolutism = 20
+		legitimacy = 1
+		unjustified_demands = -0.25
+	}
+
+	government_abilities = {
+		
+	}
+}
+
 global_dominion_reform = {
 	icon = "king"
 	allow_normal_conversion = yes
@@ -7509,8 +7536,11 @@ global_dominion_reform = {
 	allow_convert = no
 	nation_designer_cost = 0
 	potential = {
-		is_playing_custom_nation = yes
-		ai = yes
+		OR = {
+			is_playing_custom_nation = yes
+			tag = HWN
+			tag = SUO
+		}
 	}
 	modifiers = {
 		global_tax_modifier = 100.0

@@ -406,6 +406,41 @@ germanic = {
 	gothic_ger = {
 		primary = FEO
 	}
+	anglosaxon = { #CK2
+		dynasty_names = {
+			Godhelming Beorming Eorling Æbbing Hæsting Ælling Eadricing Eadwulfing Leodwalding
+			Æthelfrithing Yffing Ingving Offing Oswalding Cerdicing Wiglafing Coenwalhing
+			Beorning Iceling Wuffing Wihtgilsing Ross Ciesla Rowe Borthwick
+		}
+		male_names = {
+			Arncytel Balthere Beorhtfrith Beorhthelm Beorhtmær Beorhtnoth Beorhtric Beorhtsige Beorhtwine_Beorhtwine Beorn_Beorn Beornræd Beornwulf
+			Burgheard Byrhtnoth Cearl Cenfus Cenræd Cenwulf Ceolwulf Cerdic Copsige
+			Cuthberht Cuthræd Cynehelm Cynewulf Cytelbearn Eadberht Eadfrith Eadgar Eadmund Eadmær Eadric
+			Eadræd Eadsige Eadulf Eadweald Eadweard Eadwig Eadwine Eadwulf Ealdhun Ealdmund Ealdræd Ealdwine
+			Ealdwulf Eanberht Eanfrith Eanhere Eardwulf Eastmund Ecgberht Ecgfrith Gamall Godwine Gospatric Guthfrith Guthmund
+			Gyrth Hacon Harold Heahberht Hereberht Hereweald Hereweard Hlothere Hrodberht Inwær Leofheah Leofhelm
+			Leofric Leofweald Leofwine Maccus Morcar Mærleswegn Offa Onlaf Ordgar
+			Oscytel Oshere Osmund Osric Osræd Osulf Osweald Oswine Oswulf Peter Rædwulf_Ralph Rægenweald Scule
+			Sigeberht Sigehelm Sigeric Sigeræd Sighere Siweard Stigand Swegn Swithelm Swithræd Swæfræd Sæbert Sælræd Sæweald
+			Sæxbald Sæxræd Thoræd Thurcytel Thurfrith Tostig Uhtræd Ulfcytel Waltheof Werestan Wiglaf Wihtræd
+			Wistan Wulf Wulfgar Wulfgeat Wulfhelm Wulfhere Wulfmær Wulfnoth Wulfstan Ælfgar Ælfmær Ælfnoth Ælfric Ælfræd_Alfred Ælfsige
+			Ælfstan Ælfwald Ælfweard Ælfwig Ælfwine Ælle Æthelbald Æthelberht Æthelfrith Æthelhere Æthelmær
+			Æthelric Æthelræd_Ailred Æthelsige Æthelstan Æthelweald Æthelweard Æthelwine Æthelwold Æthelwulf
+			Eormenred Eorcenberht Eormenric Eadbald Rædwald
+		}
+		female_names = {
+			Agatha Balthild Beorhtflæd Beorhtgifu Beorhtgyth Beorhtwaru Beorhtwynn Beornflæd Beorngyth Blæja Burgflæd Ceolflæd Cristina
+			Cuthburg Cwenburg Cyneburg Cynegyth Cynehild Cyneswith Cynethryth Eadburg Eadflæd Eadgifu Eadgyth Eadhburh Eadhild Ealdgyth
+			Ealhflæd Ealhswith Eanswith Ecgfrida Ecgwyn Godgifu Gunhilda Gytha Helga Heregyth Hereswith Hextilda Hungifu Judith
+			Leofflæd Leofgifu Leofrun Leofwaru Leofwynn Margaret_Margaret Maud Matilda Mildrith Octreda Sifflæd Sigrid Sæthryth Wulfflæd Wulfgifu
+			Wulfgyth Wulfhild Wulfrun Wulfthryth Wulfwaru Wulfwynn Wynnflæd Wærburg Æbba Ælfflæd Ælfgifu Ælfgyth Ælflæda_Ælflæda Ælfrida
+			Ælfswith Ælfthryth Ælfwynn Æthelburg Æthelflæd Æthelgifu Æthelhild Æthelræda_Æthelreda Æthelswith Æthelthryth
+			Æthelburh Seaxburh Wihtburh
+		}
+	}
+	yiddish = {
+		primary = ISR
+	}
 	female_names = {
 		Adele Adelgunde Adelheid Adolfine Agatha Agnes Alexandra Alice Alina Aline Alma Alwina Alwine Amalia Amalie Amanda 
 		Amelie Andrea Angela Angelika Angelina Anika Anita Anja Anke Ann-Katrin Anna Anne Annegret Anneli Annelie Anneliese 
@@ -514,41 +549,6 @@ germanic = {
 		"von Frankenstein" "von Taube" "von Uffeln" "von Hessen" "von Boyneburg"
 		#Hannoveran
 		"von Schack" "von Fabrice" "von Hardenberg" "von Welf" "von Schauenburg" "von Holstein-Gottorp" "Askanier" "von Oldenburg"
-	}
-	anglosaxon = { #CK2
-		dynasty_names = {
-			Godhelming Beorming Eorling Æbbing Hæsting Ælling Eadricing Eadwulfing Leodwalding
-			Æthelfrithing Yffing Ingving Offing Oswalding Cerdicing Wiglafing Coenwalhing
-			Beorning Iceling Wuffing Wihtgilsing Ross Ciesla Rowe Borthwick
-		}
-		male_names = {
-			Arncytel Balthere Beorhtfrith Beorhthelm Beorhtmær Beorhtnoth Beorhtric Beorhtsige Beorhtwine_Beorhtwine Beorn_Beorn Beornræd Beornwulf
-			Burgheard Byrhtnoth Cearl Cenfus Cenræd Cenwulf Ceolwulf Cerdic Copsige
-			Cuthberht Cuthræd Cynehelm Cynewulf Cytelbearn Eadberht Eadfrith Eadgar Eadmund Eadmær Eadric
-			Eadræd Eadsige Eadulf Eadweald Eadweard Eadwig Eadwine Eadwulf Ealdhun Ealdmund Ealdræd Ealdwine
-			Ealdwulf Eanberht Eanfrith Eanhere Eardwulf Eastmund Ecgberht Ecgfrith Gamall Godwine Gospatric Guthfrith Guthmund
-			Gyrth Hacon Harold Heahberht Hereberht Hereweald Hereweard Hlothere Hrodberht Inwær Leofheah Leofhelm
-			Leofric Leofweald Leofwine Maccus Morcar Mærleswegn Offa Onlaf Ordgar
-			Oscytel Oshere Osmund Osric Osræd Osulf Osweald Oswine Oswulf Peter Rædwulf_Ralph Rægenweald Scule
-			Sigeberht Sigehelm Sigeric Sigeræd Sighere Siweard Stigand Swegn Swithelm Swithræd Swæfræd Sæbert Sælræd Sæweald
-			Sæxbald Sæxræd Thoræd Thurcytel Thurfrith Tostig Uhtræd Ulfcytel Waltheof Werestan Wiglaf Wihtræd
-			Wistan Wulf Wulfgar Wulfgeat Wulfhelm Wulfhere Wulfmær Wulfnoth Wulfstan Ælfgar Ælfmær Ælfnoth Ælfric Ælfræd_Alfred Ælfsige
-			Ælfstan Ælfwald Ælfweard Ælfwig Ælfwine Ælle Æthelbald Æthelberht Æthelfrith Æthelhere Æthelmær
-			Æthelric Æthelræd_Ailred Æthelsige Æthelstan Æthelweald Æthelweard Æthelwine Æthelwold Æthelwulf
-			Eormenred Eorcenberht Eormenric Eadbald Rædwald
-		}
-		female_names = {
-			Agatha Balthild Beorhtflæd Beorhtgifu Beorhtgyth Beorhtwaru Beorhtwynn Beornflæd Beorngyth Blæja Burgflæd Ceolflæd Cristina
-			Cuthburg Cwenburg Cyneburg Cynegyth Cynehild Cyneswith Cynethryth Eadburg Eadflæd Eadgifu Eadgyth Eadhburh Eadhild Ealdgyth
-			Ealhflæd Ealhswith Eanswith Ecgfrida Ecgwyn Godgifu Gunhilda Gytha Helga Heregyth Hereswith Hextilda Hungifu Judith
-			Leofflæd Leofgifu Leofrun Leofwaru Leofwynn Margaret_Margaret Maud Matilda Mildrith Octreda Sifflæd Sigrid Sæthryth Wulfflæd Wulfgifu
-			Wulfgyth Wulfhild Wulfrun Wulfthryth Wulfwaru Wulfwynn Wynnflæd Wærburg Æbba Ælfflæd Ælfgifu Ælfgyth Ælflæda_Ælflæda Ælfrida
-			Ælfswith Ælfthryth Ælfwynn Æthelburg Æthelflæd Æthelgifu Æthelhild Æthelræda_Æthelreda Æthelswith Æthelthryth
-			Æthelburh Seaxburh Wihtburh
-		}
-	}
-	yiddish = {
-		primary = ISR
 	}
 }
 
@@ -962,6 +962,7 @@ finno-ugric = {
 		}
 	}
 	finngolian = {
+		primary = SUO
 		dynasty_names = {
 			Bielke Horn Tott Fleming Paijkull Bonde Wrede Soop
 			Mannerheim Furuhjelm Aminoff Armfelt Carpelan Rehbinder Schulman
@@ -1947,6 +1948,72 @@ gaelic	= {
 			Ncill
 			Rothach Ros
 			Stiubhart Singlear Sutherlarach
+		}
+	}
+	brythoniaid = {
+		primary = BRY
+		dynasty_names = {
+			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
+			#CK2
+			"Morgannwg" "Caradoc" "Mostyn" "Gorfynydd" Denbigh "Gwynn" "Gwarthaf" "Môn" "Penfro"
+			"Aberteifi" "Gethin" "Gruffudd" "Carmarthen" "Mynyw" "Anwyl of Tywyn" "Fane"
+			"of Bristol" "Evans" "Owen" "Lloyd" 
+		}
+		male_names = {
+			Owain Dafydd Gruffydd Llewelyn Rhodri Maredudd Cynan Cadwaladr Iago Idwal Maelgwyn Einion Iorwerth Trahaearn 
+			Aeron Aled Aneirin Arvel Berwyn Brynmor Cadfael Cadoc Cadwgawn Celyn Cledwyn Colwyn Dai Dilwyn Emyr Gawain 
+			Glynn Gwyn Heddwyn Heilyn Hywel Rhian Tristan Tudor Urien Vaughan
+			Adda Adgar Edgar Adran Adrian Aeddan Alan Aldwr Aldroenus Algwyn Alisander Alexander Alured 
+			Alfred Alwyn Anarawd Andreas Andrew Aneurin Anlaff Olaf Anllech Annwn Antoninus Argad Arcadius 
+			Arod Arthen Artemius Arthfael Arthfoddw Arthbodus Arthwr Arthur Arthws Arthwys Artorius Asa 
+			Asaph Awst August Bangar Bedwyr Beli Berthgwyn Berhtwine Berthwallt Berthoald Bleddyn Bledrig 
+			Bleiddud Branwaladr Bride Briog Brochfael Brogmaglus Brwt Brutus Brwyn Brychan Brân Bran Cadell 
+			Cadeyrn Cadfael Cadfan Cadog Cadw Cadwal Cadwaladr Cadwallon Cadwared Cadwared Cadwgan Cadwr 
+			Cadwr Cai Gaius Caid Cain Caradog Caradog Casnar Caswallon Cawdaf Cedig Caedicius Cedwyn Ceneu 
+			Ceredig Caratacus Clydog Louis Coel Corentin Cuhelyn Custennin Constantine Cwlfyn Culmin Cwrig 
+			Cyriacus Cydifor Cydrych Cynan Conan Cynddelw Cyndyddan Cynddylan Cyndeyrn Kentigern Cynfael 
+			Cynfarch Cynfawr Cynfeddw Cynfelyn Cynfran Cynfyn Cyngar Cyngen Cynwallon Cynwared Cynwrig 
+			Cynwyd Cynyr Cysteint Constans Dafydd Deheuwant Deiniol Daniel Dewi David Dogfael Drystan 
+			Tristan Dumnagual Dwyfan Damian Dyfnarth Donyarth Dyfnwal Donald Dyfnwallon Dynod Donatus Dywel 
+			Edern Eternus Ednyfed Ednywain Edryd Ailred Edwyn Edwin Edylfred Aethelfred Einion Elfin Alwin 
+			Elidyr Elis Elisedd Elud Elystan Alstan Emrys Ambrosius Enfidaig Erb Urban Erclwf Heracles Eudaf 
+			Octavius Ewyas Ffernfael Ffilip Philip Ffriog Friog Ffwdwr Fragan Ffransis Fransis Fychan Fyrsil 
+			Gamon Garmon German Geraint Gerontius Gerallt Gerald Glwyddien Glywys Claudius Godwyn Godwin 
+			Goronwy Gronw Gruffydd Ruffinus Grygor Gregory Guret Gwalchmai Gavin Gwen Gwenwynwyn Gwerstan 
+			Werestan Gwerthefyr Vortimer Gwerthern Vortigern Gwydol Vitalis Gwydolin Vitalinus Gwyn Finn 
+			Gwidyr Gwilym William Gwrfawr Gwrfoddw Gwrgant Fergus Gwrgeneu Gwrgi Gwriad Viriathius Harri 
+			Henry Herewallt Hereweald Huw Hugh Hywel Iago Jacob Ivor Idnerth Idwal Idwallon Iestyn Justin 
+			Ieuan John Ifor Ivar Io Ioan Iolo Iorwerth Ithel Lles Lucius Llew Leon Llyr Llywarch Llywelyn 
+			Macsen Maximos Madog Matad Mael Maelcwn Malcolm Maelgwn Melgwn Maenyrch March Marcus Maredudd 
+			Murdoch Math Matthew Mawgan Meilyr Meirchion Marcianus Meiriadog Meriadoc Meirion Marianus 
+			Merfyn Meurig Maurice Mihangel Michael Morfarch Morgan Morien Morgen Morydd Mwyn Mungo Myrddin 
+			Martin Neithon Nathan Nowy Nynniaw Oswallt Oswald Owain Eugene Oucydd Eochaid Padern Padrig 
+			Patrick Pandoff Pasgen Pascentius Padarn Paternus Pawl Paul Pedr Peter Peredyr Publig Pyr 
+			Rheinallt Reginald Rhicert Richard Rhigeneu Ricenus Rhirid Rhiwal Riwal Rhiwallon Rhobert Robert 
+			Rhodri Rhufon Roman Rhun Rucenus Rhydderch Roderick Rhydog Rhys Riaged Riacet Richwin Sandde 
+			Sanctus Sawyl Samuel Seferus Severin Seisyll Cecil Selyf Solomon Senyllt Serigi Sergius Sieffre 
+			Godfrey Sion Sior George Siwauna Steffen Stephen Stinian Justinanius Sulien Julian Taliesin 
+			Telesinus Tegonwy Tegwyd Tadg Teilo Teithfalch Teudebur Tewdos Theodosius Tewdrig Theodoric 
+			Tewdwr Theodore Tomos Thomas Trahaearn Tudur Tudwal Tuathal Tudwallon Tydy Tyfoedd Tysilio Urien 
+			Urbgenius Uthyr Victor Ynyr Honorius Ysfael Llewelyn Maelgwyn Aeron Aled Aneirin Arvel Berwyn 
+			Brynmor Cadoc Cadwgawn Celyn Cledwyn Colwyn Dai Dilwyn Emyr Gawain Glynn Heddwyn Heilyn Rhian 
+			Tudor Vaughan 
+		}
+		female_names = {
+			Elain 
+			Addiena Aelwyd Aeronwen Aeronwy Afrella Abrelda Alys Alice Angharad Annes Anna Annest Annwyl 
+			Anowed Arddyn Arianrhod Blodwen Bronwen Catrin Catherine Ceindrych Cagintria Ceridwen Cerie 
+			Cerys Cicely Cecilia Clarisant Creirwy Cristin Christina Danhadlwen Delyth Denis Denise Dwynwen 
+			Dwywai Dyddgu Efa Eva Effros Euphrasia Efrddyl Efyrddyl Aurelia Eiliwedd Elaine Elen Helen Eleri 
+			Hilaria Elinion Elinor Eleanor Ellyn Enid Essyllt Hersilia Euronwy Ffelis Ffion Fflur Flora 
+			Ffraid Brigit Glynys Gwen Gwenasedd Gwenfrewi Winifred Gwenhwyfach Gwenhwyfar Gwenllian Gwenwyn 
+			Gwerfyl Gwladys Claudia Haer Hawys Hawise Heledd Hellawes Heulwen Hunydd Hywela Ilud Isabel 
+			Elizabeth Llear Clara Llecci Lleigy Lleuca Lucia Lowry Mabyn Maches Madrun Matrona Maelrys Mair 
+			Maria Mali Mallt Marared Marchell Marcella Margred Margaret Marwenna Mawd Matilda Melisant 
+			Melisende Morganna Morien Murron Myfanwy Nest Nesta Agnes Newlyna Neulenna Non Nonna Olwen 
+			Onbrawst Owena Eugenia Prawst Ragnell Ragnhild Rhiaindrech Rioantdrec Rhiainfelt Regina Rhiannon 
+			Rhonwen Sannant Sara Sarah Senena Sibyl Sibylla Sioned Siwan Siân Joan Susanna Susana Tangwystl 
+			Tancostyla Tegla Thecla Ysbail Ystradwel
 		}
 	}
 }
@@ -8164,6 +8231,14 @@ east_asian = {	# Chinese Group
 	cantonese = {
 		primary = YUE
 		male_names = {
+			Kaiming Siugei Seoileon Manyiu Channaam Saiwing Gwongcho Waaidak Siuking Ziheung Wingcheung
+			Yinglung Chiubong Sheungchi Waaiyuen Siutong Chiying Chunfai Tingkwong Wingshing Yuentak
+			Chikeung Kingfai Manon Kwongyuk Waiyan Saicheung Chunkwok Kingchung Yuenshan Kwanwa Siulun
+			Chiking Fukon Kwokhing Kaicheung Waichung Kaiyin Manlung Tinfuk Chiho Takshing Kingman Tinyau
+			Winghong Chunkit Wungyun Kingyin Saiyin Kwongyiu Kinshing Yuenlung Shuilun Chion Kashing
+			Chunhin Yathei Kachiu
+
+			Yingsau Yatsam Yauling Kabo Nimchi Siyin Yauyung Heungwah Sautyun Wanhung
 			
 			#chief executuve
 			Kachiu Chunying Yamkuen Cheehwa
@@ -8185,7 +8260,15 @@ east_asian = {	# Chinese Group
 			Potsai Po Yud Manhin Yiuyud Wong Tsih Yiuwong Shekyi Yaukam Yingshek Hungshek Chiching Kuyeung SheungChing Loutung Lautong Potai Hokhin Popou Shanyi Kailaan Boungou Kwokwa Ng Syunsou Anam Paufuk Timpo Kwunfu
 		}
 		female_names = {
-		
+			Saulan Yukmui Chuikyun Laifong Fungying Choiha Waileung Ngakam Meiwa Shuichi Kwaiying Bingsam
+			Chauyuet Chingfan Chuiyuk Siting Puiyi Syutngor Chunfa Lauching Yuetngor Sauchun Meikyun
+			Kwaiheung Chauguk Choifung Laihah Lanying Bikyuk Fungleung Kamlin Ngawai Sauwah Yauhing Laiyi
+			Ngoichun Choiwan Chunyin Laifan Sauling Meiyuk Laiwah Puilan Sauhing Bikfong Ngahing Chuihung
+			Kamfung Laichun Yuklan Miuheung Chunto Syutmui Yunyi Chauling Gaiwai Binglan Kamsau Ting Onsang
+			Sukfan Kayi Shekyeung
+
+			Yingsau Yatsam Yauling Gaabou Nimci SiYin Yauyung Hoengwaa Sautaan Wanhang
+			
 			#chief executuve
 			Yuetngor
 			#secretary
@@ -8220,7 +8303,7 @@ east_asian = {	# Chinese Group
 		}
 	}
 	ping_culture = {
-		primary = YUE
+		primary = KWS
 		male_names = {
 			
 			#chief executuve
@@ -8786,7 +8869,7 @@ cantonese_g = {	# If EoC collapse
 		primary = HKG
 	}
 	ping_culture_n = {
-		primary = KWI
+		primary = KWS
 	}
 	tanka_n = {
 		primary = CPT
@@ -8813,6 +8896,15 @@ cantonese_g = {	# If EoC collapse
 		}
 	}
 	male_names = {
+		Kaiming Siugei Seoileon Manyiu Channaam Saiwing Gwongcho Waaidak Siuking Ziheung Wingcheung
+		Yinglung Chiubong Sheungchi Waaiyuen Siutong Chiying Chunfai Tingkwong Wingshing Yuentak
+		Chikeung Kingfai Manon Kwongyuk Waiyan Saicheung Chunkwok Kingchung Yuenshan Kwanwa Siulun
+		Chiking Fukon Kwokhing Kaicheung Waichung Kaiyin Manlung Tinfuk Chiho Takshing Kingman Tinyau
+		Winghong Chunkit Wungyun Kingyin Saiyin Kwongyiu Kinshing Yuenlung Shuilun Chion Kashing
+		Chunhin Yathei Kachiu
+
+		Yingsau Yatsam Yauling Kabo Nimchi Siyin Yauyung Heungwah Sautyun Wanhung
+		
 		#chief executuve
 		Kachiu Chunying Yamkuen Cheehwa
 		#secretary
@@ -8833,7 +8925,15 @@ cantonese_g = {	# If EoC collapse
 		Potsai Po Yud Manhin Yiuyud Wong Tsih Yiuwong Shekyi Yaukam Yingshek Hungshek Chiching Kuyeung SheungChing Loutung Lautong Potai Hokhin Popou Shanyi Kailaan Boungou Kwokwa Ng Syunsou Anam Paufuk Timpo Kwunfu
 	}
 	female_names = {
-	
+		Saulan Yukmui Chuikyun Laifong Fungying Choiha Waileung Ngakam Meiwa Shuichi Kwaiying Bingsam
+		Chauyuet Chingfan Chuiyuk Siting Puiyi Syutngor Chunfa Lauching Yuetngor Sauchun Meikyun
+		Kwaiheung Chauguk Choifung Laihah Lanying Bikyuk Fungleung Kamlin Ngawai Sauwah Yauhing Laiyi
+		Ngoichun Choiwan Chunyin Laifan Sauling Meiyuk Laiwah Puilan Sauhing Bikfong Ngahing Chuihung
+		Kamfung Laichun Yuklan Miuheung Chunto Syutmui Yunyi Chauling Gaiwai Binglan Kamsau Ting Onsang
+		Sukfan Kayi Shekyeung
+
+		Yingsau Yatsam Yauling Gaabou Nimci SiYin Yauyung Hoengwaa Sautaan Wanhang
+		
 		#chief executuve
 		Yuetngor
 		#secretary
@@ -9094,6 +9194,7 @@ korean_g = {
 		}
 	}
 	ancient_hwan = {
+		primary = HWN
 		dynasty_names = { 
 			Kim
 		}
@@ -9235,7 +9336,7 @@ japanese_g = {
 			Yuuka Yuuki Yuuko Yuuna Yuzuki
 		}
 	}
-	okinawan = { #Kyushu culture
+	okinawan = {
 		primary = RYU
 		dynasty_names = { 
 			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa 
@@ -9975,13 +10076,9 @@ pacific = {
 		}
 	}
 	formosan = {
-		primary = MDG
 		dynasty_names = {
-			Aalona Ahulani Ainalani Akeakamai Alani Aluala Alealani Alohilani Anakalia Anuenue "'Ehukai" "'Ewalani" "Ha'aheo" Heleakala
-			Hanalei Hanohano "Hau'oli" "Hi'iaka" "Ho'okano" Hualani Ikepela "Ka'aukai" Kahananui Kaheleha Kaikea Kainalu Kalauokalani
-			Kaleoikaika Kamehu "Kameha'o" Kamehameha Kawaiola Kehaulani Kelupaina Keonoana Lanakila Lehuanani Lokelani Lono
-			Makaleka Makikonu Mauna Momilani Nohealani Polola Po'okela Sanoe Ualani Uluwehi Wailani Waipuna
-			Kamachat Ruvaniyaw Tjuleng
+			Amis Atayal Bunun Kanakanavu Kavalan Paiwan Puyuma Rukai Saaroa Saisiyat Sakizaya Seediq Taroko Thao Tsou Yami
+			Arikun Babuza Basay Hoanya Kaxabu Ketagalan Kulon Lloa Luilang Makatao Papora Pazeh Qauqaut Siraya Taivoan Taokas Favorlang Trobiawan
 		}
 		female_names = {
 			Alamea Alaula Alika Elikapeka Halia Iokina Iolana Kailani Kalea Kamaile Kamea Kanoa Kawena Keala Keola Keona Kiele Kina
@@ -9992,7 +10089,6 @@ pacific = {
 			Akamu Aloha Alohilani Analu Aolani Aulani Aulii Feleti Inoke Iolani Ipo Iwalani Kai Kaili Kaipo Kalani Kale Kalei Kapena
 			Kapono Keahi Kealii Keani Keanu Keiki Kelii Keon Keoni Kimo Konala Liko Loe Lulani Makaio Makani Malo Mauli Mele Moke
 			Nalani Oke Palani Pekelo
-			Aslamie Maloe Timos
 		}
 	}
 	dynasty_names = {
@@ -12114,7 +12210,7 @@ sudanese = {
 		
 	}
 	nubian = {
-		primary = NUB
+		primary = NBI
 	}
 	beja = {
 		primary = BEJ
@@ -12532,6 +12628,7 @@ oghur = {
 		}
 	}
 	chuvash = {
+		primary = CVS
 		dynasty_names = {
 			Cälil Göbäydullina Nasiri Näcmetdin Nigmät Nurgäli Isxaqi Märcani Qamay "Qol-Gäli" Qursawi Tuqay Yusupow
 		}
@@ -12550,11 +12647,13 @@ oghur = {
 
 kemetic = {
 	old_egyptian = {
+		primary = KEM
 		dynasty_names = {
-			Thinis Memphis Abydos Herakleopolis Thebes Itjtawy Avaris Bubastis Sais
+			#Thinis Memphis Abydos Herakleopolis Thebes Itjtawy Avaris Bubastis Sais
+			Tjenu Men-nefer Abedju Henen-Nesut Waset Itjtawy Hut-waret Per-Bast Sais
 		}
 		male_names = {
-			Seka Khayu Tiu Thesh Neheb Wazner Mekh "Iry-Hor" Sekhen Serqer Narmer "Hor-Aha" Djer Djet Den Semerkhet "Qa'a" Sneferka Raneb Nynetjer Senedj Neferkara Hudjefa Djoser Sekhemkhet Sanakht Khaba Huni Sneferu Khufu Khafre Djdefre Menkaure Thamphtis Userkaf Sahure Neferefre Shepseskare Nyuserre Unas Teti "Dejkadre Shemai" Neferkare Merenhor Nikare Intef "Sankhkare Mentuhotep" Menkare Segerseni Senusret Nerikare Sonbef Sebkay Sobekhotep Dedumose Sheeshi Nehesy Sheneh Semenre Rahotep "Nebpehtire Ahmose" Amenhotep Thutmose  "Awybre Hor" Akhenaten Tutankhamun Ramesses Herihor Piankh Pinedjem Masaharta Menkheperre Smendes Pinedjem
+			Seka Khayu Tiu Thesh Neheb Wazner Mekh "Iry-Hor" Sekhen Serqer Narmer "Hor-Aha" Djer Djet Den Semerkhet "Qa'a" Sneferka Raneb Nynetjer Senedj Neferkara Hudjefa Djoser Sekhemkhet Sanakht Khaba Huni Sneferu Khufu Khafre Djdefre Menkaure Thamphtis Userkaf Sahure Neferefre Shepseskare Nyuserre Unas Teti "Dejkadre Shemai" Neferkare Merenhor Nikare Intef "Sankhkare Mentuhotep" Menkare Segerseni Senusret Nerikare Sonbef Sebkay Sobekhotep Dedumose Sheeshi Nehesy Sheneh Semenre Rahotep "Nebpehtire Ahmose" Amenhotep Thutmose "Awybre Hor" Akhenaten Tutankhamun Ramesses Herihor Piankh Pinedjem Masaharta Menkheperre Smendes Pinedjem
 		}
 		female_names = {
 			"Sobekkare Sobekneferu" Hatshepsut Tentamun Nitocris Neit Cleopatra Neferneferuaten Nefertiti 

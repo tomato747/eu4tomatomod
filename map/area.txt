@@ -557,11 +557,19 @@ lowlands_area = { #5
 }
 
 north_lowlands_area = { #5
-	251 5016 5017 5020
+	251 5016 5017 5020 5229
 }
 
-wales_area = { #4
-	241 242 4366 4369
+wales_area = { #5	#Southern Wales
+	241 4369 5230 5231 5233
+}
+
+central_wales_area = { #4
+	4366 5232 5234 5236
+}
+
+northern_wales_area = { #4
+	242 5235 5237 5238
 }
 
 scottish_marches_area = { #4
@@ -1249,15 +1257,15 @@ cukurova_area = { #3
 }
 
 aleppo_area = { #5
-	377 2313 4298 5032 5033
+	377 2313 5033 5225 5226
 }
 
 syria_area = { #3
-	382 4297 1849
+	382 4297 1849 5227
 }
 
 lebanon_area = { #4
-	378 1855 5030 5031
+	378 1855 5030 5031 5032
 }
 
 trans_jordan_area = { #3
@@ -1270,7 +1278,7 @@ palestine_area = { #5
 
 dulkadir_area = { # 4
 	color = { 184 54 72 }
-	332 2303 2308 4310
+	332 2303 2308 4298 4310
 }
 
 iraq_arabi_area = { #5 Lower Mesopotamia
@@ -1320,8 +1328,8 @@ nafud_area = { #3
 	393 2338 4272
 }
 
-tabuk_area = { #4
-	383 2328 4268 4269
+tabuk_area = { #5
+	383 2328 4268 4269 5228
 }
 
 medina_area = { #3
@@ -1400,17 +1408,25 @@ delta_area = { #3
 	358 362 363
 }
 
-bahari_area = { #4 #Lower Egypt
+bahari_area = { #5 #Lower Egypt
 	color = { 19 193 219 }
-	361 2316 4316 4317 
+	361 2316 4316 4317 5239
 }
 
-vostani_area = { #3 #Middle Egypt
-	359 2317 4318
+vostani_area = { #5 #Middle Egypt
+	359 2317 4318 5240 5241
 }
 
 said_area = { #5 #Upper Egypt
-	360 1231 2319 4319 4320
+	2319 5242 5243 5244 5245
+}
+
+qena_area = { #5 #Qena
+	360 4320 5246 5247 5248
+}
+
+aswan_area = { #5 #Aswan
+	1231 4319 5249 5250
 }
 
 tripolitania_area = { #4
@@ -2675,7 +2691,7 @@ sanindo_area = { #4
 	1830 4185 4977 4978
 }
 
-east_sanindo_area = { #3
+west_sanindo_area = { #3
 	1018 4183 4979
 }
 

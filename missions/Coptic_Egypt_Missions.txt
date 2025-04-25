@@ -1,0 +1,37 @@
+cop_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = COP
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	cop_coptic_resurgence = {
+		icon = mission_rb_seize_alexandria
+		position = 1
+		provinces_to_highlight = {
+			region = egypt_region
+		}
+		trigger = {
+			egypt_region = {
+				type = all
+				religion = coptic
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					primary_culture = al_misr_arabic
+					primary_culture = saidi_arabic
+				}
+				country_event = { id = copticegypt_event.1 }
+			}
+			add_country_modifier = {
+				name = cop_coptic_resurgence
+				duration = 7300
+			}
+		}
+	}
+}

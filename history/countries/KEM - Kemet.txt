@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = pharonic_kingdom_reform
+primary_culture = old_egyptian
+add_accepted_culture = coptic_culture
+religion = egyptian
+technology_group = muslim
+capital = 361 # Cairo/Men-nefer

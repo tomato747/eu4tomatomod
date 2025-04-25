@@ -7115,7 +7115,7 @@ kanbawzathadi_palace = {
 
 pyramid_of_cheops = {
 	# province it starts in
-	start = 361
+	start = 5239
 	
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
 	date = -2570.01.01 #1556

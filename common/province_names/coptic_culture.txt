@@ -1,0 +1,50 @@
+#I don't speak Coptic, a lot of this probably isn't accurate, please correct me
+
+1231 = {"Souan" "Souan"}	#Aswan
+4319 = {"Sne" "Sne"}	#Isna
+360 = {"Qus WerWir" "Qus WerWir"}	#Qus
+4320 = {"Tarje" "Tarje"}	#Girga
+2319 = {"Manbalot" "Manbalot"}	#Akhmin/Manfalut
+2317 = {"Tmone" "Tmone"}	#Ushmunayn/Al Minya
+4318 = {"Tpeh" "Tpeh"}	#Atfih
+359 = {"Phiom" "Phiom"}	#Faiyum
+361 = {"Khairon" "Khairon"}	#Qahirah
+#4317 = {"___" "___"}	#Buhaira
+2316 = {"Tantato" "Tantato"}	#Al Gharbia/Manuf
+4316 = {"Belbes" "Belbes"}	#Sharqiya/Mansura
+358 = {"Alexandria" "Alexandria"}	#Iskandaria
+362 = {"Ti-Rashit" "Ti-Rashit"}	#Rashid
+363 = {"Tamiati" "Tamiati"}	#Dumyat
+#2315 = {"___" "___"}	#Suez
+#2320 = {"___" "___"}	#Ras Gareb
+2321 = {"Tao" "Tao"}	#Al Qusair	(Leucus Limen)
+365 = {"Sina" "Sina"}	#Sina
+5027 = {"Hrinokorura" "Hrinokorura"}	#El Arish
+1234 = {"Prim" "Prim"}	#Qasr Ibrim
+#2322 = {"___" "___"}	#Wadi Halfa
+1233 = {"Diwah Enhib" "Diwah Enhib"}	#Kharga
+#5048 = {"___" "___"}	#Dakhla
+#4323 = {"___" "___"}	#Farafreh
+2318 = {"Bahnasa" "Bahnasa"}	#Bahiriya/El Qasr
+5047 = {"Soouh" "Soouh"}	#Siwah
+#2325 = {"___" "___"}	#Tarrana/Marsa Matruh
+#2326 = {"___" "___"}	#Bardiya
+#357 = {"___" "___"}	#Darnah
+#356 = {"___" "___"}	#Bangazi
+5239 = {"Terso" "Terso"} #Giza
+5240 = {"Ehnees" "Ehnees"} #Beni Suef
+#5241 = {"___" "___"} #Amarna
+5241 = {"Shmin" "Shmin"} #Akhmim
+5243 = {"Pnoub" "Pnoub"} #Abnub
+5244 = {"Syout" "Syout"} #Asyut
+5245 = {"Bompaho" "Bompaho"} #Sohag
+5246 = {"Nitentori" "Nitentori"} #Dandarah
+5247 = {"Kone" "Kone"} #Qena
+5248 = {"Pshomt Enkastron" "Pshomt Enkastron"} #Luxor
+5249 = {"Enkhab" "Enkhab"} #Elkab
+5250 = {"Etvo" "Etvo"} #Edfu
+
+#Outside of Egypt
+379 = {"Hierusalim" "Hierusalim"}	#Jerusalem
+118 = {"Hroma" "Hroma"}	#Roma
+382 = {"Damaskos" "Damaskos"}	#Damascus

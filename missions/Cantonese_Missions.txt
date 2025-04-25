@@ -1,0 +1,1074 @@
+cantonese_missions_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        OR = {
+			tag = YUE
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
+    }
+    
+    canton_cuengh = {
+        icon = mission_che_the_cave_country
+        position = 3
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_unite_ningnam
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				culture = zhuang
+				culture = zhuang_new
+			}
+        }
+    
+        trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_subjects_with = {
+					value = 8
+					OR = {
+						area = guangxi_area
+						area = kwangsi_area
+						area = kwangsi_north_area
+					}
+					OR = {
+						primary_culture = cantonese
+						primary_culture = ping_culture
+						primary_culture = tanka
+						culture_group = cantonese_g
+					}
+				}
+				accepted_culture = zhuang
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+    
+    canton_kin_and_kith = {
+        icon = mng_thirteen_provinces
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_cuengh canton_vietnam
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				culture = zhuang
+				culture = zhuang_new
+				culture = vietnamese
+				culture = vietnamese_new
+			}
+        }
+    
+        trigger = {
+			OR = {
+				NOT = {
+					any_owned_province = {
+						culture = zhuang
+						culture = vietnamese
+					}
+				}
+				AND = {
+					accepted_culture = zhuang
+					accepted_culture = vietnamese
+					if = {
+						limit = { religion = confucianism }
+						has_harmonized_with = mahayana
+					}
+					guangxi_area = {
+						type = all
+						tolerance_to_this = 0
+					}
+					kwangsi_area = {
+						type = all
+						tolerance_to_this = 0
+					}
+					kwangsi_north_area = {
+						type = all
+						tolerance_to_this = 0
+					}
+					red_river_delta_area = {
+						type = all
+						tolerance_to_this = 0
+					}
+					vietnam_area = {
+						type = all
+						tolerance_to_this = 0
+					}
+				}
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+}
+
+cantonese_missions_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        OR = {
+			tag = YUE
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
+    }
+    
+    canton_independent = {
+        icon = french_revolution
+        position = 1
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			province_id = 738
+        }
+    
+        trigger = {
+			is_subject = no
+			owns_core_province = 667
+        }
+        
+        effect = {
+			guangdong_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_guangdong_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			teoswa_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_river_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_kwongtung_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shiuhing_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hainan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guangxi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kwangsi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kwangsi_north_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = { 
+				name = canton_independent_modifier
+				duration = 7300
+				hidden = yes
+			}
+        }
+    }
+    
+    canton_vietnam = {
+        icon = mission_mnd_dai_prevent_division
+        position = 3
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_unite_ningnam
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+			}
+        }
+    
+        trigger = {
+			red_river_delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+			if = {
+				limit = {
+					exists = DAI
+					DAI = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					target = DAI
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else = {
+				champa_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				tay_nguyen_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+        }
+    }
+    
+    canton_champa = {
+        icon = mission_mnd_khm_protect_the_cham
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_vietnam
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = champa_area
+				area = tay_nguyen_area
+			}
+        }
+    
+        trigger = {
+			champa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tay_nguyen_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+    
+    canton_modern_military = {
+        icon = army_reforms
+        position = 5
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_fortify
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			army_tradition = 80
+			army_professionalism = 0.50
+			artillery_fraction = 0.3
+			has_leaders = {
+				value = 2
+				type = general
+				include_monarch = no
+				include_heir = no
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+}
+
+cantonese_missions_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+		OR = {
+			tag = YUE
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
+    }
+    
+    canton_unite_ningnam = {
+        icon = mission_leungkwongmap
+        position = 2
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_independent canton_forcelimit
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+				area = teoswa_area
+				area = east_river_area
+				area = north_kwongtung_area
+				area = shiuhing_area
+				area = hainan_area
+				area = guangxi_area
+				area = kwangsi_area
+				area = kwangsi_north_area
+			}
+        }
+    
+        trigger = {
+			guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			teoswa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_kwongtung_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shiuhing_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hainan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guangxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kwangsi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kwangsi_north_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+			if = {
+				limit = {
+					exists = DAI
+					DAI = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					target = DAI
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else = {
+				red_river_delta_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				vietnam_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+        }
+    }
+    
+    canton_fortify = {
+        icon = mng_nomadic_frontier
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_unite_ningnam
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+				area = teoswa_area
+				area = east_river_area
+				area = north_kwongtung_area
+				area = shiuhing_area
+				area = hainan_area
+				area = guangxi_area
+				area = kwangsi_area
+				area = kwangsi_north_area
+			}
+        }
+    
+        trigger = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 7
+				OR = {
+					area = guangdong_area
+					area = west_guangdong_area
+					area = teoswa_area
+					area = east_river_area
+					area = north_kwongtung_area
+					area = shiuhing_area
+					area = hainan_area
+					area = guangxi_area
+					area = kwangsi_area
+					area = kwangsi_north_area
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+				fort_level = 1
+			}
+        }
+        
+        effect = {
+			south_china_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+        }
+    }
+    
+    canton_south_china = {
+        icon = mission_kowtow
+        position = 5
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_fortify
+        }
+        
+        provinces_to_highlight = {
+			region = south_china_region
+        }
+    
+        trigger = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 15
+				region = south_china_region
+				NOT = {
+					area = guangdong_area
+					area = west_guangdong_area
+					area = teoswa_area
+					area = east_river_area
+					area = north_kwongtung_area
+					area = shiuhing_area
+					area = hainan_area
+					area = guangxi_area
+					area = kwangsi_area
+					area = kwangsi_north_area
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+			south_china_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			china_superregion = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+        }
+    }
+    
+    canton_hegemon_china = {
+        icon = mng_heavens_will
+        position = 6
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_south_china
+        }
+        
+        provinces_to_highlight = {
+			superregion = china_superregion
+        }
+    
+        trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = CANTON_EMPIRE_150_PROVINCES_CHINA
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 150
+						superregion = china_superregion
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					government_rank = 3
+				}
+				is_emperor_of_china = yes
+				custom_trigger_tooltip = {
+					tooltip = CANTON_DOMINATE_CHINA_TRADE
+					700 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+					4233 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+					679 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+					682 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+					684 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+					1372 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+					1371 = { 
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+				}
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+}
+
+cantonese_missions_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        OR = {
+			tag = YUE
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
+    }
+    
+    canton_forcelimit = {
+        icon = mission_mnd_dai_control_the_army
+        position = 1
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			army_size_percentage = 1
+        }
+        
+        effect = {
+			guangdong_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_guangdong_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			teoswa_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_river_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_kwongtung_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shiuhing_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hainan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guangxi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kwangsi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kwangsi_north_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = { 
+				name = canton_forcelimit_modifier
+				duration = 7300
+				hidden = yes
+			}
+        }
+    }
+    
+    canton_deal_with_hakka = {
+        icon = mission_rice_field
+        position = 3
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_unite_ningnam canton_clanwars
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				culture = hakka
+				culture_group = hakka_g
+			}
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+				area = teoswa_area
+				area = east_river_area
+				area = north_kwongtung_area
+				area = shiuhing_area
+				area = hainan_area
+				area = guangxi_area
+				area = kwangsi_area
+				area = kwangsi_north_area
+			}
+        }
+    
+        trigger = {
+			OR = {
+				AND = {
+					east_river_area = {
+						type = all
+						OR= {
+							primary_culture = cantonese
+							primary_culture = ping_culture
+							primary_culture = tanka
+							culture_group = cantonese_g
+						}
+					}
+					4948 = {
+						type = all
+						OR= {
+							primary_culture = cantonese
+							primary_culture = ping_culture
+							primary_culture = tanka
+							culture_group = cantonese_g
+						}
+					}
+				}
+				OR = {
+					accepted_culture = hakka
+					accepted_culture = south_hakka
+				}
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+    
+    canton_develop_hinterlands = {
+        icon = mng_expand_bogue
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_deal_with_hakka
+        }
+        
+        provinces_to_highlight = {
+			NOT = { development = 10 }
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+				area = teoswa_area
+				area = east_river_area
+				area = north_kwongtung_area
+				area = shiuhing_area
+				area = hainan_area
+			}
+        }
+    
+        trigger = {
+			guangdong_area = {
+				type = all
+				development = 10
+			}
+			west_guangdong_area = {
+				type = all
+				development = 10
+			}
+			teoswa_area = {
+				type = all
+				development = 10
+			}
+			east_river_area = {
+				type = all
+				development = 10
+			}
+			north_kwongtung_area = {
+				type = all
+				development = 10
+			}
+			shiuhing_area = {
+				type = all
+				development = 10
+			}
+			hainan_area = {
+				type = all
+				development = 10
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+}
+
+cantonese_missions_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    
+    # Determines whether a series is loaded at all. Used to limit series to DLC.
+    potential_on_load = {
+        
+    }
+    
+    # Determines when a series appears for a country. Country scope.
+    potential = {
+        OR = {
+			tag = YUE
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = tanka
+			culture_group = cantonese_g
+		}
+    }
+	
+    
+    canton_clanwars = {
+        icon = mission_mnd_maj_subjugate_makassar
+        position = 2
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			custom_trigger_tooltip = {
+				tooltip = COMPLETED_CLAN_WARS
+				has_global_flag = south_china_clanwars_end
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+    
+    canton_deal_with_hokkien = {
+        icon = mission_junk_boat
+        position = 3
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_unite_ningnam canton_clanwars
+        }
+        
+        provinces_to_highlight = {
+			OR = {
+				culture = chimin
+				culture_group = min_g
+			}
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+				area = teoswa_area
+				area = east_river_area
+				area = north_kwongtung_area
+				area = shiuhing_area
+				area = hainan_area
+				area = guangxi_area
+				area = kwangsi_area
+				area = kwangsi_north_area
+			}
+        }
+    
+        trigger = {
+			OR = {
+				AND = {
+					teoswa_area = {
+						type = all
+						OR= {
+							primary_culture = cantonese
+							primary_culture = ping_culture
+							primary_culture = tanka
+							culture_group = cantonese_g
+						}
+					}
+					2157 = {
+						type = all
+						OR= {
+							primary_culture = cantonese
+							primary_culture = ping_culture
+							primary_culture = tanka
+							culture_group = cantonese_g
+						}
+					}
+					hainan_area = {
+						type = all
+						OR= {
+							primary_culture = cantonese
+							primary_culture = ping_culture
+							primary_culture = tanka
+							primary_culture = hlai
+							culture_group = cantonese_g
+						}
+					}
+				}
+				OR = {
+					accepted_culture = chimin
+					accepted_culture = banlam
+				}
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+    
+    canton_curtail_triads = {
+        icon = mission_japanese_samurai
+        position = 4
+        completed_by = 9999.12.31
+        
+        # Which missions must be completed before this mission is active.
+        required_missions = {
+            canton_deal_with_hokkien
+        }
+        
+        provinces_to_highlight = {
+			
+        }
+    
+        trigger = {
+			OR = {
+				has_country_flag = enable_triads_estate
+			}
+        }
+        
+        effect = {
+			
+        }
+    }
+}
