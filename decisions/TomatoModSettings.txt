@@ -45,4 +45,28 @@ country_decisions = {
 		}
 		ai_importance = 0
 	}
+
+	tomato_invasion_decision = {
+		major = yes
+		potential = {
+			ai = no
+			has_global_flag = TomatoModActive
+			NOT = { has_global_flag = TomatoDisableSettings }
+		}
+		provinces_to_highlight = {
+			
+		}
+		allow = {
+			
+		}
+		effect = {
+			country_event = {
+				id = tomato_invasion.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 0
+	}
 }

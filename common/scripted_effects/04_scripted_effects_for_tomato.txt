@@ -1,0 +1,199 @@
+pick_random_notable_historical_pharaoh = {
+	random_list = {
+	
+		#Old Kingdom
+		5 = {
+			define_ruler = {
+				name = "Narmer"
+				dynasty = "Tjenu"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 6
+				dip = 6
+				mil = 6
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = legendary_conqueror_personality
+			convert_ruler_to_general = 100
+		}
+		5 = {
+			define_ruler = {
+				name = "Hor-Aha"
+				dynasty = "Tjenu"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 6
+				dip = 6
+				mil = 6
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = legendary_conqueror_personality
+			convert_ruler_to_general = 100
+		}
+		5 = {
+			define_ruler = {
+				name = "Djoser"
+				dynasty = "Men-nefer"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 4
+				dip = 4
+				mil = 4
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = great_engineer_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Sneferu"
+				dynasty = "Men-nefer"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 4
+				dip = 4
+				mil = 4
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = great_engineer_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Khufu"
+				dynasty = "Men-nefer"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 3
+				dip = 3
+				mil = 4
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = great_engineer_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Khafre"
+				dynasty = "Men-nefer"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 3
+				dip = 3
+				mil = 3
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = great_engineer_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Menkaure"
+				dynasty = "Men-nefer"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 3
+				dip = 3
+				mil = 3
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = great_engineer_personality
+		}
+		
+		#Middle Kingdom
+		5 = {
+			define_ruler = {
+				name = "Menkaure"
+				dynasty = "Men-nefer"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 6
+				dip = 6
+				mil = 6
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = great_engineer_personality
+			convert_ruler_to_general = 100
+		}
+		
+		#New Kingdom
+		5 = {
+			define_ruler = {
+				name = "Hatshepsut"
+				dynasty = "Thutmoside"
+				culture = old_egyptian
+				religion = egyptian
+				female = yes
+				adm = 5
+				dip = 5
+				mil = 2
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = merchant_basileus_personality
+			add_ruler_personality = silver_tongue_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Akhenaten"
+				dynasty = "Thutmoside"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 2
+				dip = 0
+				mil = 1
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = babbling_buffoon_personality
+			add_ruler_personality = zealot_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Tutankhamun"
+				dynasty = "Thutmoside"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 3
+				dip = 3
+				mil = 2
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+		}
+		5 = {
+			define_ruler = {
+				name = "Ramesses II"
+				dynasty = "Ramesside"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 6
+				dip = 6
+				mil = 6
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = legendary_conqueror_personality
+			add_ruler_personality = inspiring_leader_personality
+			convert_ruler_to_general = 100
+		}
+		5 = {
+			define_ruler = {
+				name = "Ramesses III"
+				dynasty = "Ramesside"
+				culture = old_egyptian
+				religion = egyptian
+				adm = 4
+				dip = 4
+				mil = 5
+			}
+			clear_scripted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = bold_fighter_personality
+		}
+	}
+}

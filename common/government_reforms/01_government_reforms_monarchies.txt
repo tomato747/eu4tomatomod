@@ -7504,7 +7504,7 @@ formosan_kingdom = {
 }
 
 pharonic_kingdom_reform = {
-	icon = "egyptian_government_reform"
+	icon = "tribal_lip_service"
 	allow_normal_conversion = yes
 	potential = {
 		religion = egyptian
@@ -7512,6 +7512,7 @@ pharonic_kingdom_reform = {
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	allow_force_tributary = no
 
 	nation_designer_trigger = {
 		religion = egyptian

@@ -1,0 +1,185 @@
+namespace = tomato_invasion
+
+#Invasion Menu
+country_event = {
+	id = tomato_invasion.1
+	title = tomato_invasion.1.t
+	desc = tomato_invasion.1.d
+	picture = INVASION_ALLIES_eventPicture
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+	
+	option = {
+		name = tomato_invasion.1.a
+	}
+	
+	#British Cyprus
+	option = {
+		name = tomato_invasion.1.b
+		trigger = { NOT = { has_global_flag = activated_curse_of_the_pharaohs } }
+		ROOT = {
+			country_event = {
+				id = tomato_invasion.2
+			}
+		}
+	}
+}
+
+#Curse of the Pharaohs
+country_event = {
+	id = tomato_invasion.2
+	title = tomato_invasion.2.t
+	desc = tomato_invasion.2.d
+	is_triggered_only = yes
+	picture = TEMPORAL_RIFT_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					region = egypt_region
+					NOT = {
+						area = gulf_of_arabia_area
+						area = lower_nubia_area
+						area = cyrenaica_area
+						area = al_wahat_area
+					}
+				}
+				save_event_target_as = spawn_curse_of_the_pharaohs
+			}
+		}
+	}
+	
+	#Don't spawn
+	option = {
+		name = tomato_invasion.2.a
+	}
+	
+	#Play against
+	option = {
+		name = tomato_invasion.2.b
+		set_global_flag = activated_curse_of_the_pharaohs
+		event_target:spawn_curse_of_the_pharaohs = {
+			add_core = KEM
+			cede_province = KEM
+			clear_rebels = yes
+			change_culture = old_egyptian
+			add_base_tax = 10
+			add_base_production = 10
+			add_base_manpower = 10
+			change_religion = egyptian
+		}
+		KEM = {
+			add_country_modifier = { 
+				name = invasion_nation
+				duration = -1
+				hidden = no
+			}
+			set_capital = event_target:spawn_curse_of_the_pharaohs
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.6
+					cavalry = 0.3
+					artillery = 0.1
+				}
+			}
+			capital_scope = {
+				if = {
+					limit = { has_port = yes }
+					build_to_forcelimit = {
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.2
+					}
+				}
+			}
+			change_government = monarchy
+			adopt_reform_progress = ROOT
+			pick_random_notable_historical_pharaoh = yes
+			set_government_rank = 3
+			add_government_reform = pharonic_kingdom_reform
+			egypt_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = {
+						area = gulf_of_arabia_area
+						area = lower_nubia_area
+						area = cyrenaica_area
+						area = al_wahat_area
+					}
+				}
+				add_core = ROOT
+			}
+		}
+		
+	}
+	
+	#Play as
+	option = {
+		name = tomato_invasion.2.c
+		set_global_flag = activated_curse_of_the_pharaohs
+		event_target:spawn_curse_of_the_pharaohs = {
+			add_core = KEM
+			cede_province = KEM
+			clear_rebels = yes
+			change_culture = old_egyptian
+			add_base_tax = 10
+			add_base_production = 10
+			add_base_manpower = 10
+			change_religion = egyptian
+		}
+		KEM = {
+			add_country_modifier = { 
+				name = invasion_nation
+				duration = -1
+				hidden = no
+			}
+			set_capital = event_target:spawn_curse_of_the_pharaohs
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.6
+					cavalry = 0.3
+					artillery = 0.1
+				}
+			}
+			capital_scope = {
+				if = {
+					limit = { has_port = yes }
+					build_to_forcelimit = {
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.2
+					}
+				}
+			}
+			change_government = monarchy
+			adopt_reform_progress = ROOT
+			pick_random_notable_historical_pharaoh = yes
+			set_government_rank = 3
+			add_government_reform = pharonic_kingdom_reform
+			egypt_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = {
+						area = gulf_of_arabia_area
+						area = lower_nubia_area
+						area = cyrenaica_area
+						area = al_wahat_area
+					}
+				}
+				add_core = ROOT
+			}
+		}
+		switch_tag = KEM
+	}
+}

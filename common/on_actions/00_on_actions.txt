@@ -34,6 +34,48 @@ on_startup = {
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
+	if = {
+		limit = {
+			has_reform = pharonic_kingdom_reform
+			NOT = {
+				tag = KEM
+				has_global_flag = activated_curse_of_the_pharaohs
+			}
+		}
+		egypt_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					area = gulf_of_arabia_area
+					area = lower_nubia_area
+					area = cyrenaica_area
+					area = al_wahat_area
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+	else_if = {
+		limit = {
+			has_reform = pharonic_kingdom_reform
+			tag = KEM
+			has_global_flag = activated_curse_of_the_pharaohs
+		}
+		egypt_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					area = gulf_of_arabia_area
+					area = lower_nubia_area
+					area = cyrenaica_area
+					area = al_wahat_area
+				}
+			}
+			add_core = ROOT
+		}
+	}
 }
 
 # country
@@ -2132,6 +2174,48 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	if = {
+		limit = {
+			has_reform = pharonic_kingdom_reform
+			NOT = {
+				tag = KEM
+				has_global_flag = activated_curse_of_the_pharaohs
+			}
+		}
+		egypt_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					area = gulf_of_arabia_area
+					area = lower_nubia_area
+					area = cyrenaica_area
+					area = al_wahat_area
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+	else_if = {
+		limit = {
+			has_reform = pharonic_kingdom_reform
+			tag = KEM
+			has_global_flag = activated_curse_of_the_pharaohs
+		}
+		egypt_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = {
+					area = gulf_of_arabia_area
+					area = lower_nubia_area
+					area = cyrenaica_area
+					area = al_wahat_area
+				}
+			}
+			add_core = ROOT
+		}
+	}
 }
 on_yearly_pulse = {
 	events = {

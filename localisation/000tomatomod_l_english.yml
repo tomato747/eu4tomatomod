@@ -1665,6 +1665,15 @@
  gamestart.9.d:0 "With the hinterlands of China firmly under our grasps, the locals in [southwestern_mandarin_province.GetAreaName] are starting to slowly embrace our customs to climb the social ranks."
  gamestart.9.a:0 "Allow this to continue"
  gamestart.9.b:0 "We must put a stop to this"
+ tomato_invasion.1.t:0 "Invasions"
+ tomato_invasion.1.d:0 "Vanilla Europa Universails IV bores you and you want a challenge to fight or paint the map your colour? Choose new \"Invasion\" country to invade this world!"
+ tomato_invasion.1.a:0 "Not today"
+ tomato_invasion.1.b:0 "Curse of the Pharaohs"
+ tomato_invasion.2.t:0 "Curse of the Pharaohs"
+ tomato_invasion.2.d:0 "The locals in [spawn_curse_of_the_pharaohs] reports of an alarming issue in the desert:\nAfter a band of tomb robbers attempted to rob an ancient tomb in the local area, an unfortunate string of event happened leading of what seems to be the ancient dead rising once more and massacuring their way out. Now not only has the Pharaohs of old arisen from their tombs but also has gathered a mighty army in the area to reclaim what was once their's."
+ tomato_invasion.2.a:0 "Nonsense!"
+ tomato_invasion.2.b:0 "Oh dear! We must be prepared of this threat!"
+ tomato_invasion.2.c:0 "The Pharaohs of old shall rise once more! (Play as @KEM[KEM])"
  
  #Ming Crisis
  ming_crisis.12.t:0 "Zhang Xianzhong's Rebellion and the Xi Dynasty"
@@ -1884,6 +1893,8 @@
  restore_templars_desc:0 "The Knights Templars, the greatest defenders of Christendom in the Levant was once disbanded and branded as Heretics by the vile Philip IV of France and Pope Boniface VIII. Let us restore this most venerable military order!"
  korean_empire_decision_title:0 "Proclaim Korean Empire"
  korean_empire_decision_desc:0 "With our relations with the weakening China worsening by the day and our power growing ever stronger, it makes no sense anymore for us to just be "Kings" of Korea while surrounded by Empires. It is time for us to proclaim Emperorship too!"
+ tomato_invasion_decision_title:0 "閪 Tomato Mod Invasions"
+ tomato_invasion_decision_desc:0 "Opens Invasions event for Tomato Mod"
  
  ###############
  ### Strings ###
@@ -2220,6 +2231,7 @@
  yazidi_rebels_army:0 "$RELIGION$ Army"
  
  #Ancient Egyptian Paganism
+ nile_religion_group:0 "Egyptian"
  egyptian:0 "Egyptian"
  egyptian_religion_desc:0 "The traditional believe of the Ancient Egyptians along the nile valley dates back millennia and involve the worship of many deities."
  egyptian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -2227,7 +2239,16 @@
  egyptian_rebels_name:0 "$RELIGION$ Zealots"
  egyptian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  egyptian_rebels_army:0 "$RELIGION$ Army"
- ATENISM:0 "Atenism"
+ KUSHITE:0 "Kushite"
+ 
+ #Atenism
+ atenism:0 "Atenism"
+ atenism_religion_desc:0 "Founded by the \"Heretic Pharaoh\" Akhenaten, the Atenists breaks from tradition by renounces worship of all gods other than the Aten."
+ atenism_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ atenism_rebels_title:0 "Religious"
+ atenism_rebels_name:0 "$RELIGION$ Zealots"
+ atenism_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ atenism_rebels_army:0 "$RELIGION$ Army"
  
  #Zunism
  zunist:0 "Zunist"
