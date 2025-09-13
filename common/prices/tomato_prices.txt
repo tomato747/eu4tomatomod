@@ -6,3 +6,6 @@
 date = {
 	base_price = 2.5
 }
+australium = {
+	base_price = 8.0
+}

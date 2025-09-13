@@ -290,3 +290,21 @@ cop_coptic_resurgence = {
 harmonized_mandaeism_group = {
 	tolerance_own = 1
 }
+regionalist_dip_ability = {
+	caravan_power = 0.2
+	ship_power_propagation = 0.1
+	global_trade_power = 0.1
+}
+australian_drop_bear = {
+	local_colonial_growth = -5
+}
+river_sea_tile = {
+	local_defender_dice_roll_bonus = 1
+}
+river_port = {
+	local_sailors_modifier = -0.5
+	local_ship_cost = 0.5
+	ship_recruit_speed = 0.5
+	blockade_force_required = -0.5
+	hostile_fleet_attrition = 1
+}

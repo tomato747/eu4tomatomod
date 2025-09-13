@@ -30,14 +30,14 @@ country_event = {
 				recent_treasure_ship_passage = yes
 			}
 			1371 = {
-				privateer_power = { share = 5 }
+				privateer_power = { share = 20 }
 			}
 			any_country = {
 				capital_scope = {
 					region = south_china_region
 					has_port = yes
 				}
-				war_exhaustion = 5
+				war_exhaustion = 10
 			}
 		}
 	}

@@ -1540,6 +1540,13 @@ mam_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			antalya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			hudavendigar_area = {
 				limit = {
 					NOT = { is_core = ROOT }

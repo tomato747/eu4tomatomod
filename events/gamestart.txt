@@ -23,6 +23,22 @@ country_event = {
 			set_global_flag = CoreSiege
 			set_global_flag = TomatoMingModded
 			set_global_flag = TomatoCultureShiftEvents
+			
+			river_tiles = {
+				add_province_modifier = { 
+					name = river_sea_tile
+					duration = -1
+					hidden = yes
+				}
+			}
+			
+			river_ports = {
+				add_province_modifier = { 
+					name = river_port
+					duration = -1
+					hidden = yes
+				}
+			}
 		}
 	}
 	
@@ -464,6 +480,30 @@ country_event = {
 			id = gamestart.4
 		}
 	}
+	
+	#Turn on Australium
+	option = {
+		name = gamestart.7.b.a
+		trigger = {
+			NOT = { has_global_flag = australium_enabled }
+		}
+		set_global_flag = australium_enabled
+		country_event = {
+			id = gamestart.11
+		}
+	}
+	
+	#Turn off Australium
+	option = {
+		name = gamestart.7.b.b
+		trigger = {
+			has_global_flag = australium_enabled
+		}
+		clr_global_flag = australium_enabled
+		country_event = {
+			id = gamestart.11
+		}
+	}
 }
 # South Western Sinification
 country_event = {
@@ -601,5 +641,57 @@ country_event = {
 			change_culture = north_east_mandarin
 		}
 		set_country_flag = rejected_chinese_spread_culture
+	}
+}
+
+country_event = {
+	id = gamestart.10
+	title = gamestart.10.t
+	desc = gamestart.10.d
+	picture = candle_vigil_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		real_day_of_year = 154
+		NOT = { real_day_of_year = 155 }
+	}
+	option = {
+		name = gamestart.10.a
+	}
+}
+
+#Bounce back to wacky settings
+country_event = {
+	id = gamestart.11
+	title = gamestart.11.t
+	desc = gamestart.11.d
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		country_event = {
+			id = gamestart.7
+		}
+	}
+	
+	trigger = {
+		
+	}
+	
+	# Back
+	option = {
+		name = gamestart.11.a
+		ai_chance = { 
+			factor = 100
+		}
+		country_event = {
+			id = gamestart.7
+		}
+	}
+	
+	after = {
+		
 	}
 }

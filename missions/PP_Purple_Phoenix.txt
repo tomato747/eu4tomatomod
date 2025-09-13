@@ -21,6 +21,7 @@ byz_pp_balkans_north_italy = {
 			OR = {
 				area = albania_area
 				area = macedonia_area
+				area = upper_macedonia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -30,6 +31,10 @@ byz_pp_balkans_north_italy = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_macedonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -642,6 +647,7 @@ byz_pp_religion = {
 		provinces_to_highlight = {
 			OR = {
 				area = aydin_area
+				area = antalya_area
 				area = hudavendigar_area
 			}
 			OR = {
@@ -652,6 +658,11 @@ byz_pp_religion = {
 		trigger = {
 			religion = orthodox
 			aydin_area = {
+				type = all
+				owned_by = ROOT
+				religion = orthodox
+			}
+			antalya_area = {
 				type = all
 				owned_by = ROOT
 				religion = orthodox
@@ -823,6 +834,13 @@ byz_pp_religion = {
 				add_claim = ROOT
 			}
 			gulf_of_arabia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			sinai_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }

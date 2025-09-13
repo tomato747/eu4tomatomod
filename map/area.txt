@@ -88,7 +88,7 @@ java_sea_area = { #3
 }
 
 east_china_sea_area = { #8
-	1372 1373 1374 1375 1389 1392 4233 4234
+	1372 1373 1374 1375 1389 1392 4233 4234 5264 5265
 }
 
 sea_of_japan_area = { #10
@@ -1076,8 +1076,12 @@ mecklenburg_area = { #5
 # South Eastern Europe 				   #
 ########################################
 
-macedonia_area = { #5 (Macedonia)
-	148 1853 3001 4702 4780
+macedonia_area = { #5 (Lower Macedonia)
+	148 1853 4702
+}
+
+upper_macedonia_area = { #5
+	3001 4780
 }
 
 morea_area = { #3 South Peloponnese
@@ -1092,7 +1096,7 @@ central_greece = { #3
 	146 3003 5045
 }
 
-northern_greece_area = { #3 #Northern Greece
+northern_greece_area = { #3
 	144 147 4699
 }
 
@@ -1225,9 +1229,13 @@ germiyan_area = { #4
 	322 1848 4308 4311
 }
 
-aydin_area = { #5
+aydin_area = { #3 Ionia
 	color = { 239 70 86 }
-	318 319 2297 2298 4309
+	318 2297 4309
+}
+
+antalya_area = { #2
+	319 2298
 }
 
 ankara_area = { #3
@@ -1268,8 +1276,8 @@ lebanon_area = { #4
 	378 1855 5030 5031 5032
 }
 
-trans_jordan_area = { #3
-	380 381 2327
+trans_jordan_area = { #4
+	380 381 2327 4268 5256
 }
 
 palestine_area = { #5
@@ -1329,7 +1337,7 @@ nafud_area = { #3
 }
 
 tabuk_area = { #5
-	383 2328 4268 4269 5228
+	383 2328 4269 5228
 }
 
 medina_area = { #3
@@ -1395,9 +1403,13 @@ syrian_desert_area = { #3
 # North Africa					       #
 ########################################
 
-gulf_of_arabia_area = { #5
+gulf_of_arabia_area = { #3	Eastern Desert Egypt
 	color = { 19 219 75 }
-	365 2315 2320 2321 5027
+	2315 2320 2321
+}
+
+sinai_area = { #2
+	365 5027 5257 5259 5260
 }
 
 al_wahat_area = { #3
@@ -1434,7 +1446,11 @@ tripolitania_area = { #4
 }
 
 cyrenaica_area = { #5
-	356 357 2325 2326 
+	356 357 5261 5263
+}
+
+marmarica_area = { #5
+	2325 2326 5262
 }
 
 fezzan_area = { #4
@@ -2379,8 +2395,8 @@ malaya_area = { #4
 	 598 599 2393 4814
 }
 
-johor_area = { # 3
-	597 2686 4815
+johor_area = { # 4
+	597 2686 4815 5251
 }
 
 malacca_area = { #3
@@ -2588,12 +2604,12 @@ south_sulawesi_area = { #4
 # Korea & Japan                        #
 ########################################
 
-pyongan_area = { #3
-	1845 2744 4232
+pyongan_area = { #5
+	1845 2744 4232 5254 5255
 }
 
-hamgyeong_area = { #3
-	732 2742 2743
+hamgyeong_area = { #5
+	732 2742 2743 5252 5253
 }
 
 western_korea_area = { #2 Gyeonggi

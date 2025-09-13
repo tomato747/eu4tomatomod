@@ -1,0 +1,87 @@
+country_decisions = {
+
+	found_singapore_1 = {
+		major = no
+		potential = {
+			culture_group = east_asian
+			owns_core_province = 4815 #Singapura
+		}
+		provinces_to_highlight = {
+			province_id = 4815 #Singapura
+		}
+		allow = {
+			culture_group = east_asian
+			is_at_war = no
+			owns_core_province = 4815 #Singapura
+			1361 = { # Malacca
+				trade_share = {
+					country = ROOT
+					share = 33
+				}
+			}
+			4815 = {
+				NOT = {
+					culture_group = east_asian
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			4815 = {
+				change_religion = ROOT
+				change_culture = ROOT
+				add_core = SGA
+				if = {
+					limit = {
+						OR = {
+							primary_culture = cantonese
+							primary_culture = ping_culture
+							primary_culture = tanka
+							culture_group = cantonese_g
+						}
+					}
+					change_province_name = "Singchow"
+					rename_capital = "Singgabo"
+				}
+				else_if = {
+					limit = {
+						OR = {
+							primary_culture = chimin
+							primary_culture = taiwanese
+							culture_group = min_g
+						}
+					}
+					change_province_name = "Sinchew"
+					rename_capital = "Sinkapho"
+				}
+				else_if = {
+					limit = {
+						OR = {
+							primary_culture = hakka
+							culture_group = hakka_g
+						}
+					}
+					change_province_name = "Sînchu"
+					rename_capital = "Sînkâpô"
+				}
+				else = {
+					change_province_name = "Singapore"
+					rename_capital = "Singapore"
+				}
+				center_of_trade = 2
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				add_local_autonomy = -10
+			}
+			SGA = {
+				change_primary_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

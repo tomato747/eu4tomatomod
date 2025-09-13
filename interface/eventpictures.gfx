@@ -801,4 +801,19 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_tomato/TOMATO_Thanks_eventPicture.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "candle_vigil_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_tomato/candle_vigil_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "Dropbear1_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_tomato/DROPBEARS1_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "Dropbear2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_tomato/DROPBEARS2_eventPicture.dds"
+		alwaystransparent = yes
+	}
 }

@@ -1,0 +1,90 @@
+namespace = debug_stuff
+
+#Credits
+country_event = {
+	id = debug_stuff.1
+	title = debug_stuff.1.t
+	desc = debug_stuff.1.d
+	picture = TOMATO_Thanks_eventPicture
+	is_triggered_only = yes
+	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1444
+		ai = no
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TomatoModActive
+			set_global_flag = ChinaSiege
+			set_global_flag = CoreSiege
+			set_global_flag = TomatoMingModded
+			set_global_flag = TomatoCultureShiftEvents
+		}
+	}
+	
+	#nothing
+	option = {
+		name = debug_stuff.1.a
+	}
+	
+	#spawn australia
+	option = {
+		name = debug_stuff.1.b
+		set_global_flag = australium_enabled
+		australia_region = {
+			type = all
+			add_core = AUS
+			cede_province = AUS
+			change_culture = australian
+			change_religion = protestant
+			discover_country = AUS
+			add_institution_embracement = {
+				which = feudalism
+				value = 100
+			}
+		}
+		1790 = {
+			discover_country = AUS
+		}
+		1791 = {
+			discover_country = AUS
+		}
+		4870 = {
+			discover_country = AUS
+		}
+		1635 = {
+			discover_country = AUS
+		}
+		1413 = {
+			discover_country = AUS
+		}
+		AUS = {
+			change_government = monarchy
+			define_ruler = {
+				name = "Saxton"
+				dynasty = "Hale"
+				adm = 6
+				dip = 6
+				mil = 6
+				age = 15
+				claim = 100
+				culture = australian
+			}
+			define_ruler_to_general = {
+				fire = 1000
+				shock = 1000
+				manuever = 1000
+				siege = 1000
+			}
+			clear_scipted_personalities = yes
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = inspiring_leader_personality
+			add_ruler_personality = martial_educator_personality
+			set_ruler_flag = saxton_hale
+		}
+	}
+}

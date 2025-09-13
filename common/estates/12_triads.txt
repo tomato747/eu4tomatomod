@@ -3,7 +3,8 @@ estate_triads = {
 
 	# If true, country will get estate
 	trigger = {
-		has_country_flag = enable_triads_estate
+		#has_country_flag = enable_triads_estate
+		always = no
 	}
 
 	# These scale with loyalty & power

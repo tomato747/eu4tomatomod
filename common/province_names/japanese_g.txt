@@ -36,6 +36,25 @@
 4230 = {"Suigen" "Suigen"}
 4231 = {"Kokai Kaishu" "Kaishu"}
 4232 = {"Kokai" "Kokai"}
+#Tomato extra
+5107 = {"Koshu" "Koshu"}
+5108 = {"Masuyama" "Masuyama"}
+5109 = {"Taikyu" "Taikyu"}
+5110 = {"Chanwon" "Chanwon"}
+5111 = {"Pyonchan" "Pyonchan"}
+5112 = {"Chunchon" "Chunchon"}
+5113 = {"Sokucho" "Sokucho"}
+5114 = {"Kowancho" "Kowancho"}
+5115 = {"Jemulpo" "Jemulpo"}
+5116 = {"Kaijo" "Kaijo"}
+5117 = {"Konju" "Konju"}
+5118 = {"Honju" "Honju"}
+5119 = {"Sonfa" "Sonfa"}
+5120 = {"Kokusan" "Kokusan"}
+5252 = {"Genzan" "Genzan"}
+5253 = {"Ryangan" "Keizan"}
+5254 = {"Anju" "Anju"}
+5255 = {"Tokuchon" "Tokuchon"}
 
 
 #Taiwan

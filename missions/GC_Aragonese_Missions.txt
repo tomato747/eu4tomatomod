@@ -1004,6 +1004,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			upper_macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_constantinople = {
@@ -1014,6 +1021,7 @@ gc_aragon_4 = {
 			OR = {
 				area = thrace_area
 				area = macedonia_area
+				area = upper_macedonia_area
 				province_id = 1320
 			}
 			NOT = {
@@ -1033,6 +1041,10 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			upper_macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_mercantilism = 3
@@ -1044,6 +1056,13 @@ gc_aragon_4 = {
 				add_permanent_claim = ROOT
 			}
 			aydin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			antalya_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1074,6 +1093,7 @@ gc_aragon_4 = {
 			OR = {
 				area = hudavendigar_area
 				area = aydin_area
+				area = antalya_area
 				area = cukurova_area
 				area = kastamonu_area
 				area = east_adriatic_coast_area
@@ -1089,6 +1109,10 @@ gc_aragon_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			antalya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

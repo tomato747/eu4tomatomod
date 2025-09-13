@@ -170,18 +170,22 @@ monarch_names = {
 }
 
 leader_names = {
-	Lao Chang Chao U Miu Wo Pao Ng Louie Choi Sio Wu Tao Yuen Tsang Kot Loo Kok Yu Fuk Yan
-	Tik Tai Pui Put Mio Pak Io Fan Vu Tong Cheang Ving Or Auyeung Mao Sum Yuen Im Tau Chong
-	Puk Yue O Pao Tsui Fung Iong Ko Ma Mo Mang Song Pau Pei Chio Chui Cheng Chu Foo Iao Meng
-	Iun Ngai Cheng Tek Pang Szema Yung Chiu Lok Sheung Kwai Muk Keung Kei Iam Chik Chai Quat
-	Peng Yeung Wai Tang Kong Tso Hai Tse Mai Lam Pok Tam Wat Vong Kuoc Van Wing Hung Ip Wai
-	Woo On Cheung Kit Siu Ping Lo Ying Lo Lui Dick See Che Ian Sung Tin Mui Sam Loi Fan Lim
-	Yiu Kat Fong Mou Diu Yim Chou Mok Pau Yau Yam Si Pong Ngai Suen Cham Iu Ieng Kut Kuok Lok
-	Seng Cheong Koo Ngok Shum Hui Fong Lou Kwok Va Fok Chan Ku Wan Pei Lee Sui Wong Long Chau
-	Chow Sit Ching So Li To Lui Fu Bao Tao Chin Chun Fok Vo Sou Mau Wan Cho Leong Hong Kuai
-	Shiu Chung Wa Pun Kam Leung Hong Law Sing Sze Sun Hon Veng Lu Keong Kou Ieong Lo Ok Soi
-	Shing Luk Teng Lau Poon Kai Hoi Pui Un Fa Loi Wah Chu Chon Ming Vat Ting Tou Pat Ho Pin
-	Chek
+	Chiu Chio Chin Suen Sun Lee Li Chow Chau Chao Ng Cheng Cheang Wong
+	Vong Fung Fong Chan Chu Wai Cheung Cheong Shum Sum Sam Hon Ieong
+	Yeung Chun Chon Yau Iao Hui Hoi Ho Lui Loi Sze Si Hung Hong Cho
+	Tso Chou Yim Im Wa Wah Va Kam Ngai To Tao Tou Keung Keong Chik
+	Chek Tse Che Yu U Pak Sui Soi Tau Tao Wan Van So Sou Poon Pun Kot
+	Quat Hai Fan Pang Long Lo Wai Ma Miu Mio Fa Yam Iam Yuen Un Iun Lau
+	Lao Pau Pao Tong Pei Lim Sit Lui Louie Loi Ngai Tang Yan Ian Law Lo
+	Put Pat Kok Wu Vu On Sheung Lok Ok Ngok See Fu Foo Pei Pin Chai Hong
+	Yue Yuen Puk Pok Koo Ku Mang Ping Peng Wo Vo Muk Mok Siu Shiu Sio Wan
+	Yiu Iu Io Cham Kei Mo Mou Tik Dick Tek Mai Pui Ming Meng Chong Tsang
+	Chang Kai Fuk Fok Shing Sing Seng Tai Tam Sung Mau Song Mao Pong
+			
+	Diu Wat Vat Leung Leong Kwai Kuai Kong Kwok Kuok Kuoc Mui Lam Chung
+	Chui Tsui Choi Ko Kou Tin Fan Woo Fok Or O Lo Lu Loo Lou Fong Ting Teng
+	Pau Pao Bao Chu Kut Kat Kit Ching Cheng Ying Ieng Pui Luk Lok Wing Veng Ving
+	Yung Iong Ip Szema Auyeung
 }
 
 ship_names = {

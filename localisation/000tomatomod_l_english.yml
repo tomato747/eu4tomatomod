@@ -503,6 +503,9 @@
  COP: "Egypt"
  COP_ADJ: "Egyptian"
  COP_ADJ2: "Egyptian"
+ SGA: "Singapore"
+ SGA_ADJ: "Singaporean"
+ SGA_ADJ2: "Singaporean"
  
  #############
  ### Areas ###
@@ -601,6 +604,10 @@
  northern_wales_area:0 "Northern Wales"
  qena_area:0 "Qena"
  aswan_area:0 "Aswan"
+ upper_macedonia_area:0 "Upper Macedonia"
+ sinai_area:0 "Sinai"
+ marmarica_area:0 "Marmarica"
+ antalya_area:0 "Antalya"
  
  #################
  ### Provinces ###
@@ -1010,8 +1017,8 @@
  PROV_ADJ5118:0 "Hongju"
  PROV5119:0 "Songhwa"
  PROV_ADJ5119:0 "Songhwa"
- PROV5120:0 "Koksan"
- PROV_ADJ5120:0 "Koksan"
+ PROV5120:0 "Goksan"
+ PROV_ADJ5120:0 "Goksan"
  PROV5121:0 "Svaneti"
  PROV_ADJ5121:0 "Svaneti"
  PROV5122:0 "Guangzhou"
@@ -1291,6 +1298,36 @@
  PROV_ADJ5249:0 "Elkab"
  PROV5250:0 "Edfu"
  PROV_ADJ5250:0 "Edfu"
+ PROV5251:0 "Bunguran"
+ PROV_ADJ5251:0 "Bunguran"
+ PROV5252:0 "Wonsan"
+ PROV_ADJ5252:0 "Wonsan"
+ PROV5253:0 "Ryanggang"
+ PROV_ADJ5253:0 "Ryanggang"
+ PROV5254:0 "Anju"
+ PROV_ADJ5254:0 "Anju"
+ PROV5255:0 "Deokcheon"
+ PROV_ADJ5255:0 "Deokcheon"
+ PROV5256:0 "Shoubak"
+ PROV_ADJ5256:0 "Shoubak"
+ PROV5257:0 "Eilat"
+ PROV_ADJ5257:0 "Eilat"
+ PROV5258:0 "Sinai"
+ PROV_ADJ5258:0 "Sinai"
+ PROV5259:0 "El Tor"
+ PROV_ADJ5259:0 "El Tor"
+ PROV5260:0 "Dahab"
+ PROV_ADJ5260:0 "Dahab"
+ PROV5261:0 "Tobruk"
+ PROV_ADJ5261:0 "Tobruk"
+ PROV5262:0 "El Hamam"
+ PROV_ADJ5262:0 "El Hamam"
+ PROV5263:0 "Ajdabiya"
+ PROV_ADJ5263:0 "Ajdabiya"
+ PROV5264:0 "Lower Yang Tse"
+ PROV_ADJ5264:0 "Yang Tse"
+ PROV5265:0 "Mid Yang Tse"
+ PROV_ADJ5265:0 "Yang Tse"
  
  #############
  ### Ideas ###
@@ -1624,7 +1661,7 @@
  
  #Gamestart and Settings
  gamestart.1.t:0 "Credits for Tomato mod"
- gamestart.1.d:0 "Venice Flag: Blue from Overly Sarcastic Productions\nChina Siege code: Zyphon, author of Black Gold mod\nFrequently helped with my spaghetti code: Seelöwe, LimonenZitrone\nChannel Tunnel Great Project original image: Robin Webster, found via Wikimedia (File:Channel Tunnel entrance, 1992 (geograph 3306731).jpg) , file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license\n Chiho Tunnel Great Project original image: Bmazerolles, found via Wikimedia (File:Seikan Tunnel entrance - dual-gauge track.jpg) , file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license"
+ gamestart.1.d:0 "Venice Flag: Blue from Overly Sarcastic Productions\nChina Siege code: Zyphon, author of Black Gold mod\nFrequently helped with my spaghetti code: Seelöwe, LimonenZitrone\nChannel Tunnel Great Project original image: Robin Webster, found via Wikimedia (File:Channel Tunnel entrance, 1992 (geograph 3306731).jpg) , file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license\n Chiho Tunnel Great Project original image: Bmazerolles, found via Wikimedia (File:Seikan Tunnel entrance - dual-gauge track.jpg) , file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license\n Koala event pic original image: Aneta Hartmannová, https://www.pexels.com/photo/koala-bear-on-brown-tree-branch-7248214/"
  gamestart.1.a:0 "Cool!"
  gamestart.2.t:0 "$PROVINCENAME$ Defects!"
  gamestart.2.d:0 "While we may be the rulers of $PROVINCENAME$, $CONTROLLERNAME$ still have many loyalists there. With $CONTROLLERNAME$ now in control of $PROVINCE$ once more, their loyalists have siezed the oppertunity to reintegrate themselves back into their fold!"
@@ -1665,6 +1702,9 @@
  gamestart.9.d:0 "With the hinterlands of China firmly under our grasps, the locals in [southwestern_mandarin_province.GetAreaName] are starting to slowly embrace our customs to climb the social ranks."
  gamestart.9.a:0 "Allow this to continue"
  gamestart.9.b:0 "We must put a stop to this"
+ gamestart.10.t:0 "Remembrance for June 4th Massacure"
+ gamestart.10.d:0 "In 1989, in honour of for the passing of the relatively progressive CCP politican Hu Yaobang, a wave of protests, demonstrations and hunger strikes broke out all over China. Thousands of young and hopeful students gather and cry for freedom and democracy in a scale never seen before in East Asia.\nIn 4th June, The Chinese Communist government fearing that they would lose power, sent in the army to massacure the protestors and crushed the movement. To this day they still denied anything ever happened that day and justice were served for the tens of thousands who's hopes and dreams were crushed beneath gunfire and tank tracks.\nMay their sacrifice be forever remembered and justice be served."
+ gamestart.10.a:0 "The flower of freedom shall blossem, lest we forget!"
  tomato_invasion.1.t:0 "Invasions"
  tomato_invasion.1.d:0 "Vanilla Europa Universails IV bores you and you want a challenge to fight or paint the map your colour? Choose new \"Invasion\" country to invade this world!"
  tomato_invasion.1.a:0 "Not today"
@@ -1674,6 +1714,14 @@
  tomato_invasion.2.a:0 "Nonsense!"
  tomato_invasion.2.b:0 "Oh dear! We must be prepared of this threat!"
  tomato_invasion.2.c:0 "The Pharaohs of old shall rise once more! (Play as @KEM[KEM])"
+ gamestart.7.b.a:0 "Enable Australium: §ROFF"
+ gamestart.7.b.b:0 "Enable Australium: §GON"
+ 
+ #Debug
+ debug_stuff.1.t:0 "Debug event 1"
+ debug_stuff.1.d:0 "WEEEEEEE!"
+ debug_stuff.1.a:0 "Do nothing"
+ debug_stuff.1.b:0 "Spawn Australia"
  
  #Ming Crisis
  ming_crisis.12.t:0 "Zhang Xianzhong's Rebellion and the Xi Dynasty"
@@ -1795,6 +1843,25 @@
  copticegypt_event.1.a:0 "We are Egyptians"
  copticegypt_event.1.b:0 "We are Arabs"
  
+ #Australia
+ tomato_australia.1.t:0 "Monsters on the trees"
+ tomato_australia.1.d:0 "Rumours is spreading amongst the settlers of Terra Australis that the local wildlife is abnormaly vile. \"Drop Bears\", they called these monsters, for they allegendly leap down from dangerous eucalyptus trees to viciously attack unsuspecting victims with such destructive power to rival that of saltwater crocodiles, all while masquerading as innocent Koalas.\nWhile our scholars are not yet sure to what extend these tales are real, these frightening stories have most certainly scared of potential settlers of the area."
+ tomato_australia.1.a:0 "This continent is cursed!"
+ tomato_australia.2.t:0 "Australium Depleted"
+ tomato_australia.2.d:0 "After years of careless exploitation and reckless use, all known supplies of the rare miracle element known as Australium has been used up and their veins depleted."
+ tomato_australia.2.a:0 "It was worth it"
+ 
+ #Wacky
+ wacky_events.1.t:0 "The existance of Bielefeld"
+ wacky_events.1.d:0 "When trying to map out the territory we own, we have ran into a strange dilemma. While the town of \"Bielefeld\", we realised few in our government has ever been there or know people from there. And the few members of our government that do are acting suspicious when questioned on the matter. This makes our cartographers questions the need to include this potentially fictious locations on our maps"
+ wacky_events.1.a:0 "Of course Bielefeld is real!"
+ wacky_events.1.b:0 "Huh, guess Bielefeld really doesn't exist"
+ wacky_events.2.t:0 "On the Matters of England"
+ wacky_events.2.d:0 "During a diplomatic exchange with [insulted_party.GetAdjective] diplomats, the topic of our opinions on the English has came up. The [insulted_party.GetAdjective] dares to propose the idea that they hate England more than us! This statement does not sit well with us as our long held believe that we [Root.GetAdjective] hate the English more than all others in the world is being openly challenged."
+ wacky_events.2.a:0 "Preposterous! We hate England more than them!"
+ wacky_events.2.b:0 "They are our kin! We both hate England!"
+ wacky_events.2.c:0 "We hate the English?"
+ 
  #################
  ### Modifiers ###
  #################
@@ -1815,6 +1882,8 @@
  tomato_rising_empire:0 "Rising Empire"
  pirate_alliance_power:0 "Alliance of the Six flag Pirates"
  canton_captured_capital:0 "Captured Chinese Capital"
+ river_sea_tile:0 "River Province"
+ river_port:0 "River Port"
  
  #Mission - Formosan
  mdg_unite_island:0 "Formosan Unification"
@@ -1857,6 +1926,9 @@
  #Missions - Coptic Egypt
  cop_coptic_resurgence:0 "Coptic Resurgence"
  
+ #Australia
+ australian_drop_bear:0 "Australian Drop Bears"
+ 
  ######################
  ### Great Projects ###
  ######################
@@ -1895,6 +1967,8 @@
  korean_empire_decision_desc:0 "With our relations with the weakening China worsening by the day and our power growing ever stronger, it makes no sense anymore for us to just be "Kings" of Korea while surrounded by Empires. It is time for us to proclaim Emperorship too!"
  tomato_invasion_decision_title:0 "閪 Tomato Mod Invasions"
  tomato_invasion_decision_desc:0 "Opens Invasions event for Tomato Mod"
+ found_singapore_1_title:0 "Encourage settlement in Singapore"
+ found_singapore_1_desc:0 "The island of Singapore lies on the tip of the Malay Peninsula and is vital for trade in the region. Settling more [Root.Culture] people to settle in the area could greatly aid our endevours in the strategically important region."
  
  ###############
  ### Strings ###
@@ -2047,6 +2121,23 @@
  formosan_confederation_desc:0 "A Formosan Confederation is the form of government where the many formosan tribes bands together and unite under a single banner as a united nation."
  pharonic_kingdom_reform:0 "Pharonic Kingdom"
  pharonic_kingdom_reform_desc:0 "The pharaoh was the absolute monarch of the country and wielded complete control of the land and its resources."
+ chinese_regional_kingdom:0 "Regionalist Kingdom"
+ chinese_regional_kingdom_desc:0 "The archaic idea of a unified Chinese Empire does not interest us, our focus should be on securing our corner of East Asia."
+ regionalist_state_1:0 "Administrative Government Power"
+ regionalist_state_2:0 "Diplomatic Government Power"
+ regionalist_state_3:0 "Military Government Power"
+ ability_regionalist_state_mechanic:0 "East Asian Regional State Mechanic"
+ regionalist_dip_ability:0 "Sponsoring International Trade"
+ regionalist_state_ability_adm:0 "Encourage Urbanisation"
+ regionalist_state_ability_adm_desc:0 " "
+ regionalist_state_ability_dip:0 "Sponsor International Trade"
+ regionalist_state_ability_dip_desc:0 " "
+ regionalist_state_ability_mil:0 "Cultivate Military Leadership"
+ regionalist_state_ability_mil_desc:0 " "
+ settler_enthusiasm:0 "Settler Enthusiasm"
+ boost_settler_enthusiasm:0 "Boost Settler Enthusiasm"
+ walled_villages_reform:0 "Empower Local Clans"
+ walled_villages_reform_desc:0 "Allowing local clan patriarchs and their walled villages more autonomy could allow us to greatly strengthen our defences in the country side."
  
  ##################
  ### Parliament ###
@@ -2062,6 +2153,15 @@
  east_asian_parliament_name:0 "Legislative Yuan"
  cantonese_parliament_name:0 "Legislative Yuen"
  cantonese_g_parliament_name:0 "Legislative Yuen"
+ ping_culture_parliament_name:0 "Legislative Yuen"
+ tanka_parliament_name:0 "Legislative Yuen"
+ chimin_parliament_name:0 "Legislative īnn"
+ jin_parliament_name:0 "Legislative Yue"
+ wu_parliament_name:0 "Legislative Yoe"
+ huizhou_culture_parliament_name:0 "Legislative Yoe"
+ hakka_parliament_name:0 "Legislative Yan"
+ gan_parliament_name:0 "Legislative Yuen"
+ xiang_parliament_name:0 "Legislative Yue"
  japanese_g_parliament_name:0 "Kokkai"
  JAP_parliament_name:0 "Teikoku Gikai"
  ROC_parliament_name:0 "Legislative Yuan"
@@ -2382,12 +2482,24 @@
  harmonized_mandaeism_group:0 "Harmonized with Mandaeism"
  desc_harmonized_mandaeism_group:0 "We have incorporated Mandaeism in our country and national ethos."
  
+ #Unnamed Lady
+ unnamedlady:0 "Maiden's Banner"
+ unnamedlady_religion_desc:0 "While her name is lost to time, the martyered maiden who have since ascended to godhood is revered by her followers who wishes to bring liberty to their lands."
+ unnamedlady_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ unnamedlady_rebels_title:0 "Religious"
+ unnamedlady_rebels_name:0 "$RELIGION$ Zealots"
+ unnamedlady_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ unnamedlady_rebels_army:0 "$RELIGION$ Army"
+ CARRIAGEWORSHIP:0 "Cult of the Carriage god"
+ 
  ###################
  ### Trade Goods ###
  ###################
  
  date:0 "Dates"
  dateDESC:0 "Primarily cultivated in warmer climes, date products are a staple part of the diet in many cultures."
+ australium:0 "Australium"
+ australiumDESC:0 "A mysterious metal element that can adapt and transform itself into different states and forms, with invigorating health effects. It is extremely valuable and highly sought-after."
  
  ###################
  ### Mercenaries ###

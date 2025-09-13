@@ -2288,6 +2288,7 @@ weapons = {
 	manufactory = {
 		copper
 		iron
+		australium
 	}
 	onmap = yes
 	on_built = {

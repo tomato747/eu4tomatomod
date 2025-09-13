@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = oligarchy_reform
+primary_culture = chimin
+technology_group = chinese
+religion = confucianism
+capital = 4815	# Singapore

@@ -1,0 +1,75 @@
+namespace = tomato_australia
+
+normal_or_historical_nations = yes
+
+# Australian Drop bear
+province_event = {
+	id = tomato_australia.1
+	title = "tomato_australia.1.t"
+	desc = "tomato_australia.1.d"
+	picture = Dropbear2_eventPicture
+	fire_only_once = yes
+	trigger = {
+		region = australia_region
+		owner = {
+			NOT = {
+				technology_group = aboriginal_tech
+			}
+			ai = no
+		}
+		is_colony = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = tomato_australia.1.a
+		add_province_modifier = { 
+			name = australian_drop_bear
+			duration = 3650
+		}
+	}
+}
+
+# Australium depleted
+province_event = {
+	id = tomato_australia.2
+	title = "tomato_australia.2.t"
+	desc = "tomato_australia.2.d"
+	picture = Dropbear2_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = australium_enabled
+		trade_goods = australium
+		owner = {
+			production_leader = {
+				trade_goods = australium
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = tomato_australia.2.a
+		set_global_flag = australium_depleted
+		every_province = {
+			limit = {
+				trade_goods = australium
+			}
+			change_trade_goods = unknown
+		}
+	}
+}

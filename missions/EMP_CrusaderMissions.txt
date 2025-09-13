@@ -272,6 +272,13 @@ EMP_crusader_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sinai_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			said_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -503,6 +510,13 @@ EMP_crusader_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			upper_macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			thrace_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -529,6 +543,7 @@ EMP_crusader_3 = {
 			OR = {
 				area = northern_greece_area
 				area = macedonia_area
+				area = upper_macedonia_area
 				area = ionian_islands_area
 				area = thrace_area
 				area = hudavendigar_area
@@ -554,6 +569,10 @@ EMP_crusader_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_macedonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

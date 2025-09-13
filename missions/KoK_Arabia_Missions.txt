@@ -743,6 +743,7 @@ KoK_ARB_hedjaz_najd_bedouin_2 = {
 			give_claims = { area = delta_area }
 			give_claims = { area = bahari_area }
 			give_claims = { area = gulf_of_arabia_area }
+			give_claims = { area = sinai_area }
 			
 			custom_tooltip = " "
 			

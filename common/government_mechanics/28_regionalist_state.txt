@@ -1,0 +1,137 @@
+regionalist_state_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 16
+	
+	powers = {
+		regionalist_state_1 = {
+			max = 500
+			monarch_power = ADM
+			base_monthly_growth = 1.25
+			scaled_modifier = {
+				modifier = {
+					global_prosperity_growth = 0.1
+					development_cost = -0.25
+				}
+			}
+		}
+		regionalist_state_2 = {
+			max = 500
+			monarch_power = DIP
+			base_monthly_growth = 1.25
+			scaled_modifier = {
+				modifier = {
+					diplomatic_reputation = 1
+					liberty_desire = -25
+				}
+			}
+		}
+		regionalist_state_3 = {
+			max = 500
+			monarch_power = MIL
+			base_monthly_growth = 1.25
+			scaled_modifier = {
+				modifier = {
+					manpower_in_accepted_culture_provinces = 0.20
+					discipline = 0.05
+				}
+			}
+		}
+		settler_enthusiasm = {
+			max = 500
+			base_monthly_growth = 0.05
+			scaled_modifier = {
+				modifier = {
+					culture_conversion_cost = -0.35
+					culture_conversion_time = -0.25
+					global_colonial_growth = 25
+					monthly_settler_enthusiasm = -0.25
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		regionalist_state_ability_adm = {
+			icon = GFX_regionalist_state_adm_button
+			cost_type = regionalist_state_1
+			cost = 150
+			trigger = {
+				
+			}
+			effect = {
+				random_owned_province = {
+					limit = { 
+						has_owner_accepted_culture = yes
+					}
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+		regionalist_state_ability_dip = {
+			icon = GFX_regionalist_state_dip_button 
+			cost_type = regionalist_state_2
+			cost = 150
+			trigger = {
+				NOT = { has_country_modifier = regionalist_dip_ability }
+			}
+			effect = {
+				add_country_modifier = { 
+					name = regionalist_dip_ability
+					duration = 1825
+				}
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+		regionalist_state_ability_mil = {
+			icon = GFX_regionalist_state_mil_button
+			cost_type = regionalist_state_3
+			cost = 150
+			trigger = {
+				
+			}
+			effect = { 
+				create_general = { tradition = 100 }
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+		boost_settler_enthusiasm = {
+			gui = settler_enthusiasm_gov_mech
+			cost_type = settler_enthusiasm
+			center = no
+			trigger = {
+				mil_power = 50
+				not = {
+					has_government_power = {
+						mechanic_type = regionalist_state_mechanic
+						power_type = settler_enthusiasm
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = regionalist_state_mechanic
+					power_type = settler_enthusiasm
+					value = 10
+				}
+				add_mil_power = -50
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 0
+			}
+		}
+	}
+}

@@ -1483,6 +1483,7 @@ andalusia_slot_4_missions_c = {
 		provinces_to_highlight = {
 			OR = {
 				area = gulf_of_arabia_area
+				area = sinai_area
 				area = tabuk_area
 				area = medina_area
 				area = mecca_area
@@ -1494,6 +1495,11 @@ andalusia_slot_4_missions_c = {
 		
 		trigger = {
 			gulf_of_arabia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			sinai_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
@@ -1987,6 +1993,13 @@ andalusia_slot_5_missions = {
 				add_permanent_claim = ROOT
 			}
 			gulf_of_arabia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sinai_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

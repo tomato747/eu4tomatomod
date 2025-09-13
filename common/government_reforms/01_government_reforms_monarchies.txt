@@ -539,9 +539,9 @@ chinese_warlord = {
 	potential = {
 		NOT = { has_global_flag = eoc_abolished }
 		OR = {
-			primary_culture = bai
-			primary_culture = miao
-			primary_culture = yi
+			#primary_culture = bai
+			#primary_culture = miao
+			#primary_culture = yi
 			culture_group = east_asian
 		}
 		OR = {
@@ -5056,7 +5056,10 @@ enforce_trader_privileges_reform = {
 		}
 	}
 	trigger = {
-		has_reform = plutocratic_reform
+		OR = {
+			has_reform = chinese_regional_kingdom
+			has_reform = plutocratic_reform
+		}
 	}
 	modifiers = {
 		trade_range_modifier = 0.3
@@ -7829,6 +7832,134 @@ global_dominion_reform = {
 			province_warscore_cost = -0.15
 			effect = { hidden_effect = { change_variable = { which = cultures_assimilated value = 1 } } }
 			removed_effect = { hidden_effect = { subtract_variable = { which = cultures_assimilated value = 1 } } }
+		}
+	}
+}
+
+chinese_regional_kingdom = {
+	icon = "korean_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			culture_group = east_asian
+		}
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			culture_group = east_asian
+		}
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		OR = {
+			culture_group = east_asian
+		}
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				area = taiwan_area
+				area = north_taiwan_area
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+
+	modifiers = {
+		manpower_recovery_speed = 0.25
+		development_cost = -0.1
+		global_colonial_growth = 15
+		production_efficiency = 0.15
+		diplomatic_upkeep = 1
+		liberty_desire = 50
+	}
+	
+	ai = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			OR = {
+				tag = MNG
+				tag = QNG
+				tag = CSH
+				tag = CXI
+				tag = YUA
+				tag = CZH
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				tag = YUE
+				tag = MIN
+				tag = WUU
+				tag = HUA
+			}
+		}
+	}
+	
+	government_abilities = {
+		regionalist_state_mechanic
+	}
+}
+
+walled_villages_reform = {
+	icon = "castle"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = cantonese
+			primary_culture = ping_culture
+			primary_culture = chimin
+			primary_culture = hakka
+			primary_culture = taiwanese
+			culture_group = cantonese_g
+			culture_group = min_g
+			culture_group = hakka_g
+		}
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.3
+		enemy_core_creation = 0.2
+		defensiveness = 0.10
+		global_autonomy = 0.10
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			num_of_owned_provinces_with = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				value = 5
+			}
 		}
 	}
 }

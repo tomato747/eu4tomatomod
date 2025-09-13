@@ -2317,3 +2317,35 @@ date = {
 		}
 	}
 }
+
+australium = {
+	color = { 1.0 0.90 0.10 }
+	modifier = {
+		monarch_lifespan = 0.25
+		infantry_power = 0.50
+		technology_cost = -0.5
+		idea_cost = -0.5
+	}
+	province = {
+		local_attacker_dice_roll_bonus = 2
+	}
+	chance = {
+		factor = 25
+		modifier = {
+			factor = 0
+			NOT = {
+				region = australia_region
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_global_flag = australium_enabled
+			}
+		}
+		modifier = {
+			factor = 0
+			has_global_flag = australium_depleted
+		}
+	}
+}

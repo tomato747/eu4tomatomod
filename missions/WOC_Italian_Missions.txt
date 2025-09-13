@@ -597,6 +597,7 @@ JHC_ITA_war_branch = {
 			give_claims = { area = northern_greece_area }
 			give_claims = { area = ionian_islands_area }
 			give_claims = { area = macedonia_area }
+			give_claims = { area = upper_macedonia_area }
 			give_claims = { area = morea_area }
 			give_claims = { area = peloponnese_area }
 			give_claims = { area = central_greece }
@@ -633,6 +634,7 @@ JHC_ITA_war_branch = {
 				area = northern_greece_area
 				area = ionian_islands_area
 				area = macedonia_area
+				area = upper_macedonia_area
 				area = morea_area
 				area = peloponnese_area
 				area = central_greece
@@ -646,6 +648,7 @@ JHC_ITA_war_branch = {
 					area = northern_greece_area
 					area = ionian_islands_area
 					area = macedonia_area
+					area = upper_macedonia_area
 					area = morea_area
 					area = peloponnese_area
 					area = central_greece

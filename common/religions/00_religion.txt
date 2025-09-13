@@ -1814,6 +1814,27 @@ eastern = {
 		
 	}
 	
+	unnamedlady = {
+		icon = 55
+		color = { 232 209 5 }
+		country = {
+			all_power_cost = -0.05
+			republican_tradition = 1
+		}
+		country_as_secondary = {
+			all_power_cost = -0.025
+			republican_tradition = 0.5
+		}
+		province = {
+		 	local_production_efficiency = 0.1
+			local_missionary_strength = -0.02
+		}
+		can_have_secondary_religion = yes
+		declare_war_in_regency = yes
+		
+		heretic = { CARRIAGEWORSHIP }
+	}
+	
 	crusade_name = CRUSADE
 	
 }

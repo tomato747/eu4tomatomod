@@ -3,6 +3,7 @@
 owner = MNG
 controller = MNG
 add_core = MNG
+add_core = CMI
 culture = gan
 religion = animism
 capital = "Pautching"

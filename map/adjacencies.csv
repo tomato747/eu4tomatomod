@@ -114,11 +114,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 1015;4955;sea;1392;-1;-1;-1;-1;Ryuku islands
 668;4942;sea;1371;-1;-1;-1;-1;Macau-Hongkong
 4184;4959;sea;1390;-1;-1;-1;-1;-Iyo
-4996;4997;sea;1373;-1;-1;-1;-1;Shanghai-Hemen
-1822;4997;sea;1373;-1;-1;-1;-1;Soutseu-Hemen
-4998;4999;sea;1373;-1;-1;-1;-1;Zantseu-Tongzhou
-2145;4999;sea;1373;-1;-1;-1;-1;Tsenkaon-Tongzhou
-2145;685;sea;1373;-1;-1;-1;-1;Tsenkaon-Yangzhou
+4996;4997;sea;5264;-1;-1;-1;-1;Shanghai-Hemen
+1822;4997;sea;5264;-1;-1;-1;-1;Soutseu-Hemen
+4998;4999;sea;5264;-1;-1;-1;-1;Zantseu-Tongzhou
+2145;4999;sea;5264;-1;-1;-1;-1;Tsenkaon-Tongzhou
+2145;685;sea;5264;-1;-1;-1;-1;Tsenkaon-Yangzhou
 1024;5000;sea;1980;-1;-1;-1;-1;Echigo-Sado
 994;2583;sea;5008;-1;-1;-1;-1;Quebec-Levis
 994;4893;sea;5008;-1;-1;-1;-1;Quebec-Nebesek
@@ -142,4 +142,15 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 235;87;canal;235;-1;-1;-1;-1;channel_tunnel
 5140;1033;canal;5140;-1;-1;-1;-1;chiho_tunnel
 242;5235;sea;2184;-1;-1;-1;-1;Gwynedd-Anglesey
+365;5228;sea;1328;-1;-1;-1;-1;SaintCatherine-AlBad'
+1821;685;sea;5264;-1;-1;-1;-1;Namking-Yangzhou
+1821;5103;sea;5265;-1;-1;-1;-1;Namking-Chuzhou
+1821;5102;sea;5265;-1;-1;-1;-1;Namking-Hezhou
+5099;5102;sea;5265;-1;-1;-1;-1;Tebin-Hezhou
+5099;1838;sea;5265;-1;-1;-1;-1;Tebin-Luzhou
+5098;1838;sea;5265;-1;-1;-1;-1;Zetsei-Luzhou
+5098;686;sea;5265;-1;-1;-1;-1;Zetsei-Anqing
+5079;686;sea;5265;-1;-1;-1;-1;Tsiukong-Anqing
+5079;4197;sea;5265;-1;-1;-1;-1;Tsiukong-Huangzhou
+682;4197;sea;5265;-1;-1;-1;-1;Wuchang-Huangzhou
 -1;-1;;-1;-1;-1;-1;-1;-1;

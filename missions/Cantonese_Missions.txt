@@ -159,7 +159,7 @@ cantonese_missions_2 = {
         }
         
         provinces_to_highlight = {
-			province_id = 738
+			province_id = 667
         }
     
         trigger = {

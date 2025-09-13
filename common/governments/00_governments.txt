@@ -135,6 +135,7 @@ monarchy = {
 				formosan_kingdom
 				pharonic_kingdom_reform
 				global_dominion_reform
+				chinese_regional_kingdom
 			}
 		}
 		hereditary_vs_nobility = {
@@ -225,6 +226,8 @@ monarchy = {
 				#1.37 Hungary
 				continue_the_renaissance_reform
 				timurid_diwan_reform
+				#tomato
+				walled_villages_reform
 			}
 		}
 		state_and_religion = {

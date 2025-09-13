@@ -251,9 +251,11 @@ MEE_BYZ_conquest_2 = {
 			
 			give_claims = { area = hudavendigar_area }
 			give_claims = { area = aydin_area }
+			give_claims = { area = antalya_area }
 			give_claims = { area = bulgaria_area }
 			give_claims = { area = silistria_area }
 			give_claims = { area = macedonia_area }
+			give_claims = { area = upper_macedonia_area }
 			
 			custom_tooltip = " "
 			
@@ -565,6 +567,7 @@ MEE_BYZ_conquest_3 = {
 			OR = {
 				area = thrace_area
 				area = macedonia_area
+				area = upper_macedonia_area
 				area = northern_greece_area
 				area = ionian_islands_area
 			}
@@ -575,6 +578,7 @@ MEE_BYZ_conquest_3 = {
 				OR = {
 					area = thrace_area
 					area = macedonia_area
+					area = upper_macedonia_area
 					area = northern_greece_area
 					area = ionian_islands_area
 				}
@@ -990,12 +994,17 @@ MEE_BYZ_conquest_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = aydin_area
+				area = antalya_area
 				area = hudavendigar_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			antalya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

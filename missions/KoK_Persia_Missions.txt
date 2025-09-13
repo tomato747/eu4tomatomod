@@ -150,6 +150,7 @@ kok_persia_conquest_mission_slot_1 = {
 			add_permanent_claim_multi_provinces = { target = morea_area }
 			add_permanent_claim_multi_provinces = { target = thrace_area }
 			add_permanent_claim_multi_provinces = { target = macedonia_area }
+			add_permanent_claim_multi_provinces = { target = upper_macedonia_area }
 			if = {
 				limit = {
 					OR = {
@@ -183,6 +184,7 @@ kok_persia_conquest_mission_slot_1 = {
 						area = morea_area
 						area = thrace_area
 						area = macedonia_area
+						area = upper_macedonia_area
 					}
 					NOT = { country_or_non_sovereign_subject_holds = root }
 				}
@@ -203,6 +205,7 @@ kok_persia_conquest_mission_slot_1 = {
 					area = morea_area
 					area = thrace_area
 					area = macedonia_area
+					area = upper_macedonia_area
 				}
 				value = 15
 			}

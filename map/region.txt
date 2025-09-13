@@ -292,6 +292,7 @@ balkan_region = {
 		central_greece
 		peloponnese_area
 		ionian_islands_area
+		upper_macedonia_area
 	}
 }
 
@@ -320,6 +321,8 @@ egypt_region = {
 		
 		qena_area
 		aswan_area
+		sinai_area
+		marmarica_area
 	}
 }
 
@@ -373,6 +376,8 @@ anatolia_region = {
 		cukurova_area
 		ankara_area
 		germiyan_area
+		
+		antalya_area
 	}
 }
 

@@ -1294,6 +1294,8 @@ british	= {
 			Victor Vincent
 			William Walter Winfield Wilbur Wallace Walker
 			Zachary
+			
+			Barnabus Bilious Saxton
 		}
 		female_names = {
 			Anne Amanda Ada April Amphyllis Abigail Alice Adell Amelia Antoinette Arabella Alma Agnes Agatha
@@ -1345,6 +1347,8 @@ british	= {
 			Washington Wayne Wilson Wood Williams Whitney Waldron Wolfe Wright Wyatt Worsam Wilkes Wythe
 			Waterhouse
 			Young Yelverton
+			
+			Hale Mundy
 		}
 	}
 	scottish = {
